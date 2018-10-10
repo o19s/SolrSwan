@@ -1,0 +1,48 @@
+package com.o19s.solr.swan.nodes;
+
+/**
+ * Copyright 2012 OpenSource Connections, LLC.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import org.apache.lucene.search.BooleanClause;
+import org.apache.lucene.search.spans.SpanNearQuery;
+import org.apache.lucene.search.spans.SpanQuery;
+
+public class SwanAndOperationNode extends SwanOperatorNode {
+
+  public SwanAndOperationNode(SwanNode left, SwanNode right) {
+    super(left, right);
+  }
+  
+  //this is a copy constructor
+  public SwanAndOperationNode(SwanAndOperationNode originalNode){
+	  super(originalNode.getNodes().toArray(new SwanNode[originalNode.getNodes().size()]));
+  }
+
+  @Override
+  public SpanQuery getSpanQuery(String field) {
+    return new SpanNearQuery(getQueries(field), Integer.MAX_VALUE, false);
+  }
+
+  @Override
+  public BooleanClause.Occur getClause() {
+    return BooleanClause.Occur.MUST;
+  }
+
+  @Override
+  protected String getOperation() {
+    return "AND";
+  }
+}

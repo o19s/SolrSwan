@@ -1,0 +1,654 @@
+ (("3744120")!.PN. ) .#USPT.
+ (silicon.asn. lantronix.asn. chipman.in.) and (flow$1sensitiv$3 "flow sensitivie") and (determin$5 check$5 identif$8 eliminat$6 remov$5 reduc$5 delet$5 check$5) with(dead execut$4 un$1used un$1necessary un$1need$3)
+"12/358660"
+"12/964,862"
+"224G11" or "224 G11"
+"5 nm"
+"access file"
+"bachmann, martin"[IN]
+"cox, george"[IN]
+"factor B" same antibod$
+"ID3" OR "1H2" OR "1C6" OR "2A5"
+"prostate cancer" and vitronectin
+"SHAO-ZHAOHUI"!
+"steering wheel switches".clm.
+"tissue factor" or rhtf
+"TOBINICK-EDWARD-L"!
+$9benzothiophen and ethoxy and proyl and azetidin$9
+$successful$ near attemp$ near (switch$ or select$ or decid$ or choos$) same component$ near (carrier$ or frequen$ or bandwidth or $band$)
+( (428/32.77 |428/32.78 |428/32.79).ccls. or (503/227).ccls. )
+("20020182243" |"6270827").PN.
+("copper alloy" or corson or "cda 70250" or cda70250 or cunisi) and (Ra or "mean roughness" or "average roughness" or ry or rz) and (Rsk or "frequency curve" or distribution)
+("polyethylene glycol" "PEG") and ("ascorbic acid" "ascorbate") and ((colon intestin$5) near10 (clean$6 lavage evacuat$5))
+($diamond$ with (gene or nucleotide or oligonucleotide or polynucleotide or dna or rna or nucleic acid) with (bound$ or bond$ or bind$ or link$ or attach$ or conjug$ or pendant or join$ or covalent$) with (pharmaceut$ or administ$ or deliver$ or inject$ or therapeut$)) and (@ay<2005) 
+(( (g08b 13/189 ) or (g08b 13/196 ) or (g06f 9/00 ) or (h04n 7/18 ) or (h04n 5/225 ) or (g06t 1/00 ) or (g06k 9/54 ) or (g08b 13/14 ) or (h04n 5/00 ) or (b60r 25/10 ) (g06k 9/46 ) ) and (((security adj2 camera) or camera) and tamper$6))
+(((((medium adj chain adj fatty) near salt) or (sodium near octanoate)) and (((drug or therapeutic or (active adj agent) or pharmaceutical) near $%)) ) and PD<20081231)
+((((medium adj chain adj fatty) near salt) or (sodium near octanoate)) near5 $%)
+(((h02h 7/09 or g08b 19/00 or g08b 21/00 or g01r 31/26 or h02h 5/04 or h02h 3/00 or h02h 3/08 or h02h 7/00 ) and (estimat$6 NEAR6 temperature$1) ) and ((temperature NEAR3 loss$2) and (temperature NEAR3 impedance$2)))
+(((medium adj chain adj fatty) near salt) or (sodium near octanoate))
+(((perfume or benefit agent or fragrance) near5 ($sphere or shell or coating or coated) or (perfume or benefit agent or fragrance) near5 ($encapsul$ or $capsule or microsphere or shell or coating or coated) ) same (pet/peg or pet-peg or pet peg or petpeg or peg/poet or peg-poet or peg poet or pegpoet or $phthalate$ or petpoet or pet poet or pet-poet or pet/poet ))
+(((touch adj3 (pad or screen)) or touchpad or touchscreen) with gestur$3) same (secur$3 or encrypt$4 or decrypt$4)
+((@ad<20010320 and ((defin$5 determin$5) near (policy rule laws restriction)) ) and ((associat$5 correlat$5 relat$5 match$5) near2 (geo-politic$5 geograph$5 politic$5) near2 (region boundary populat$5 segment locality country)))
+((adaptive$3 or variabl$3) near5 (fec or (forward adj error adj correct$3)) near3 decod$3)
+((anaerobic adj (digest OR digestion OR ferment OR fermentation OR fermenting) AND (Saccharomyces adj cerevisiae) AND ((non-ionic OR non$ionic) WITH (surfactant OR surfactants)) AND temperature AND (sludge OR waste OR sewage OR garbage) ) AND biogas)
+((bacteria SAME2 (ferment OR fermentation OR digest OR digestion) AND anaerobic WITH (ferment OR fermentation OR digest OR digestion) AND temperature AND ((tank OR tanks) SAME2 (ferment OR fermentation)) AND (non$ionic adj surfactant OR non$ionic adj surfactants OR non-ionic adj surfactant OR non-ionic adj surfactants) ) AND (biogas OR gas OR methane OR hydrogen))
+((Bender near3 Christopher) or (Turi near3 (Andrew or Robert))).in.
+((cardiovascular adj (disease or disorder)) or atherosclerosis or ischemi$1 or heart)
+((cationc adj surfactant) $behenyl$ $ammonium$) same (pigment (titanium adj dioxide) (zinc adj oxide)) 
+((CoQ10 or Co-Q10 or (Co adj Q10) or (coenzyme near Q10)) same (layer or coating or film or stratum or tier)) and (((ascorbic or $tocopherol or retinol or (vitamin near B$) or cyanocobalamine or nicotinamide or pyrodoxine or cholecalciferol or fursultiamine or inositol)) same (layer or coating or film or sheet or stratum or tier)) and @ad<20070711 not ((CoQ10 or Co-Q10 or (Co adj Q10)) same (layer or coating or film or stratum or tier)) and (((ascorbic or $tocopherol or retinol or (vitamin near B$) or cyanocobalamine or nicotinamide or pyrodoxine or cholecalciferol or fursultiamine or inositol)) same (layer or coating or film or sheet or stratum or tier)) and @ad<20070711 and (layer or coating or film or sheet or stratum or tier) and (tablet or capsule or solid or oral) ((CoQ10 or Co-Q10 or (Co adj Q10) or (coenzyme near Q10)) same ($layer$ or coating or film)) and (((ascorbic or $tocopherol or retinol or (vitamin near B$) or cyanocobalamine or nicotinamide or pyrodoxine or cholecalciferol or fursultiamine or inositol)) same ($layer$ or $coated or film or sheet))
+((effervesc$ or disintegra$ near3 (granule or granular) not effervesc$ or disintegra$ near3 (granule or granular) not acid and alkali ) not (effervesc$ or disintegra$ near3 (granule or granular) not effervesc$ or disintegra$ near3 (granule or granular) not acid and alkali not detergent or clean$ near1 composition ))
+((exothermic$6 or (exo adj thermic$6)) near12 (react$4 or reduce$4 or reduci$4 or reduct$4)) near21 ((vapor$4 or vapour$4 or gaseous) near12 (halid$4 or chlorid$4 or clorid$4 or tetrachlorid$4 or tetraclorid$4 or (tetra adj (chlorid$4 or clorid$4)) or ticl$4))
+((first type$1) and (second type$1) and touch and mouse and filter$).clm.
+((FPGA or (programmable adj2 gate adj2 array)) NEAR5 (parallel NEAR5 process$6))
+((gamma adj tocopherol) or gammatocopherol) adj methyltransferase$
+((glycosyl with hydrolase) or xylanase or glucanase)
+((magnetic adj resonan$2) or MRI or NMR)
+((magnetic with resonance) or mri or nmr or mr)
+((mobile adj (unit$1 or terminal)) or (cellular adj (telephone or phone))) with convave with shap$1
+((molten adj salt) near12 (mix or mixture)).clm.
+((network-based or (network near1 based)) near1 local near1 mobility near1 management) or NetLMM
+((radio with frequency) or radio-frequency or radiofrequency or rf)
+((scfc ) and single adj chain)
+((search ADJ engine) SAME ((further or refin$3 or refinement or revis$3 or revision) NEAR9 (search$3 or inquir$3)) ) SAMe (keyword or (key ADJ word) or history or historic$4 or profile or knowledge or correlat$4 or match$3)
+((set$ or assign$ or parameter$) near2 (hyperlink$1 or link$ or url)) with (local adj server$)
+((stor$ or database or DB) near5 (visitor$ or participant$ or user$1 or vendor$ or purchaser$ or client$) adj3 session$)
+((time adj digital) adj convert$3)
+((Tkatch neaer3 Alexander) or (Arash near3 Ghanaie-Sichanie) or (Janedittakarn near3 Akezyt) or (Ott near3 Michael) or(Gupta near3 Nishant)).in.
+((virtual machine$1) and (physical server$1) and (load balancing) and overloaded$ and underloaded$ and migrat$).clm.
+((volatilis$6 or volatiliz$6 or vaporiz$6 or vaporis$6) near12 (oxygen or o2)) near21 ((metal$4 or alloy$4 or tantalum or niobium or molybdenum or hafnium or zirconium or titanium or vanadium or rhenium or tungsten or ta or nb or mo or hf or zr or ti or v or re or w) near12 (powder$4 or particl$4 or particulat$4))
+((wound same heal$ ) and (tonsillectomy or tonsillectommy))
+(20020140425.pn. or 7141978.pn. or 20050270023.pn. or 6194900.pn.)
+(20040078277 or 20040107127 or 20090281878)[pn] 
+(20080195473 or 20070219926 or 20070012759 or 6330543 or 20090089193 or 0019163).pn.
+(20080288396 or 8055557 or 8027890 or 20040249749 or 20050234817 or 7406442 or 20090164370 or 20100100480).pn.
+(20090118464 or 4924077).pn.
+(20110300316 or 20110300315).pn. 
+(252/184,188.25,188.26,188.27,182.32,182.34).ccls.
+(252/187.23,187.21,187.34,186.21;423/477).ccls.
+(4096254 or 4259593).pn.
+(424/46 or 424/489).ccls.
+(424/70.122).ccls. and aminosilicon$
+(435/115)!.ccls.
+(435/155)!.ccls.
+(435/183)!.ccls.
+(4379755 4606913 4741944 4776976 4865221 4904524 5085854 5382418 5539021 5888842 5976804).pn. and zinc
+(5,705,369)[PN]
+(502/60).ccls.
+(514/23;536/29.2)![CCLS]
+(526/913)![CCLS]
+(536/20,123.1)![CCLS]
+(552/526).CCLS.
+(552/610).CCLS.
+(5608778 or 5359182).pn.
+(5-ht or serotonin) same (anxiety or anxieolytic) same (brain)
+(6,171,344)[PN]
+(6039251 6443890 7156809 7301451 7428189 20030046090 20030146926 20030221687 20040015132 20050143671 20050146431 20050148890 20050151640 20050228245 20070232942 20100120585 20100131280 5754111 5348008 5564429 6893396 7539532 20010027384 20020019584 20060111948 20070265533 20080154099 20090089100 20090227876 20090227877 6151521 4588383 5617855 5843142 6106463 4102332 4295232 4297677 4433684 4531527 4768088 4816689 4835372 4843378 4857716 4912388 4938582 5006987 5008942 5181200).pn.
+(6879952  7047189  7315816  7533017  7562013  20010037195  20050091042  20070055511  20070100615  20090150146  20080071540  20110125496  5828997  5353376  7533015  7567678  7804973  7895038  7995767  20030097257  20040047474  20040220800  20060122832  20070005350  20080120100  20080294432  20080310646  20090030552  20090055170  20100124339  20110200205  20040040621  20090257536  20100070274  20100329472  4488005  4507750  5258924  5386475  5966690  6157727  7478041  7680667  7720679  20030177007  20060143017  20090076815  20090076827  20110131044  20110170726  ).pn.
+(707/705).ccls.
+(717/100 |717/101 |717/102 |717/103 |717/120 |717/121 |717/122 |717/123 |717/168 |717/169 |717/170).ccls.
+(7298543 or 7252749 or 7079305 or 6951666 or 6838372 or 6274412 or 6153348 or 6110632).pn.
+(7763673 or 7527870 or 7087127 or 6828403).pn.
+(adaptor)near8(receiv? or obtain? or acquir? or get? or gather? or secur?)near5(stream or frame or packet or datagram)near7(insert? or embed? or fill? or inject? or plac? or set? or enclos?)near5(stream or frame or packet or datagram)
+(administ$) with (anti$) with (GM-CSF or granulocyte macrophage colony stimulating factor)
+(air near2 (handl$3 or clean$3 or treat$5 or purifier or purification or purif$5 or deodori$6 or sterili$6 or disinfect$3 or saniti$5 or filt$7)).ab. 
+(alum or ((aluminum or aluminium) near5 (sulfate or sulphate)))
+(aminolaevulinic adj2 ester$) same dermal same particle
+(amorphous or noncrystal$6 or (non adj crystal$6) or (metallic adj glas$4) or metglas) near21 (metal$4 or alloy$4)
+(antibod$) near5 ((interleukin-1 alpha or il-1alpha or il1alpha or interleukin1 alpha) near5 human$)
+(asymmetr$4 or variance or variation or fluctuation) near4 rf
+(bear).in.
+(ben near sasson).inv.
+(biodegradable or bioabsorable or biocompatible) and (oligomer$ or prepolymer$) same (unsaturated or unsaturation)
+(birkle stephane)[IN]
+(bloom-filter$ or (bloom$ near1 filter$)) same ((packet$ or data or information$) near1 rout$6)
+(calzone)adj(frank)adj(j)
+(carbon monoxide dehydragenase or hyrdrogenase or NAD(P)H-ferredoxin oxidoreductase or ferredoxin) and recombinant 
+(charging agent and metallic particle).clm.
+(chlorhexidine and polymer and silicone and urethane)
+(clynes)[IN] AND ((regulatory t cell) and (immune complex$))
+(coli near5 (express$ or produc$)).ti. 
+(collimat$3 or convergence or divergence or concove or concave) adj2 lens
+(collimat$3 or relay) adj2 lens
+(colon or colorectal) and survival and pbmc
+(combin$ near1 images)
+(compress$3 fluid) same (temperature)
+(cross near1 beta) and (composition or preparation or formulation or medicin$3 or blood)
+(CXCR4 or CD184 or D2S201E or fusin or HM89 or HSY3RR or LESTR or NPY3R or NPYR or NPYY3R).ab.
+(decreas$ or inhibit$ or reduc$ or suppress$) near6 cell near3 death
+(determin? or conclud? or decid? or figur? or evaluat? or examin? or inspect? or inspect? or analyz? or check? or investigat? or scan? or judg?)near8(audit near4 data or audit near4 information or hardware near4 config? or hardware near4 setting? or hardware near4 parameter$2 or software near4 config? or software near4 parameter$2 or software near4 setting? or software near4 state)near9(device or phone or pda or computer or client or workstation)
+(device or node or terminal or computer or client) near5 telemetry same server$5 near5 telemetry same execut$4 near5 aapplication
+(digital and right$1 and management and rule$1).ti. and @py<=2008
+(document near processing)
+(document$ or email$ or mail$ or paper$1 or bill$1 or money$ or transfer$) adj15 (select$ or chosen or choose$1 or choice$1 or opt$) adj15 (job$1 or action$1 or task$)
+(drug or substance) adj (addiction or abuse or dependence) same (problem) same (behavior or behavioral) same (psychosis or psycholoigical)
+(DVT or duvane or duvatriene) and tobacco,clm.
+(electric$ with vehicle) and (second$ with digital$ with control$) and (second$ with actuators) and ((vote$ or voting$) with (proce$ or mechani$ or step$))
+(electrolytic$ or electrolysis or electrolyz$)
+(electrolyzed or anodic or cathodic or alkaline or acidic or basic) near5 water
+(electron donor or porphrin$ or phthalocyanine$ or discotic) with (electron acceptor or fullerene$ or nanotube or graphene or dye or thiophene)
+(encrypt? or cipher?)near6(audio or music or movie$2 or program)near4(signal or packet or frame or stream)
+(enrol$ or regist$) same (customer$ or client$1 or consumer$1) same bill$
+(etidronic near acid) and (cosmetic and aging)
+(expect or expected or predict or predicted) with (outcome or result$3) with patient
+(fatty acid esters) and bioadhesive and skin and benzydamine
+(fermentor or bioreactor)
+(first or second or plural$4) adj3 (light or beam or laser)
+(Flower near5 White) and (Hilum near5 Black) and (Pubescence near5 (Light adj tawny)) and (Pod near5 Tan) and (Maturity near5 IV)
+(Flower near5 White) and (Hilum near5 Black) and (Pubescence near5 (Light adj tawny)) and (Pod near5 Tan) and (Maturity near5 IV) and (lodging near5 ("5.8" or "5.9" or "6.0"))
+(frame or tube or tubing) and (welded or weld or welding or weldment) and filler and (aa7$ or aa7000 or "aa 7000" or (aa adj1 7$)) and (copper or cu) and (magnesium or mg) and (zinc or zn) and (chromium or cr) and ((t4 or t6) near5 (aged or aging or age or treat$))
+(headset or eyeglasses or (arm near3 band$)) same (track$ or identif$) same position$
+(hexavalent or (hexa near2 valent)) near5 (chrome or chromium)
+(hydrogen peroxide) same (sodium hypochlorite) same peroxide
+(hydroxyproline near7 (compound or deriv$ or salt)) and (dermatitis or atopic or urticaria or rhinitis or conjunctivitis or pollin$ or asthma)
+(IFN-beta) or (interferon-beta)
+(IgM or immunoglobulin near1 M) with (bind$3 or recongni$5 or against) the (native or folded or unfolded or misfolded or aggregat$6)
+(image$ or lcd) near5 (display$ or screen$ or panel$)
+(INSTRUMENT? OR DERIVATIVE? OR OPTION? OR FUTURE? OR FUND? OR SECURITIES OR STOCKS OR EQUITIES OR BOND).ti,ab.
+(intergrity validat$3) near2 (SMM or (system management))
+(james martin staddon)
+(johnson or ziegler).in.
+(krieg.in. and klinman.in.) and (immune.clm. and deficiency.clm.)
+(laminat$ same gate same (hf or hafnium) same (la or lanthanum))
+(lcd or (liquid adj3 crystal adj3 display))
+(LFA adj 1) OR CD11A OR (ALPHA adj L) 
+(LI or YEH or LEE).inv.
+(login or "logging in" or "log in" or authoriz$5 or credential$3) with ("care team" or physician or doctor or nurse or "healthcare provider" or "health care provider") with access$3
+(lok-c$ or boing-a$ or Sargent-I$ or sooranna-s$ or joris-a$ or joris-m$ or nieuwland-r$ or surk-a$).in.
+(maize or corn) and (short$ near3 internode)
+(match$ or compar$) near10 (field$ or subject$) near10 (file or record)
+(mcrb$3 or metb$2) and methioni$4
+(medium or disk or disc or cd or dvd or bd) same ((groove or track) near5 wobbl$3)
+(medium or disk or disc or cd or dvd) near9 (space or capacity or (record$3 adj time))
+(Mek kinase ERK kinase or MEK protein or ERK protein)
+(mekada eisuke)[IN]
+(microniz$6 same (cell adj wall)) and (protein same (legume or algae or grain or ((single adj cell) near3 plant) or soybean or soy or sesame or flax or (mung adj bean) or kelp or laver or wakame or spirulina or rice or millet or maize or barley or wheat or oat or yeast or Saccharomyces or Candida or (soybean adj pomace) or(colza adj meal) or (cotton near3 pomace) or glutenin))
+(monitor$ or check$ or detect$ or test$ or debug$) near5 (behav$ or error$ or condition$) near4 (application$ or program$ or code$)
+(multidrug resistance) near5 transporter$
+(multi-stage$ or (multi near1 stage$)) near1 switch$6
+(Oconnor).in.
+(PERKINS or MERCALDI or MATSA or KOSTOULAS).inv.
+(Pfeiffer)[IN] OR (Ulrich)[IN]
+(phospholipid or glycolipid or diglyceride) same ((polyoxyethylene poly adj oxyethylene) or (poly adj ethyleneglycol or peg or polyethyleneglycol))
+(plasma or discharge) and inner surface and (tube or tubular)
+(plularity or miltiple) near2 accounts with credential
+(polariz$4 or polarization or polarisation or polaris$4)
+(polyvinylpyrrolidone near20 (stab$6 or viscosity or thinning))
+(provid? or giv? or collect? or acquir? or send? or transmit? or transfer? or communicat?)near8(address or hyperlink or URL or location near4 information or device near5 id?)near8(tech? near support or help near4 desk or admin?)
+(ps20 or WFDC1)
+(PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO)
+(purchas$3 or buy$3) near20 (product or article) near20 (real-time or real adj time) near20 (sales or sell$3) near20 controll$4 near20 (pric$3 or cost$3) near20 clock$3
+(rating same system)
+(record$3 or stor$3 or sav$3 or log$4) adj7 mobile adj6 connection$1 same (table$1 or database$1 or file$1)
+(right$ near object$)
+(rinse OR rinsed) WITH cells
+(schema and relational and cache and field$1 and value1$1 and read and query$3).ab. and @py<=2010
+(SDF-1 or SDF1) with heparin
+(search ADJ engine) SAME (buyer or purchaser or consumer or customer) SAME (seller or manufacturer or vendor or merchant)
+(search ADJ engine) SAME (buyer or purchaser or consumer or customer) SAME (seller or manufacturer or vendor or merchant) SAME (specification or characteristics or describ$3 or description)
+(second same division) or sdr
+(shar$ near media)
+(silicone or polysiloxane) and dissolver disk
+(skew$4 or inclinat$4 or tilt$3) adj2 (error or signal)
+(snmp near (get or request) with (poll$3 or notif$7))
+(SPD$1 or (suspend$3 WITH particle$1)) SAME (opaci$4 or opaque$4) SAME control$4
+(stor$3 delay value1)
+(switch$ or select$ or choos$) near (frequenc$ or subband$ or bandwidth or carrier$ and subcarrire$) and (power or interferenc$) near threshold$
+(switch$ or select$ or exchang$ or swop$ or swap$ or chang$ or replac$ or substitut$) near (carrier$ or frequen$ or bandwidth$) same (signal near quality or SINR or SIR)
+(switch$$ near1 (fabric or core$))
+(TANAKA-TAKATOSHI$ or ASAKAWA-HIROSHI$ or NAGASHIMA-HITOSHI$ or ASAO-MASAYA$).in.
+(terminals)
+(test or testing or calibrat$) adj2 (media or medium or disk or disc)
+(test or testing or calibrat$) adj3 (medium or disk or disc) 
+(time near2 period) with suspicious
+(titanium and (titanium near (particle or $sphere or $capsule or $fiber or nano$ or micro$) same (size or diameter)) and (nano$ or micro$) and (size near5 $nm)) 
+(top and bottom) near3 surface$1 and stage$1 and calibration near3 bay$1
+(transplant$ or graft$) and (treat$ or therap$ or inhibit$ or prevent$ or suppress$) and (lf15-0195)
+(trench with isolat$4) and (gate with (recess$3 or groove or trench))
+(TrueFisp or True-Fisp or "True Fisp" or (true with fast with steady$1State with precess$4))
+(type adj of adj incident$).clm. and (known adj criminal adj activities).clm.
+(WATANABE-TAICHI$ or SAWA-YUJI$).in.
+(williams)adj(john)adj(c)
+(yarrowia or oleaginous)
+(ysz or yttria or ytterbia) and "thermal barrier" and impurity
+@ad<20071106
+@pd>20050523
+@pd>20050805
+@pd>20090403
+@pd>20091109
+05rm300035
+10/440,516
+10562205
+11/525,715
+11169576
+11374486
+11631681
+11667746
+11betahydroxysteroid dehydrogenase or 11beta-hsd
+12006201
+12211390
+12349853
+12557610
+12562149
+12577006
+12650125
+12728915
+12777193.pn.
+12865737
+12953783
+12967091
+13287262
+157258
+1685094
+200+0263361.did.
+20000646297
+20020040723
+20020069190.pn.
+20020069190.pn. 
+20020124057
+20020131365
+20020196296.pn.
+2003/0084484
+20030077745
+20030113348
+20030157036
+20030228315
+2003157036
+20040009767
+20040013781
+20040025078.pn.
+20040043229
+20040187918.pn.
+20040207724
+2004101606.pn.
+20050028154 or 2006107030
+20050048634.pn.
+20050059028.pn.
+20050112639.pn.
+20050113449
+20050155117.com
+20050181202
+20050221440.did.
+20050281363 or 7519136 or 5301127
+2005198606
+20060062178.pn.
+20060085343
+20060094036.pn.
+20060094953
+20060230981
+20060263361.did.
+20060291587
+20070054739.pn.
+20070061197.pn.
+20070130151 or 20060112094 or 20040019697
+20070135372.pn.
+20070184111 and core and (agent or pharmaceutical or vitamin or herb$ or extract)
+20070218122
+20080056994.pn.
+20080090282 and TEMPO
+20080118569
+20080138622.pn.
+20080280289.pn.
+20080316902
+20090002097
+20090053295.pn.
+20090053295.pn. or 7348313.pn.
+20090055596.pn.
+20090137496.pn.
+20090163612
+20090170931
+20090217979.pn.
+20090284482
+20090285860
+20090304679.did.
+20090305248.pn.
+20090324452.pn.
+2009086558.pn.
+20100010068
+20100010744
+20100035965
+20100061394.pn.
+20100157910
+20100209529 [pn]
+20100259486
+20100280892.pn.
+20110117564.pn.
+20110119318.pn. 
+20110151462.pn.
+20110177594
+20110187497
+20110224086
+20110244455.pn.
+20110280876.pn.
+2011088309.pn.
+202164340.did.
+265128
+2813059.pn. or 4592920.pn.
+3378056.pn.
+3654936.pn.
+373662[apn]
+374/$.ccls.
+4059442.pn.
+4066786.pn.
+4093606.pn.
+410749.apn.
+4225619.pn.
+423/447.1-447.9.ccls. and (PAN or polyacryl$9) and shrink$5
+423/447.1-447.9.ccls. and tensile and elastic
+423/447.3.ccls. and fluidi$8
+424/1.73,1.77,1.65.ccls.
+424/228.1.ICLS.
+424/70.1.ccls.
+4298111
+4343819.pn.
+435/4,29,325,243.ccls.
+4582055.pn. or 20040052730.pn. or 20070191716.pn.
+4668662.pn.
+46888172.pn.
+4900162.pn.
+502/309-439.ccls.
+5122569.pn. and block
+5132906.pn. or 20080223637 or 20090326748 
+5151082.pn. 
+5183901
+525/193,217,221,222.ccls.
+525/199,200.ccls. or 524/519,520.ccls.
+528/15.ccls. or 528/29.ccls.
+5292523.pn.
+5372743 [pn]
+5374710.pn. and (tim$3 or control$4)
+5413780.pn.
+544/196-198.ccls.
+5525464.pn.
+5530101.pn.
+5537618.pn.
+556/4$.ccls. and (xylitol or xylose)
+5574466
+5589182.PN.
+5671303.pn.
+5679723.pn.
+5774819.pn.
+5777512.pn. or 2005052299
+5831080.pn.
+5935894.pn.
+5957859
+60/312,279
+6004781.pn.
+60-239929
+6027945.pn. or 5990302.pn.
+609473.pn.
+6101484.pn. or 6604089.pn. or 6631356.pn.
+6261804
+6284495
+6415253.pn. or 6272459.pn.
+6424706.pn.
+6503752.pn.
+6521427.pn. and (parsed oligonucleotides)
+6541520.pn.
+6592863.pn.
+6682745.pn.
+6683043 [pn]
+6772136 or 20110082666 or 7548873 
+6801527.pn.
+6901427.pn.
+6905516
+705.clas.
+705/26.7.ccls. or 705/26.9.ccls. or 705/27.1.ccls. or 705/14.49.ccls. or 705/14.53.ccls. or 705/14.55.ccls. or 705/14.58.ccls. or 705/14.66.ccls. or 705/14.73.ccls.
+715/$.ccls.
+717/100-103,120-123,168-170.ccls.
+717/100-129.ccls.
+7235361.pn. and quantum dot
+7265090.pn.
+7325045.pn.
+7442764.pn.
+7496588.pn.
+7550433.pn.
+7579437.pn.
+7691969.pn.
+7720654 or 7113559 or 7113559 or 20070100596
+7736670.pn.
+7842458[pn]
+7864843.pn.
+7912969.pn.
+7913947.pn. or 5639691.pn. 
+7998479.pn.
+8039590
+8041732.pn.
+8055688.pn.
+8071562.pn.
+8077913.pn.
+83160645
+ABC adj transport$2
+alkyl adj carbonate
+allodynia or hyperpathia or hyperresthesia or hyperalgesia or paresthesia
+alpha$4 adj3 amylas$4
+alumina blend
+alzheimer
+anti-erythropoietin adj antibod$
+AOX3700D0
+arani and vulnerability
+astrocytoma
+behring [as]
+ben near sasson.inv.
+bernd NEAR2 mueller.in.
+biglycan
+bimodal or dimodal or trimodal or tetramodal or multimodal or polymodal or bi modal or di modal or tri modal or tetra modal or multi modal or poly modal or bimodality or dimodality or trimodality or tetramodality or multimodality or polymodality or bi modality or di modality or tri modality or tetra modality or multi modality or poly modality
+bioneer.as.
+blok-edward$.in. or ellul-maria$.in. or jacob-sunny$.in. or pickett-alfred$.in.
+bloom-filter$ or (blomm near1 filter$)
+BR3 or (BR adj 3)
+BUJARD, HERMANN.IN. 
+buprenorphine.ab. and artrhitis
+bzip.clm. and plant.clm.
+cash$ and (internal adj4 rate$) and debt
+cd34.clm.
+cdp.clm.
+ceramic and ((metalliz$ or metaliz$) near5 (coated or coating or layer or layered or film or plate or plated or plating or coat)) and (Picocoulomb or "pico coulomb" or (partial$ near2 discharg$))
+chalmers.inv.
+CHANNAKESHAVA.inv.
+chlorhexidine and polymer and silicone and urethane
+chondrocyte
+chu.in.
+clermont.in. and agent adj based
+clock near3 malfunction near5 (usage right)
+Clostridium and butyricum and Miyairi
+clothianidin and metconazol$2
+Coffey M.IN.
+concentration near5 surfactatn near5 lys$3 near5 cell
+control panel
+control same sample
+convert$ near3 web$
+coordinat$3 near4 (intelligent$ or auto$ or local or actual) near30 (configur$ or determin$) near15 context same mobile host
+cordata
+Costantino.IN.
+cotton or gossypium
+coulter[xp]
+cyclic aliphatic diol or cyclic aliphatic dihydroxy$ or cyclic diol 
+danshensu
+danziger.in.
+data adj structur$
+delta adj 8 adj desaturase
+detect$3 adj7 food adj7 product$1 adj7 defect$1
+detergent builder granul$
+device with (music or song) same beach
+diagnosing.clm.
+dielectric ceramic particle same aggregate
+DIETZSCHOLD.in. and rabies
+display$ near10 (panel$ or screen$)
+diving suit
+document near drafting
+duffy-b$.xa.
+Eby-w$.in.
+ecdysone$ near5 receptor$
+electrodialy$ or (electro near2 (dialysis or dialytic$))
+elvaloy$ same (1820ac or 3135eac or 34035eac or 3427ac)
+embryonic stem
+eming.in. or krieg.in. or sollberg.in. or lauer.in.
+ep-1046398-$.did.
+epoxy$ or eupergit or (epoxy adj soabeads)
+epoxy$9 or propylene oxide
+epoxysuccinamid$9 and isobutoxy$9 qand oxirane and carbamoyl$9
+ERF1 
+establish$3 near3 connection$1 same protocol$1
+ether near2 $phosphate
+ethylene near3 (methacrylate or acrylate or methymethacrylate or butylacrylate)
+etravirine
+extend$ adj3 (life or lifetime) adj3 (laser or light or beam)
+ferment? and Saccharomyces and butanol
+fernandez-marie$.in.
+first composition parameter
+first syngas number or first synthesis gas number
+flook-ronald.in.
+flux same electrophore$7
+folate receptor alpha or FOLR1 or FR alpha
+fractionating and algae
+fractionating and algae and pH and polar and solvent
+garbage and threshold and young and old and list and unvisit$4
+geographical near2 information
+glutamine adj synthtase with bar
+growth hormone or gh or hgh
+GUI and (alternat$4 same navigat$4 same object$1)
+harwood louis
+Hello
+heterogeneous or heterophas$ or multiphas$ or polyphas$ or hetero phas$ or multi phas$ or poly phas$ or heteromorph$ or hetero morph$ or (island with sea) or (continuous with discontinuous) or (discrete with continuous) or (discrete with matrix) or (matrix with domain) or (dispersed with continuous) or (dispersed with matrix) or (noncontinuous with continuous) or (noncontinuous with matrix) or (non continuous with continuous) or (non continuous with matrix) or (matrix with nodule) or (matrix with node)
+hicks-j$.in.
+high adj2 frequency
+hissen.inv. or cartina.inv.
+holtcamp-matthew$.in. or bedoya-matthew$.in.
+huynh, cong.xa. and hong, stephen.xp.
+hydrogenat$9 benzenepolycarboxylic acid 
+hypromellose
+IGF-1R tumor
+immunostimulatory adj oligo
+impatiens near10 walleriana
+IN289755
+investment near5 analytical near5 tools
+ion adj exchang$5
+iron and alkaline and heat treat$4
+jasmonic adj acid.ab. and (exfol$ )
+jp-5436025-$.did.
+ketamine with ketoprofen
+Kir2dl1 and pre-eclampsia
+Kroutil-w$.in. or Lara-m$.in.
+kwak-won-kyu$.in.
+L1 and (preview$ near2 font$1)
+lee.inv.
+lf15-0195
+library
+lieberburg.in.
+LIF near (ERK or MEK) near GSK3
+liposome
+liquid crystal$ same ((electron donor or porphyrin$ or phthalocyanine or discotic) with (electron acceptor or fullerene or carbon nanotube or graphie or dye or thiophene)) 
+liu.in.
+lu.in.
+Machida.in.
+magnesium ascorbyl phosphate or ascorbyl magnesium phosphate or ascorbyl monophosphate magnesium or L-Ascorbic acid phosphate magnesium or Ascorbic acid phosphate magnesium
+makower.inv.
+master same controller and compatability
+mccarthy.in. near2 william.in.
+MDR3 or ABCB4 or PGY3 or (multidrug adj resist$ adj 3)
+memory adj polymer
+MEMORY SAME (WRIT$5 NEAR2 SYMBOL$1)
+methacrylic acid
+methane or natural gas
+model near view
+moretta-alessandro$.in.
+myostatin.clm.
+myristamidopropylene
+myrtle or myrtus communis
+Na$ near5 exchange$
+Nabel.in. and DNA vaccine
+nanoparticle or nanocomposite
+NDV and (vlp or virus like) and M and (chimeric or chimera or heterologous) and RSV
+network with test$3 system
+nitride near2 crystal$9
+nitrosyl same nitric oxide
+notif$7 near (buffer$3 or queu$3)
+omega adj 3 adj4 fatty
+online adj1 (group or space)
+optical near3 probe
+osmotic and pump and piston and implant
+osmotic dosage form
+osp
+Panabaker.inv. near Ruston
+panzara.in.
+particle and LED
+particle same taurolidine
+patient with ("care plan" or "care path") with (task or status)
+penalty adj scor$
+PERFORMANCE NEAR7 (TASK OR TASKS OR JOB$1 OR ACTIVITY OR ACTIVITIES OR ASSIGNMENT$ OR DUTIE$ OR DUTY) NEAR5 (PRODUCTION$ OR FULFILL$ OR ACCOMPLISH$) NEAR8 (CRITERIA OR CRITERION)
+peroxiredoxin
+peugh
+Peumus boldus or Peumus or Boldo 
+phospholipase near3 protein kinase 
+pinnisch.in. near2 (russell.in. or russel.in.)
+polyhydric or diol or glycerol or glycerin
+polymer$ near2 (color$ or dye or pigment$)
+polypropylene adj impact adj copolymer
+preS2 same Kozak
+processor
+proline near10 arginine same inluenza
+propanil or dichlorophenylpropanamide or dichloropropanilide
+propargyl alcohol or propargylic alcohool
+PTA adj 9529
+publish$6 with publick adj key near2 parameter$2
+radar$1 or 342/1-205.ccls. or 348/441-442.ccls.
+random$ near (switch$ or select$) and (component near carrier or subband or bandwidth or frequenc$) and eNB
+REQUEST WITH FRAUD WITH RISK WITH REPORT
+rjs01001
+Roth-Wolfgang$.in.
+rs2518224 or rs4825476
+rubber and (diene or isoprene or chloroprene or "acrylic rubber" or EPDM or "ethylene propyle diene terpolymer")
+rubin.in.
+sahouria[in]
+salt and formula and pharmaceutical and nitrogen and sulfur and hydrogen and rings
+sbm or styrene butadiene methacrylate or polystyrene polybutadiene polymethacrylate or polystyrene polybutadiene polymethylmethacrylate or ps-pb-pmma
+screen$ and test and compound$ and contact$ and interact$
+sean NAER2 simpson.in.
+seed with yellow
+sense strand
+sequence.ti.
+sericin
+shewareged
+Shiga
+Siphonochilus aethiopicus or Natal ginger or Wild ginger or Wildegemmer or indungulo or isiphephetho
+sofia-susan.in.
+softener or (ion adj exchange)
+solid state deflector
+sp600215
+stabilization same agrochemical same fizz
+Steidler-Lothar.in.
+sulfo adj3 ester$
+sweat
+switch$ near6 (3-d or 3-dimension$ or three-dimension$ or stereoscop$ or stereo-scop$) near6 (2-d or 2-dimension$ or two-dimension$)
+synthetic adj liposome
+terzic.in. or behfar.in.
+text near blocks
+three nrea5 dimension$
+three$ near dimensional near movement with pointer near display 
+Tien-m$.in.
+TIM adj 1
+tonsillectomy
+touch near screen
+traffic same flow same normal$ same (pattern or capacity)
+transmembrane$ near5 potential$
+trifloxysulfuron$7 same glyphosate
+tzu-hsaia and wei
+us 20040058430
+US 20070259412 
+us-20010051186-$.did.
+us-20030235633-$.did.
+us-2004300204-$.did.
+US-2396515-$.DID. OR US-3152094-$.DID. OR US-3152904-$.DID. OR US-3485658-$.DID. OR US-3511764-$.DID. OR US-3624835-$.DID. OR US-3647439-$.DID. OR US-3846236-$.DID. OR US-3933507-$.DID. OR US-3996141-$.DID. OR US-4113658-$.DID. OR US-4130517-$.DID. OR US-4136177-$.DID. OR US-4136178-$.DID. OR US-4260677-$.DID. OR US-4310509-$.DID. OR US-4328799-$.DID. OR US-4340043-$.DID. OR US-4393048-$.DID. OR US-4474571-$.DID. OR US-4483688-$.DID. OR US-4529623-$.DID. OR US-4604384-$.DID. OR US-4608041-$.DID. OR US-4612337-$.DID. OR US-4624656-$.DID. OR US-4708821-$.DID. OR US-4721724-$.DID. OR US-4747847-$.DID. OR US-4782819-$.DID. OR US-4801291-$.DID. OR US-4902503-$.DID. OR US-4915694-$.DID. OR US-4969881-$.DID. OR US-5049139-$.DID. OR US-5086620-$.DID. OR US-5149524-$.DID. OR US-5151271-$.DID. OR US-5158772-$.DID. OR US-5175229-$.DID. OR US-5236421-$.DID. OR US-5342528-$.DID. OR US-5354862-$.DID. OR US-5407685-$.DID. OR US-5432077-$.DID. OR US-5447492-$.DID. OR US-5453401-$.DID. OR US-5470585-$.DID. OR US-5503840-$.DID. OR US-5508038-$.DID. OR US-5508417-$.DID. OR US-5516502-$.DID. OR US-5527534-$.DID. OR US-5567495-$.DID. OR US-5593683-$.DID. OR US-5599296-$.DID. OR US-5603946-$.DID. OR US-5614568-$.DID. OR US-5681579-$.DID. OR US-5683713-$.DID. OR US-5693624-$.DID. OR US-5695777-$.DID. OR US-5709870-$.DID. OR US-5725491-$.DID. OR US-5735251-$.DID. OR US-5736582-$.DID. OR US-5753251-$.DID. OR US-5792090-$.DID. OR US-5804213-$.DID. OR US-5820918-$.DID. OR US-5830496-$.DID. OR US-5833665-$.DID. OR US-5855570-$.DID. OR US-5863548-$.DID. OR US-5863864-$.DID. OR US-5869073-$.DID. OR US-5908693-$.DID. OR US-5927317-$.DID. OR US-5951458-$.DID. OR US-5965204-$.DID. OR US-5972317-$.DID. OR US-6000403-$.DID. OR US-6011194-$.DID. OR US-6042845-$.DID. OR US-6051614-$.DID. OR US-6099805-$.DID. OR US-6103868-$.DID. OR US-6113287-$.DID. OR US-6159977-$.DID. OR US-6187290-$.DID. OR US-6201164-$.DID. OR US-6214360-$.DID. OR US-6224622-$.DID. OR US-6235964-$.DID. OR US-6248342-$.DID. OR US-6264927-$.DID. OR US-6316084-$.DID. OR US-6326524-$.DID. OR US-6468989-$.DID. OR US-6471982-$.DID. OR US-6530895-$.DID. OR US-6669981-$.DID. OR US-6716895-$.DID. OR US-6897349-$.DID. OR US-6921529-$.DID. OR US-7129389-$.DID. OR US-7160553-$.DID. OR US-7166330-$.DID. OR US-7576255-$.DID. OR US-20010026810-$.DID. OR US-20020001604-$.DID. OR US-20020042587-$.DID. OR US-20020073891-$.DID. OR US-20030041188-$.DID. OR US-20030083610-$.DID. OR US-20030093057-$.DID. OR US-20030186955-$.DID. OR US-20040082925-$.DID. OR US-20040108462-$.DID. OR US-20040127025-$.DID. OR US-20040147618-$.DID. OR US-20040170545-$.DID. OR US-20040173056-$.DID. OR US-20040180093-$.DID. OR US-20040253536-$.DID. OR US-20040254532-$.DID. OR US-20050008861-$.DID. OR US-20050029121-$.DID. OR US-20050186135-$.DID. OR US-20050265894-$.DID. OR US-20060276740-$.DID. OR US-20070003603-$.DID. OR US-20070207335-$.DID. OR US-20070254044-$.DID. OR US-20070293800-$.DID. OR US-6014585-$.DID. OR US-6004667-$.DID. OR US-5454886-$.DID. OR US-5326567-$.DID.
+us-7291727-$.did.
+ushijima NEAR2 richard.in.
+Vaccinium erythrocarpum or Vaccinium macrocarpon or Vaccinium microcarpum or Vaccinium oxycoccos 
+verif$7 same integrity same (software or firmware or BIOS or SMM)
+virtualiz$6 and 20080151863.pn.
+wbpm wbpv wbpu bgt wbpo wbpp wbpt wbps rmlb
+weidanz-jon$.in.
+WO 031304
+wo-199517210-$.app.
+xr2081
+yagi near akira.inv.
+YENER-DORUK$.in.
+zammert.in.

@@ -1,0 +1,601 @@
+qt=swan&q="12/358660"
+qt=swan&q="12/964,862"
+qt=swan&q="224G11" or "224 G11"
+qt=swan&q="5 nm"
+qt=swan&q="access file"
+qt=swan&q="bachmann, martin"[IN]
+qt=swan&q="cox, george"[IN]
+qt=swan&q="factor B" same antibod$
+qt=swan&q="ID3" OR "1H2" OR "1C6" OR "2A5"
+qt=swan&q="prostate cancer" and vitronectin
+qt=swan&q="SHAO-ZHAOHUI"!
+qt=swan&q="steering wheel switches".clm.
+qt=swan&q="tissue factor" or rhtf
+qt=swan&q="TOBINICK-EDWARD-L"!
+qt=swan&q=$9benzothiophen and ethoxy and proyl and azetidin$9
+qt=swan&q=( (428/32.77 |428/32.78 |428/32.79).ccls. or (503/227).ccls. )
+qt=swan&q=("20020182243" |"6270827").PN.
+qt=swan&q=("polyethylene glycol" "PEG") and ("ascorbic acid" "ascorbate") and ((colon intestin$5) near10 (clean$6 lavage evacuat$5))
+qt=swan&q=(( (g08b 13/189 ) or (g08b 13/196 ) or (g06f 9/00 ) or (h04n 7/18 ) or (h04n 5/225 ) or (g06t 1/00 ) or (g06k 9/54 ) or (g08b 13/14 ) or (h04n 5/00 ) or (b60r 25/10 ) (g06k 9/46 ) ) and (((security adj2 camera) or camera) and tamper$6))
+qt=swan&q=(((((medium adj chain adj fatty) near salt) or (sodium near octanoate)) and (((drug or therapeutic or (active adj agent) or pharmaceutical) near $%)) ) and PD<20081231)
+qt=swan&q=((((medium adj chain adj fatty) near salt) or (sodium near octanoate)) near5 $%)
+qt=swan&q=(((medium adj chain adj fatty) near salt) or (sodium near octanoate))
+qt=swan&q=(((touch adj3 (pad or screen)) or touchpad or touchscreen) with gestur$3) same (secur$3 or encrypt$4 or decrypt$4)
+qt=swan&q=((@ad<20010320 and ((defin$5 determin$5) near (policy rule laws restriction)) ) and ((associat$5 correlat$5 relat$5 match$5) near2 (geo-politic$5 geograph$5 politic$5) near2 (region boundary populat$5 segment locality country)))
+qt=swan&q=((anaerobic adj (digest OR digestion OR ferment OR fermentation OR fermenting) AND (Saccharomyces adj cerevisiae) AND ((non-ionic OR non$ionic) WITH (surfactant OR surfactants)) AND temperature AND (sludge OR waste OR sewage OR garbage) ) AND biogas)
+qt=swan&q=((bacteria SAME2 (ferment OR fermentation OR digest OR digestion) AND anaerobic WITH (ferment OR fermentation OR digest OR digestion) AND temperature AND ((tank OR tanks) SAME2 (ferment OR fermentation)) AND (non$ionic adj surfactant OR non$ionic adj surfactants OR non-ionic adj surfactant OR non-ionic adj surfactants) ) AND (biogas OR gas OR methane OR hydrogen))
+qt=swan&q=((Bender near3 Christopher) or (Turi near3 (Andrew or Robert))).in.
+qt=swan&q=((effervesc$ or disintegra$ near3 (granule or granular) not effervesc$ or disintegra$ near3 (granule or granular) not acid and alkali ) not (effervesc$ or disintegra$ near3 (granule or granular) not effervesc$ or disintegra$ near3 (granule or granular) not acid and alkali not detergent or clean$ near1 composition ))
+qt=swan&q=((first type$1) and (second type$1) and touch and mouse and filter$).clm.
+qt=swan&q=((FPGA or (programmable adj2 gate adj2 array)) NEAR5 (parallel NEAR5 process$6))
+qt=swan&q=((gamma adj tocopherol) or gammatocopherol) adj methyltransferase$
+qt=swan&q=((glycosyl with hydrolase) or xylanase or glucanase)
+qt=swan&q=((magnetic adj resonan$2) or MRI or NMR)
+qt=swan&q=((magnetic with resonance) or mri or nmr or mr)
+qt=swan&q=((molten adj salt) near12 (mix or mixture)).clm.
+qt=swan&q=((network-based or (network near1 based)) near1 local near1 mobility near1 management) or NetLMM
+qt=swan&q=((radio with frequency) or radio-frequency or radiofrequency or rf)
+qt=swan&q=((scfc ) and single adj chain)
+qt=swan&q=((time adj digital) adj convert$3)
+qt=swan&q=((Tkatch neaer3 Alexander) or (Arash near3 Ghanaie-Sichanie) or (Janedittakarn near3 Akezyt) or (Ott near3 Michael) or(Gupta near3 Nishant)).in.
+qt=swan&q=((virtual machine$1) and (physical server$1) and (load balancing) and overloaded$ and underloaded$ and migrat$).clm.
+qt=swan&q=((wound same heal$ ) and (tonsillectomy or tonsillectommy))
+qt=swan&q=(20020140425.pn. or 7141978.pn. or 20050270023.pn. or 6194900.pn.)
+qt=swan&q=(20040078277 or 20040107127 or 20090281878)[pn] 
+qt=swan&q=(20080195473 or 20070219926 or 20070012759 or 6330543 or 20090089193 or 0019163).pn.
+qt=swan&q=(20080288396 or 8055557 or 8027890 or 20040249749 or 20050234817 or 7406442 or 20090164370 or 20100100480).pn.
+qt=swan&q=(20090118464 or 4924077).pn.
+qt=swan&q=(20110300316 or 20110300315).pn. 
+qt=swan&q=(252/184,188.25,188.26,188.27,182.32,182.34).ccls.
+qt=swan&q=(252/187.23,187.21,187.34,186.21;423/477).ccls.
+qt=swan&q=(4096254 or 4259593).pn.
+qt=swan&q=(424/46 or 424/489).ccls.
+qt=swan&q=(424/70.122).ccls. and aminosilicon$
+qt=swan&q=(435/115)!.ccls.
+qt=swan&q=(435/155)!.ccls.
+qt=swan&q=(435/183)!.ccls.
+qt=swan&q=(4379755 4606913 4741944 4776976 4865221 4904524 5085854 5382418 5539021 5888842 5976804).pn. and zinc
+qt=swan&q=(5,705,369)[PN]
+qt=swan&q=(502/60).ccls.
+qt=swan&q=(514/23;536/29.2)![CCLS]
+qt=swan&q=(526/913)![CCLS]
+qt=swan&q=(536/20,123.1)![CCLS]
+qt=swan&q=(552/526).CCLS.
+qt=swan&q=(552/610).CCLS.
+qt=swan&q=(5608778 or 5359182).pn.
+qt=swan&q=(5-ht or serotonin) same (anxiety or anxieolytic) same (brain)
+qt=swan&q=(6,171,344)[PN]
+qt=swan&q=(6039251 6443890 7156809 7301451 7428189 20030046090 20030146926 20030221687 20040015132 20050143671 20050146431 20050148890 20050151640 20050228245 20070232942 20100120585 20100131280 5754111 5348008 5564429 6893396 7539532 20010027384 20020019584 20060111948 20070265533 20080154099 20090089100 20090227876 20090227877 6151521 4588383 5617855 5843142 6106463 4102332 4295232 4297677 4433684 4531527 4768088 4816689 4835372 4843378 4857716 4912388 4938582 5006987 5008942 5181200).pn.
+qt=swan&q=(6879952  7047189  7315816  7533017  7562013  20010037195  20050091042  20070055511  20070100615  20090150146  20080071540  20110125496  5828997  5353376  7533015  7567678  7804973  7895038  7995767  20030097257  20040047474  20040220800  20060122832  20070005350  20080120100  20080294432  20080310646  20090030552  20090055170  20100124339  20110200205  20040040621  20090257536  20100070274  20100329472  4488005  4507750  5258924  5386475  5966690  6157727  7478041  7680667  7720679  20030177007  20060143017  20090076815  20090076827  20110131044  20110170726  ).pn.
+qt=swan&q=(707/705).ccls.
+qt=swan&q=(717/100 |717/101 |717/102 |717/103 |717/120 |717/121 |717/122 |717/123 |717/168 |717/169 |717/170).ccls.
+qt=swan&q=(7298543 or 7252749 or 7079305 or 6951666 or 6838372 or 6274412 or 6153348 or 6110632).pn.
+qt=swan&q=(7763673 or 7527870 or 7087127 or 6828403).pn.
+qt=swan&q=(administ$) with (anti$) with (GM-CSF or granulocyte macrophage colony stimulating factor)
+qt=swan&q=(air near2 (handl$3 or clean$3 or treat$5 or purifier or purification or purif$5 or deodori$6 or sterili$6 or disinfect$3 or saniti$5 or filt$7)).ab. 
+qt=swan&q=(alum or ((aluminum or aluminium) near5 (sulfate or sulphate)))
+qt=swan&q=(aminolaevulinic adj2 ester$) same dermal same particle
+qt=swan&q=(amorphous or noncrystal$6 or (non adj crystal$6) or (metallic adj glas$4) or metglas) near21 (metal$4 or alloy$4)
+qt=swan&q=(antibod$) near5 ((interleukin-1 alpha or il-1alpha or il1alpha or interleukin1 alpha) near5 human$)
+qt=swan&q=(asymmetr$4 or variance or variation or fluctuation) near4 rf
+qt=swan&q=(bear).in.
+qt=swan&q=(ben near sasson).inv.
+qt=swan&q=(biodegradable or bioabsorable or biocompatible) and (oligomer$ or prepolymer$) same (unsaturated or unsaturation)
+qt=swan&q=(birkle stephane)[IN]
+qt=swan&q=(calzone)adj(frank)adj(j)
+qt=swan&q=(carbon monoxide dehydragenase or hyrdrogenase or NAD(P)H-ferredoxin oxidoreductase or ferredoxin) and recombinant 
+qt=swan&q=(charging agent and metallic particle).clm.
+qt=swan&q=(chlorhexidine and polymer and silicone and urethane)
+qt=swan&q=(clynes)[IN] AND ((regulatory t cell) and (immune complex$))
+qt=swan&q=(coli near5 (express$ or produc$)).ti. 
+qt=swan&q=(collimat$3 or convergence or divergence or concove or concave) adj2 lens
+qt=swan&q=(collimat$3 or relay) adj2 lens
+qt=swan&q=(colon or colorectal) and survival and pbmc
+qt=swan&q=(combin$ near1 images)
+qt=swan&q=(compress$3 fluid) same (temperature)
+qt=swan&q=(cross near1 beta) and (composition or preparation or formulation or medicin$3 or blood)
+qt=swan&q=(CXCR4 or CD184 or D2S201E or fusin or HM89 or HSY3RR or LESTR or NPY3R or NPYR or NPYY3R).ab.
+qt=swan&q=(decreas$ or inhibit$ or reduc$ or suppress$) near6 cell near3 death
+qt=swan&q=(device or node or terminal or computer or client) near5 telemetry same server$5 near5 telemetry same execut$4 near5 aapplication
+qt=swan&q=(document near processing)
+qt=swan&q=(drug or substance) adj (addiction or abuse or dependence) same (problem) same (behavior or behavioral) same (psychosis or psycholoigical)
+qt=swan&q=(DVT or duvane or duvatriene) and tobacco,clm.
+qt=swan&q=(electric$ with vehicle) and (second$ with digital$ with control$) and (second$ with actuators) and ((vote$ or voting$) with (proce$ or mechani$ or step$))
+qt=swan&q=(electrolytic$ or electrolysis or electrolyz$)
+qt=swan&q=(electron donor or porphrin$ or phthalocyanine$ or discotic) with (electron acceptor or fullerene$ or nanotube or graphene or dye or thiophene)
+qt=swan&q=(etidronic near acid) and (cosmetic and aging)
+qt=swan&q=(fermentor or bioreactor)
+qt=swan&q=(first or second or plural$4) adj3 (light or beam or laser)
+qt=swan&q=(Flower near5 White) and (Hilum near5 Black) and (Pubescence near5 (Light adj tawny)) and (Pod near5 Tan) and (Maturity near5 IV)
+qt=swan&q=(Flower near5 White) and (Hilum near5 Black) and (Pubescence near5 (Light adj tawny)) and (Pod near5 Tan) and (Maturity near5 IV) and (lodging near5 ("5.8" or "5.9" or "6.0"))
+qt=swan&q=(hexavalent or (hexa near2 valent)) near5 (chrome or chromium)
+qt=swan&q=(hydrogen peroxide) same (sodium hypochlorite) same peroxide
+qt=swan&q=(hydroxyproline near7 (compound or deriv$ or salt)) and (dermatitis or atopic or urticaria or rhinitis or conjunctivitis or pollin$ or asthma)
+qt=swan&q=(IFN-beta) or (interferon-beta)
+qt=swan&q=(image$ or lcd) near5 (display$ or screen$ or panel$)
+qt=swan&q=(INSTRUMENT? OR DERIVATIVE? OR OPTION? OR FUTURE? OR FUND? OR SECURITIES OR STOCKS OR EQUITIES OR BOND).ti,ab.
+qt=swan&q=(intergrity validat$3) near2 (SMM or (system management))
+qt=swan&q=(james martin staddon)
+qt=swan&q=(johnson or ziegler).in.
+qt=swan&q=(krieg.in. and klinman.in.) and (immune.clm. and deficiency.clm.)
+qt=swan&q=(laminat$ same gate same (hf or hafnium) same (la or lanthanum))
+qt=swan&q=(LFA adj 1) OR CD11A OR (ALPHA adj L) 
+qt=swan&q=(LI or YEH or LEE).inv.
+qt=swan&q=(lok-c$ or boing-a$ or Sargent-I$ or sooranna-s$ or joris-a$ or joris-m$ or nieuwland-r$ or surk-a$).in.
+qt=swan&q=(maize or corn) and (short$ near3 internode)
+qt=swan&q=(mcrb$3 or metb$2) and methioni$4
+qt=swan&q=(medium or disk or disc or cd or dvd or bd) same ((groove or track) near5 wobbl$3)
+qt=swan&q=(Mek kinase ERK kinase or MEK protein or ERK protein)
+qt=swan&q=(mekada eisuke)[IN]
+qt=swan&q=(multidrug resistance) near5 transporter$
+qt=swan&q=(multi-stage$ or (multi near1 stage$)) near1 switch$6
+qt=swan&q=(Oconnor).in.
+qt=swan&q=(PERKINS or MERCALDI or MATSA or KOSTOULAS).inv.
+qt=swan&q=(Pfeiffer)[IN] OR (Ulrich)[IN]
+qt=swan&q=(phospholipid or glycolipid or diglyceride) same ((polyoxyethylene poly adj oxyethylene) or (poly adj ethyleneglycol or peg or polyethyleneglycol))
+qt=swan&q=(plularity or miltiple) near2 accounts with credential
+qt=swan&q=(polariz$4 or polarization or polarisation or polaris$4)
+qt=swan&q=(polyvinylpyrrolidone near20 (stab$6 or viscosity or thinning))
+qt=swan&q=(ps20 or WFDC1)
+qt=swan&q=(PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO)
+qt=swan&q=(rating same system)
+qt=swan&q=(record$3 or stor$3 or sav$3 or log$4) adj7 mobile adj6 connection$1 same (table$1 or database$1 or file$1)
+qt=swan&q=(right$ near object$)
+qt=swan&q=(rinse OR rinsed) WITH cells
+qt=swan&q=(SDF-1 or SDF1) with heparin
+qt=swan&q=(search ADJ engine) SAME (buyer or purchaser or consumer or customer) SAME (seller or manufacturer or vendor or merchant)
+qt=swan&q=(search ADJ engine) SAME (buyer or purchaser or consumer or customer) SAME (seller or manufacturer or vendor or merchant) SAME (specification or characteristics or describ$3 or description)
+qt=swan&q=(second same division) or sdr
+qt=swan&q=(shar$ near media)
+qt=swan&q=(silicone or polysiloxane) and dissolver disk
+qt=swan&q=(skew$4 or inclinat$4 or tilt$3) adj2 (error or signal)
+qt=swan&q=(snmp near (get or request) with (poll$3 or notif$7))
+qt=swan&q=(stor$3 delay value1)
+qt=swan&q=(switch$ or select$ or choos$) near (frequenc$ or subband$ or bandwidth or carrier$ and subcarrire$) and (power or interferenc$) near threshold$
+qt=swan&q=(switch$$ near1 (fabric or core$))
+qt=swan&q=(TANAKA-TAKATOSHI$ or ASAKAWA-HIROSHI$ or NAGASHIMA-HITOSHI$ or ASAO-MASAYA$).in.
+qt=swan&q=(terminals)
+qt=swan&q=(test or testing or calibrat$) adj3 (medium or disk or disc) 
+qt=swan&q=(time near2 period) with suspicious
+qt=swan&q=(top and bottom) near3 surface$1 and stage$1 and calibration near3 bay$1
+qt=swan&q=(transplant$ or graft$) and (treat$ or therap$ or inhibit$ or prevent$ or suppress$) and (lf15-0195)
+qt=swan&q=(trench with isolat$4) and (gate with (recess$3 or groove or trench))
+qt=swan&q=(TrueFisp or True-Fisp or "True Fisp" or (true with fast with steady$1State with precess$4))
+qt=swan&q=(type adj of adj incident$).clm. and (known adj criminal adj activities).clm.
+qt=swan&q=(WATANABE-TAICHI$ or SAWA-YUJI$).in.
+qt=swan&q=(williams)adj(john)adj(c)
+qt=swan&q=(yarrowia or oleaginous)
+qt=swan&q=(ysz or yttria or ytterbia) and "thermal barrier" and impurity
+qt=swan&q=@ad<20071106
+qt=swan&q=@pd>20050523
+qt=swan&q=@pd>20050805
+qt=swan&q=@pd>20090403
+qt=swan&q=@pd>20091109
+qt=swan&q=05rm300035
+qt=swan&q=10/440,516
+qt=swan&q=10562205
+qt=swan&q=11/525,715
+qt=swan&q=11169576
+qt=swan&q=11374486
+qt=swan&q=11631681
+qt=swan&q=11667746
+qt=swan&q=11betahydroxysteroid dehydrogenase or 11beta-hsd
+qt=swan&q=12006201
+qt=swan&q=12211390
+qt=swan&q=12349853
+qt=swan&q=12557610
+qt=swan&q=12562149
+qt=swan&q=12577006
+qt=swan&q=12650125
+qt=swan&q=12728915
+qt=swan&q=12777193.pn.
+qt=swan&q=12865737
+qt=swan&q=12953783
+qt=swan&q=12967091
+qt=swan&q=13287262
+qt=swan&q=157258
+qt=swan&q=1685094
+qt=swan&q=200+0263361.did.
+qt=swan&q=20000646297
+qt=swan&q=20020040723
+qt=swan&q=20020069190.pn.
+qt=swan&q=20020069190.pn. 
+qt=swan&q=20020124057
+qt=swan&q=20020131365
+qt=swan&q=20020196296.pn.
+qt=swan&q=2003/0084484
+qt=swan&q=20030077745
+qt=swan&q=20030113348
+qt=swan&q=20030157036
+qt=swan&q=20030228315
+qt=swan&q=2003157036
+qt=swan&q=20040009767
+qt=swan&q=20040013781
+qt=swan&q=20040025078.pn.
+qt=swan&q=20040043229
+qt=swan&q=20040187918.pn.
+qt=swan&q=20040207724
+qt=swan&q=2004101606.pn.
+qt=swan&q=20050028154 or 2006107030
+qt=swan&q=20050048634.pn.
+qt=swan&q=20050059028.pn.
+qt=swan&q=20050112639.pn.
+qt=swan&q=20050113449
+qt=swan&q=20050155117.com
+qt=swan&q=20050181202
+qt=swan&q=20050221440.did.
+qt=swan&q=20050281363 or 7519136 or 5301127
+qt=swan&q=2005198606
+qt=swan&q=20060062178.pn.
+qt=swan&q=20060085343
+qt=swan&q=20060094036.pn.
+qt=swan&q=20060094953
+qt=swan&q=20060230981
+qt=swan&q=20060263361.did.
+qt=swan&q=20060291587
+qt=swan&q=20070054739.pn.
+qt=swan&q=20070061197.pn.
+qt=swan&q=20070130151 or 20060112094 or 20040019697
+qt=swan&q=20070135372.pn.
+qt=swan&q=20070184111 and core and (agent or pharmaceutical or vitamin or herb$ or extract)
+qt=swan&q=20070218122
+qt=swan&q=20080056994.pn.
+qt=swan&q=20080090282 and TEMPO
+qt=swan&q=20080118569
+qt=swan&q=20080138622.pn.
+qt=swan&q=20080280289.pn.
+qt=swan&q=20080316902
+qt=swan&q=20090002097
+qt=swan&q=20090053295.pn.
+qt=swan&q=20090053295.pn. or 7348313.pn.
+qt=swan&q=20090055596.pn.
+qt=swan&q=20090137496.pn.
+qt=swan&q=20090163612
+qt=swan&q=20090170931
+qt=swan&q=20090217979.pn.
+qt=swan&q=20090284482
+qt=swan&q=20090285860
+qt=swan&q=20090304679.did.
+qt=swan&q=20090305248.pn.
+qt=swan&q=20090324452.pn.
+qt=swan&q=2009086558.pn.
+qt=swan&q=20100010068
+qt=swan&q=20100010744
+qt=swan&q=20100035965
+qt=swan&q=20100061394.pn.
+qt=swan&q=20100157910
+qt=swan&q=20100209529 [pn]
+qt=swan&q=20100259486
+qt=swan&q=20100280892.pn.
+qt=swan&q=20110117564.pn.
+qt=swan&q=20110119318.pn. 
+qt=swan&q=20110151462.pn.
+qt=swan&q=20110177594
+qt=swan&q=20110187497
+qt=swan&q=20110224086
+qt=swan&q=20110244455.pn.
+qt=swan&q=20110280876.pn.
+qt=swan&q=2011088309.pn.
+qt=swan&q=202164340.did.
+qt=swan&q=265128
+qt=swan&q=2813059.pn. or 4592920.pn.
+qt=swan&q=3378056.pn.
+qt=swan&q=3654936.pn.
+qt=swan&q=373662[apn]
+qt=swan&q=374/$.ccls.
+qt=swan&q=4059442.pn.
+qt=swan&q=4066786.pn.
+qt=swan&q=4093606.pn.
+qt=swan&q=410749.apn.
+qt=swan&q=4225619.pn.
+qt=swan&q=423/447.1-447.9.ccls. and (PAN or polyacryl$9) and shrink$5
+qt=swan&q=423/447.1-447.9.ccls. and tensile and elastic
+qt=swan&q=423/447.3.ccls. and fluidi$8
+qt=swan&q=424/1.73,1.77,1.65.ccls.
+qt=swan&q=424/228.1.ICLS.
+qt=swan&q=4298111
+qt=swan&q=4343819.pn.
+qt=swan&q=435/4,29,325,243.ccls.
+qt=swan&q=4582055.pn. or 20040052730.pn. or 20070191716.pn.
+qt=swan&q=4668662.pn.
+qt=swan&q=46888172.pn.
+qt=swan&q=4900162.pn.
+qt=swan&q=502/309-439.ccls.
+qt=swan&q=5122569.pn. and block
+qt=swan&q=5132906.pn. or 20080223637 or 20090326748 
+qt=swan&q=5151082.pn. 
+qt=swan&q=5183901
+qt=swan&q=525/193,217,221,222.ccls.
+qt=swan&q=525/199,200.ccls. or 524/519,520.ccls.
+qt=swan&q=528/15.ccls. or 528/29.ccls.
+qt=swan&q=5292523.pn.
+qt=swan&q=5372743 [pn]
+qt=swan&q=5374710.pn. and (tim$3 or control$4)
+qt=swan&q=5413780.pn.
+qt=swan&q=544/196-198.ccls.
+qt=swan&q=5525464.pn.
+qt=swan&q=5530101.pn.
+qt=swan&q=5537618.pn.
+qt=swan&q=556/4$.ccls. and (xylitol or xylose)
+qt=swan&q=5574466
+qt=swan&q=5589182.PN.
+qt=swan&q=5671303.pn.
+qt=swan&q=5679723.pn.
+qt=swan&q=5774819.pn.
+qt=swan&q=5777512.pn. or 2005052299
+qt=swan&q=5831080.pn.
+qt=swan&q=5935894.pn.
+qt=swan&q=5957859
+qt=swan&q=60/312,279
+qt=swan&q=6004781.pn.
+qt=swan&q=60-239929
+qt=swan&q=6027945.pn. or 5990302.pn.
+qt=swan&q=609473.pn.
+qt=swan&q=6101484.pn. or 6604089.pn. or 6631356.pn.
+qt=swan&q=6261804
+qt=swan&q=6284495
+qt=swan&q=6415253.pn. or 6272459.pn.
+qt=swan&q=6424706.pn.
+qt=swan&q=6503752.pn.
+qt=swan&q=6521427.pn. and (parsed oligonucleotides)
+qt=swan&q=6541520.pn.
+qt=swan&q=6592863.pn.
+qt=swan&q=6682745.pn.
+qt=swan&q=6683043 [pn]
+qt=swan&q=6772136 or 20110082666 or 7548873 
+qt=swan&q=6801527.pn.
+qt=swan&q=6901427.pn.
+qt=swan&q=6905516
+qt=swan&q=705.clas.
+qt=swan&q=705/26.7.ccls. or 705/26.9.ccls. or 705/27.1.ccls. or 705/14.49.ccls. or 705/14.53.ccls. or 705/14.55.ccls. or 705/14.58.ccls. or 705/14.66.ccls. or 705/14.73.ccls.
+qt=swan&q=715/$.ccls.
+qt=swan&q=717/100-103,120-123,168-170.ccls.
+qt=swan&q=717/100-129.ccls.
+qt=swan&q=7235361.pn. and quantum dot
+qt=swan&q=7265090.pn.
+qt=swan&q=7325045.pn.
+qt=swan&q=7442764.pn.
+qt=swan&q=7496588.pn.
+qt=swan&q=7550433.pn.
+qt=swan&q=7579437.pn.
+qt=swan&q=7691969.pn.
+qt=swan&q=7720654 or 7113559 or 7113559 or 20070100596
+qt=swan&q=7736670.pn.
+qt=swan&q=7842458[pn]
+qt=swan&q=7864843.pn.
+qt=swan&q=7912969.pn.
+qt=swan&q=7913947.pn. or 5639691.pn. 
+qt=swan&q=7998479.pn.
+qt=swan&q=8039590
+qt=swan&q=8041732.pn.
+qt=swan&q=8055688.pn.
+qt=swan&q=8071562.pn.
+qt=swan&q=8077913.pn.
+qt=swan&q=83160645
+qt=swan&q=ABC adj transport$2
+qt=swan&q=alkyl adj carbonate
+qt=swan&q=allodynia or hyperpathia or hyperresthesia or hyperalgesia or paresthesia
+qt=swan&q=alpha$4 adj3 amylas$4
+qt=swan&q=alumina blend
+qt=swan&q=alzheimer
+qt=swan&q=anti-erythropoietin adj antibod$
+qt=swan&q=AOX3700D0
+qt=swan&q=arani and vulnerability
+qt=swan&q=astrocytoma
+qt=swan&q=behring [as]
+qt=swan&q=ben near sasson.inv.
+qt=swan&q=bernd NEAR2 mueller.in.
+qt=swan&q=biglycan
+qt=swan&q=bimodal or dimodal or trimodal or tetramodal or multimodal or polymodal or bi modal or di modal or tri modal or tetra modal or multi modal or poly modal or bimodality or dimodality or trimodality or tetramodality or multimodality or polymodality or bi modality or di modality or tri modality or tetra modality or multi modality or poly modality
+qt=swan&q=bioneer.as.
+qt=swan&q=blok-edward$.in. or ellul-maria$.in. or jacob-sunny$.in. or pickett-alfred$.in.
+qt=swan&q=bloom-filter$ or (blomm near1 filter$)
+qt=swan&q=BR3 or (BR adj 3)
+qt=swan&q=BUJARD, HERMANN.IN. 
+qt=swan&q=buprenorphine.ab. and artrhitis
+qt=swan&q=bzip.clm. and plant.clm.
+qt=swan&q=cash$ and (internal adj4 rate$) and debt
+qt=swan&q=cd34.clm.
+qt=swan&q=cdp.clm.
+qt=swan&q=ceramic and ((metalliz$ or metaliz$) near5 (coated or coating or layer or layered or film or plate or plated or plating or coat)) and (Picocoulomb or "pico coulomb" or (partial$ near2 discharg$))
+qt=swan&q=chalmers.inv.
+qt=swan&q=CHANNAKESHAVA.inv.
+qt=swan&q=chlorhexidine and polymer and silicone and urethane
+qt=swan&q=chondrocyte
+qt=swan&q=chu.in.
+qt=swan&q=clermont.in. and agent adj based
+qt=swan&q=clock near3 malfunction near5 (usage right)
+qt=swan&q=Clostridium and butyricum and Miyairi
+qt=swan&q=clothianidin and metconazol$2
+qt=swan&q=Coffey M.IN.
+qt=swan&q=concentration near5 surfactatn near5 lys$3 near5 cell
+qt=swan&q=control panel
+qt=swan&q=control same sample
+qt=swan&q=cordata
+qt=swan&q=Costantino.IN.
+qt=swan&q=cotton or gossypium
+qt=swan&q=coulter[xp]
+qt=swan&q=cyclic aliphatic diol or cyclic aliphatic dihydroxy$ or cyclic diol 
+qt=swan&q=danshensu
+qt=swan&q=danziger.in.
+qt=swan&q=data adj structur$
+qt=swan&q=delta adj 8 adj desaturase
+qt=swan&q=detect$3 adj7 food adj7 product$1 adj7 defect$1
+qt=swan&q=detergent builder granul$
+qt=swan&q=device with (music or song) same beach
+qt=swan&q=diagnosing.clm.
+qt=swan&q=dielectric ceramic particle same aggregate
+qt=swan&q=DIETZSCHOLD.in. and rabies
+qt=swan&q=display$ near10 (panel$ or screen$)
+qt=swan&q=diving suit
+qt=swan&q=document near drafting
+qt=swan&q=duffy-b$.xa.
+qt=swan&q=Eby-w$.in.
+qt=swan&q=ecdysone$ near5 receptor$
+qt=swan&q=electrodialy$ or (electro near2 (dialysis or dialytic$))
+qt=swan&q=elvaloy$ same (1820ac or 3135eac or 34035eac or 3427ac)
+qt=swan&q=embryonic stem
+qt=swan&q=eming.in. or krieg.in. or sollberg.in. or lauer.in.
+qt=swan&q=ep-1046398-$.did.
+qt=swan&q=epoxy$ or eupergit or (epoxy adj soabeads)
+qt=swan&q=epoxy$9 or propylene oxide
+qt=swan&q=epoxysuccinamid$9 and isobutoxy$9 qand oxirane and carbamoyl$9
+qt=swan&q=ERF1 
+qt=swan&q=establish$3 near3 connection$1 same protocol$1
+qt=swan&q=ether near2 $phosphate
+qt=swan&q=etravirine
+qt=swan&q=extend$ adj3 (life or lifetime) adj3 (laser or light or beam)
+qt=swan&q=ferment? and Saccharomyces and butanol
+qt=swan&q=fernandez-marie$.in.
+qt=swan&q=first composition parameter
+qt=swan&q=flook-ronald.in.
+qt=swan&q=flux same electrophore$7
+qt=swan&q=folate receptor alpha or FOLR1 or FR alpha
+qt=swan&q=fractionating and algae
+qt=swan&q=fractionating and algae and pH and polar and solvent
+qt=swan&q=garbage and threshold and young and old and list and unvisit$4
+qt=swan&q=geographical near2 information
+qt=swan&q=glutamine adj synthtase with bar
+qt=swan&q=growth hormone or gh or hgh
+qt=swan&q=GUI and (alternat$4 same navigat$4 same object$1)
+qt=swan&q=harwood louis
+qt=swan&q=Hello
+qt=swan&q=heterogeneous or heterophas$ or multiphas$ or polyphas$ or hetero phas$ or multi phas$ or poly phas$ or heteromorph$ or hetero morph$ or (island with sea) or (continuous with discontinuous) or (discrete with continuous) or (discrete with matrix) or (matrix with domain) or (dispersed with continuous) or (dispersed with matrix) or (noncontinuous with continuous) or (noncontinuous with matrix) or (non continuous with continuous) or (non continuous with matrix) or (matrix with nodule) or (matrix with node)
+qt=swan&q=hicks-j$.in.
+qt=swan&q=high adj2 frequency
+qt=swan&q=hissen.inv. or cartina.inv.
+qt=swan&q=holtcamp-matthew$.in. or bedoya-matthew$.in.
+qt=swan&q=huynh, cong.xa. and hong, stephen.xp.
+qt=swan&q=hydrogenat$9 benzenepolycarboxylic acid 
+qt=swan&q=hypromellose
+qt=swan&q=IGF-1R tumor
+qt=swan&q=immunostimulatory adj oligo
+qt=swan&q=impatiens near10 walleriana
+qt=swan&q=IN289755
+qt=swan&q=investment near5 analytical near5 tools
+qt=swan&q=ion adj exchang$5
+qt=swan&q=iron and alkaline and heat treat$4
+qt=swan&q=jasmonic adj acid.ab. and (exfol$ )
+qt=swan&q=jp-5436025-$.did.
+qt=swan&q=ketamine with ketoprofen
+qt=swan&q=Kir2dl1 and pre-eclampsia
+qt=swan&q=Kroutil-w$.in. or Lara-m$.in.
+qt=swan&q=kwak-won-kyu$.in.
+qt=swan&q=L1 and (preview$ near2 font$1)
+qt=swan&q=lee.inv.
+qt=swan&q=lf15-0195
+qt=swan&q=library
+qt=swan&q=lieberburg.in.
+qt=swan&q=LIF near (ERK or MEK) near GSK3
+qt=swan&q=liposome
+qt=swan&q=liu.in.
+qt=swan&q=lu.in.
+qt=swan&q=Machida.in.
+qt=swan&q=magnesium ascorbyl phosphate or ascorbyl magnesium phosphate or ascorbyl monophosphate magnesium or L-Ascorbic acid phosphate magnesium or Ascorbic acid phosphate magnesium
+qt=swan&q=makower.inv.
+qt=swan&q=master same controller and compatability
+qt=swan&q=mccarthy.in. near2 william.in.
+qt=swan&q=MDR3 or ABCB4 or PGY3 or (multidrug adj resist$ adj 3)
+qt=swan&q=memory adj polymer
+qt=swan&q=MEMORY SAME (WRIT$5 NEAR2 SYMBOL$1)
+qt=swan&q=methacrylic acid
+qt=swan&q=methane or natural gas
+qt=swan&q=model near view
+qt=swan&q=moretta-alessandro$.in.
+qt=swan&q=myostatin.clm.
+qt=swan&q=myristamidopropylene
+qt=swan&q=myrtle or myrtus communis
+qt=swan&q=Na$ near5 exchange$
+qt=swan&q=Nabel.in. and DNA vaccine
+qt=swan&q=nanoparticle or nanocomposite
+qt=swan&q=NDV and (vlp or virus like) and M and (chimeric or chimera or heterologous) and RSV
+qt=swan&q=network with test$3 system
+qt=swan&q=nitride near2 crystal$9
+qt=swan&q=nitrosyl same nitric oxide
+qt=swan&q=notif$7 near (buffer$3 or queu$3)
+qt=swan&q=omega adj 3 adj4 fatty
+qt=swan&q=online adj1 (group or space)
+qt=swan&q=optical near3 probe
+qt=swan&q=osmotic and pump and piston and implant
+qt=swan&q=osmotic dosage form
+qt=swan&q=osp
+qt=swan&q=Panabaker.inv. near Ruston
+qt=swan&q=panzara.in.
+qt=swan&q=particle and LED
+qt=swan&q=particle same taurolidine
+qt=swan&q=patient with ("care plan" or "care path") with (task or status)
+qt=swan&q=penalty adj scor$
+qt=swan&q=peroxiredoxin
+qt=swan&q=peugh
+qt=swan&q=Peumus boldus or Peumus or Boldo 
+qt=swan&q=pinnisch.in. near2 (russell.in. or russel.in.)
+qt=swan&q=polyhydric or diol or glycerol or glycerin
+qt=swan&q=polymer$ near2 (color$ or dye or pigment$)
+qt=swan&q=polypropylene adj impact adj copolymer
+qt=swan&q=preS2 same Kozak
+qt=swan&q=processor
+qt=swan&q=proline near10 arginine same inluenza
+qt=swan&q=propanil or dichlorophenylpropanamide or dichloropropanilide
+qt=swan&q=propargyl alcohol or propargylic alcohool
+qt=swan&q=PTA adj 9529
+qt=swan&q=publish$6 with publick adj key near2 parameter$2
+qt=swan&q=radar$1 or 342/1-205.ccls. or 348/441-442.ccls.
+qt=swan&q=random$ near (switch$ or select$) and (component near carrier or subband or bandwidth or frequenc$) and eNB
+qt=swan&q=REQUEST WITH FRAUD WITH RISK WITH REPORT
+qt=swan&q=rjs01001
+qt=swan&q=Roth-Wolfgang$.in.
+qt=swan&q=rs2518224 or rs4825476
+qt=swan&q=rubber and (diene or isoprene or chloroprene or "acrylic rubber" or EPDM or "ethylene propyle diene terpolymer")
+qt=swan&q=rubin.in.
+qt=swan&q=sahouria[in]
+qt=swan&q=salt and formula and pharmaceutical and nitrogen and sulfur and hydrogen and rings
+qt=swan&q=sbm or styrene butadiene methacrylate or polystyrene polybutadiene polymethacrylate or polystyrene polybutadiene polymethylmethacrylate or ps-pb-pmma
+qt=swan&q=screen$ and test and compound$ and contact$ and interact$
+qt=swan&q=sean NAER2 simpson.in.
+qt=swan&q=seed with yellow
+qt=swan&q=sense strand
+qt=swan&q=sequence.ti.
+qt=swan&q=sericin
+qt=swan&q=shewareged
+qt=swan&q=Shiga
+qt=swan&q=Siphonochilus aethiopicus or Natal ginger or Wild ginger or Wildegemmer or indungulo or isiphephetho
+qt=swan&q=sofia-susan.in.
+qt=swan&q=softener or (ion adj exchange)
+qt=swan&q=solid state deflector
+qt=swan&q=sp600215
+qt=swan&q=stabilization same agrochemical same fizz
+qt=swan&q=Steidler-Lothar.in.
+qt=swan&q=sulfo adj3 ester$
+qt=swan&q=sweat
+qt=swan&q=synthetic adj liposome
+qt=swan&q=terzic.in. or behfar.in.
+qt=swan&q=text near blocks
+qt=swan&q=three nrea5 dimension$
+qt=swan&q=three$ near dimensional near movement with pointer near display 
+qt=swan&q=Tien-m$.in.
+qt=swan&q=TIM adj 1
+qt=swan&q=tonsillectomy
+qt=swan&q=touch near screen
+qt=swan&q=traffic same flow same normal$ same (pattern or capacity)
+qt=swan&q=transmembrane$ near5 potential$
+qt=swan&q=trifloxysulfuron$7 same glyphosate
+qt=swan&q=tzu-hsaia and wei
+qt=swan&q=us 20040058430
+qt=swan&q=US 20070259412 
+qt=swan&q=us-20010051186-$.did.
+qt=swan&q=us-20030235633-$.did.
+qt=swan&q=us-2004300204-$.did.
+qt=swan&q=US-2396515-$.DID. OR US-3152094-$.DID. OR US-3152904-$.DID. OR US-3485658-$.DID. OR US-3511764-$.DID. OR US-3624835-$.DID. OR US-3647439-$.DID. OR US-3846236-$.DID. OR US-3933507-$.DID. OR US-3996141-$.DID. OR US-4113658-$.DID. OR US-4130517-$.DID. OR US-4136177-$.DID. OR US-4136178-$.DID. OR US-4260677-$.DID. OR US-4310509-$.DID. OR US-4328799-$.DID. OR US-4340043-$.DID. OR US-4393048-$.DID. OR US-4474571-$.DID. OR US-4483688-$.DID. OR US-4529623-$.DID. OR US-4604384-$.DID. OR US-4608041-$.DID. OR US-4612337-$.DID. OR US-4624656-$.DID. OR US-4708821-$.DID. OR US-4721724-$.DID. OR US-4747847-$.DID. OR US-4782819-$.DID. OR US-4801291-$.DID. OR US-4902503-$.DID. OR US-4915694-$.DID. OR US-4969881-$.DID. OR US-5049139-$.DID. OR US-5086620-$.DID. OR US-5149524-$.DID. OR US-5151271-$.DID. OR US-5158772-$.DID. OR US-5175229-$.DID. OR US-5236421-$.DID. OR US-5342528-$.DID. OR US-5354862-$.DID. OR US-5407685-$.DID. OR US-5432077-$.DID. OR US-5447492-$.DID. OR US-5453401-$.DID. OR US-5470585-$.DID. OR US-5503840-$.DID. OR US-5508038-$.DID. OR US-5508417-$.DID. OR US-5516502-$.DID. OR US-5527534-$.DID. OR US-5567495-$.DID. OR US-5593683-$.DID. OR US-5599296-$.DID. OR US-5603946-$.DID. OR US-5614568-$.DID. OR US-5681579-$.DID. OR US-5683713-$.DID. OR US-5693624-$.DID. OR US-5695777-$.DID. OR US-5709870-$.DID. OR US-5725491-$.DID. OR US-5735251-$.DID. OR US-5736582-$.DID. OR US-5753251-$.DID. OR US-5792090-$.DID. OR US-5804213-$.DID. OR US-5820918-$.DID. OR US-5830496-$.DID. OR US-5833665-$.DID. OR US-5855570-$.DID. OR US-5863548-$.DID. OR US-5863864-$.DID. OR US-5869073-$.DID. OR US-5908693-$.DID. OR US-5927317-$.DID. OR US-5951458-$.DID. OR US-5965204-$.DID. OR US-5972317-$.DID. OR US-6000403-$.DID. OR US-6011194-$.DID. OR US-6042845-$.DID. OR US-6051614-$.DID. OR US-6099805-$.DID. OR US-6103868-$.DID. OR US-6113287-$.DID. OR US-6159977-$.DID. OR US-6187290-$.DID. OR US-6201164-$.DID. OR US-6214360-$.DID. OR US-6224622-$.DID. OR US-6235964-$.DID. OR US-6248342-$.DID. OR US-6264927-$.DID. OR US-6316084-$.DID. OR US-6326524-$.DID. OR US-6468989-$.DID. OR US-6471982-$.DID. OR US-6530895-$.DID. OR US-6669981-$.DID. OR US-6716895-$.DID. OR US-6897349-$.DID. OR US-6921529-$.DID. OR US-7129389-$.DID. OR US-7160553-$.DID. OR US-7166330-$.DID. OR US-7576255-$.DID. OR US-20010026810-$.DID. OR US-20020001604-$.DID. OR US-20020042587-$.DID. OR US-20020073891-$.DID. OR US-20030041188-$.DID. OR US-20030083610-$.DID. OR US-20030093057-$.DID. OR US-20030186955-$.DID. OR US-20040082925-$.DID. OR US-20040108462-$.DID. OR US-20040127025-$.DID. OR US-20040147618-$.DID. OR US-20040170545-$.DID. OR US-20040173056-$.DID. OR US-20040180093-$.DID. OR US-20040253536-$.DID. OR US-20040254532-$.DID. OR US-20050008861-$.DID. OR US-20050029121-$.DID. OR US-20050186135-$.DID. OR US-20050265894-$.DID. OR US-20060276740-$.DID. OR US-20070003603-$.DID. OR US-20070207335-$.DID. OR US-20070254044-$.DID. OR US-20070293800-$.DID. OR US-6014585-$.DID. OR US-6004667-$.DID. OR US-5454886-$.DID. OR US-5326567-$.DID.
+qt=swan&q=us-7291727-$.did.
+qt=swan&q=ushijima NEAR2 richard.in.
+qt=swan&q=Vaccinium erythrocarpum or Vaccinium macrocarpon or Vaccinium microcarpum or Vaccinium oxycoccos 
+qt=swan&q=verif$7 same integrity same (software or firmware or BIOS or SMM)
+qt=swan&q=virtualiz$6 and 20080151863.pn.
+qt=swan&q=wbpm wbpv wbpu bgt wbpo wbpp wbpt wbps rmlb
+qt=swan&q=weidanz-jon$.in.
+qt=swan&q=WO 031304
+qt=swan&q=wo-199517210-$.app.
+qt=swan&q=xr2081
+qt=swan&q=yagi near akira.inv.
+qt=swan&q=YENER-DORUK$.in.
+qt=swan&q=zammert.in.

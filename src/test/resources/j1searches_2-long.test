@@ -1,0 +1,47 @@
+<<
+20080090282 and (N,N'-Bis(3,5-di-tert-butylsalicylidene) 1,2-cyclohexanediaminato(-2-)}cobalt(2)) 
+>> FAIL
+
+<<
+((((PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO)) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO) same (donating or releasing or generating or donat$ or releas$ or generat$)) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO) same (donating or releasing or generating or donat$ or releas$ or generat$).ab.) and diazeniumdiolate$
+>> OK
+
+<<
+(((((PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO)) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO) same (donating or releasing or generating or donat$ or releas$ or generat$)) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO) same (donating or releasing or generating or donat$ or releas$ or generat$).ab.) and diazeniumdiolate$) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene))
+>> OK
+
+<<
+(((PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) ) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) same plasma same ammonia) and acetyl$
+>> OK
+
+<<
+((((PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) ) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) same plasma same ammonia) and acetyl$) and (nitric or nitrous or nitrogen)
+>> OK
+
+<<
+((((PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) ) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) same plasma same ammonia) and acetyl$) and (nitric or nitrous or nitrogen or NO)
+>> OK
+
+<<
+((((PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) ) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) same plasma same ammonia) and acetyl$) and (nitric or nitrous or nitrogen)
+>> OK
+
+<<
+((((PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) ) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) same plasma same ammonia) and acetyl$) and (nitric or nitrous)
+>> OK
+
+<<
+((((medical device or implant or stent or catheteer or probe) same (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer)).ab.) and ((medical device or implant or stent or catheteer or probe) same (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer)).clm.) and bioactive
+>> OK
+
+<<
+(((((medical device or implant or stent or catheteer or probe) same (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer)).ab.) and ((medical device or implant or stent or catheteer or probe) same (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer)).clm.) and bioactive) and (primer or coating or layer or coat)
+>> OK
+
+<<
+((((PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO)) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO) same (donating or releasing or generating or donat$ or releas$ or generat$)) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO) same (donating or releasing or generating or donat$ or releas$ or generat$).ab.) and diazeniumdiolate$
+>> OK
+
+<<
+(((((PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO)) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO) same (donating or releasing or generating or donat$ or releas$ or generat$)) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene) or fluorinated or fluororesin or fluoroelastomer) and (nitric oxide or NO) same (donating or releasing or generating or donat$ or releas$ or generat$).ab.) and diazeniumdiolate$) and (PTFE or tetrafluoroethylene or polytetrafluoroethylene or poly(tetrafluoroethylene))
+>> OK

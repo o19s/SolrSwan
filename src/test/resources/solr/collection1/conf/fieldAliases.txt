@@ -1,0 +1,9 @@
+apple,banana ,coconut, donut => fruit
+dog, cat, rabbit => animal 
+a,A => x
+b,B => y
+c => z
+c => z1
+d,e,f => z2
+d,e => z3
+rg => range
