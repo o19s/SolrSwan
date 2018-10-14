@@ -16,19 +16,18 @@ package com.o19s.solr.swan;
  * limitations under the License.
  */
 
-import static org.parboiled.errors.ErrorUtils.printParseErrors;
-
-import java.io.IOException;
-
-import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.parboiled.Parboiled;
 import org.parboiled.parserunners.RecoveringParseRunner;
 import org.parboiled.support.ParsingResult;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import static org.parboiled.errors.ErrorUtils.printParseErrors;
 
 public class SwanParserServlet extends HttpServlet {
 
@@ -43,7 +42,7 @@ public class SwanParserServlet extends HttpServlet {
 	throws ServletException, IOException
     {
         String q = req.getParameter("q");
-        ServletOutputStream out = res.getOutputStream();
+        PrintWriter out = res.getWriter();
 
     	@SuppressWarnings("unchecked")
 		SwanParser<String> parser = Parboiled.createParser(SwanParser.class);
