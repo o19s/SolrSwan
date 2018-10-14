@@ -79,7 +79,7 @@ Lastly, you need to create a text file that maps "dot" field aliases to the actu
 ```ruby
 ab,AB => abstract_html
 ```
-This will translate "device.ab." as a query for the term "device" over the abstract_html field. I don't remember at the moment whether or not the Swan field is still case-sensitive. Our whole fieldAliases.txt file looks like this:
+This will translate "device.ab." as a query for the term "device" over the abstract_html field. The aliases are not case sensitive, so "device.AB.", "device.aB.", or "device.Ab." will work too. Our whole fieldAliases.txt file looks like this:
 ```ruby
 pn,PN,did,DID => id
 pd,PD,isd,ISD => date_publ_i

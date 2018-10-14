@@ -18,7 +18,6 @@ package com.o19s.solr.swan;
 
 import org.apache.solr.SolrTestCaseJ4;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class TestFieldAliases extends SolrTestCaseJ4 {
@@ -53,6 +52,13 @@ public class TestFieldAliases extends SolrTestCaseJ4 {
 			));
 		i++;
 		assertU(commit());
+	}
+
+	@Test
+  //test field alias case dependency
+  public void testAliasCase() {
+	  test("some.a.", 2);
+	  test("some.A.", 2);
 	}
 	
 	@Test
