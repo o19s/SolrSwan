@@ -23,6 +23,10 @@
     <description>osc version 1.3.2</description>
     <name>SwanParser</name>
     <url>http://maven.apache.org</url>
+    <properties>
+        <solr.version>4.10.1</solr.version>
+        <surefireArgLine></surefireArgLine>
+    </properties>
     <build>
     <finalName>SwanParser</finalName>
         <pluginManagement>
@@ -291,7 +295,7 @@
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-test-framework</artifactId>
-            <version>4.10.1</version>
+            <version>${solr.version}</version>
             <type>jar</type>
             <scope>test</scope>
         </dependency>
@@ -305,26 +309,26 @@
         <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-core</artifactId>
-            <version>4.10.1</version>
+            <version>${solr.version}</version>
             <type>jar</type>
         </dependency>
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-core</artifactId>
-            <version>4.10.1</version>
+            <version>${solr.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-solrj</artifactId>
-            <version>4.10.1</version>
+            <version>${solr.version}</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-highlighter</artifactId>
-            <version>4.10.1</version>
+            <version>${solr.version}</version>
             <type>jar</type>
         </dependency>
         <dependency>
