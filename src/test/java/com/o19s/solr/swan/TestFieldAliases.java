@@ -57,8 +57,8 @@ public class TestFieldAliases extends SolrTestCaseJ4 {
 	@Test
   //test field alias case dependency
   public void testAliasCase() {
-	  test("some.a.", 2);
-	  test("some.A.", 2);
+	  test("this.c.", 2);
+	  test("this.C.", 2);
 	}
 	
 	@Test
