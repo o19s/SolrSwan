@@ -98,11 +98,11 @@ public abstract class SwanNode {
   public abstract SpanQuery getSpanQuery(String field);
 
   public Query getQuery(String[] fields) {
-    BooleanQuery query = new BooleanQuery();
+    BooleanQuery.Builder queryBuilder = new BooleanQuery.Builder();
     for (int x = 0; x < fields.length; x++) {
-      query.add(getQuery(fields[x]), BooleanClause.Occur.SHOULD);
+      queryBuilder.add(getQuery(fields[x]), BooleanClause.Occur.SHOULD);
     }
-    return query;
+    return queryBuilder.build();
   }
 
   @Override

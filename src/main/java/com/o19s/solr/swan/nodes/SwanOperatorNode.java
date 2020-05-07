@@ -64,21 +64,21 @@ public abstract class SwanOperatorNode extends SwanNode {
 
   @Override
   public Query getQuery(String field) {
-    BooleanQuery query = new BooleanQuery();
+    BooleanQuery.Builder queryBuilder = new BooleanQuery.Builder();
     for(SwanNode n : _nodes){
       Query q = n.getQuery(field);
-      query.add(q,getClause());
+      queryBuilder.add(q,getClause());
     }
-    return query;
+    return queryBuilder.build();
   }
 
   @Override
   public Query getQuery(String[] fields) {
-    BooleanQuery query = new BooleanQuery();
+    BooleanQuery.Builder queryBuilder = new BooleanQuery.Builder();
     for(SwanNode n : _nodes){
-      query.add(n.getQuery(), getClause());
+      queryBuilder.add(n.getQuery(), getClause());
     }
-    return query;
+    return queryBuilder.build();
   }
 
   public List<SwanNode> getNodes() {
