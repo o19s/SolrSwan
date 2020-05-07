@@ -24,7 +24,7 @@
     <name>SwanParser</name>
     <url>http://maven.apache.org</url>
     <build>
-    <finalName>SwanParser</finalName>
+        <finalName>SwanParser</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -79,8 +79,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -97,7 +97,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.7.2</version>
                 <configuration>
-                    <argLine>${surefireArgLine}</argLine>
+                    <!-- <argLine>${surefireArgLine}</argLine> -->
                     <excludes>
                         <exclude>**/TestBigSwan.java</exclude>
                     </excludes>
@@ -186,7 +186,7 @@
                     <abbrevLength>40</abbrevLength>
                     <skip>false</skip>
                     <excludeProperties>
-                    	<excludeProperty>git.remote.origin.url</excludeProperty>
+                        <excludeProperty>git.remote.origin.url</excludeProperty>
                         <!-- <excludeProperty>git.user.*</excludeProperty> -->
                     </excludeProperties>
                     <!--
@@ -261,37 +261,37 @@
         <dependency>
             <groupId>org.parboiled</groupId>
             <artifactId>parboiled-core</artifactId>
-            <version>1.1.6</version>
+            <version>1.3.1</version>
         </dependency>
         <dependency>
             <groupId>org.parboiled</groupId>
             <artifactId>parboiled-java</artifactId>
-            <version>1.1.6</version>
+            <version>1.3.1</version>
         </dependency>
         <dependency>
             <groupId>org.scalatest</groupId>
-            <artifactId>scalatest</artifactId>
-            <version>1.4.RC2</version>
+            <artifactId>scalatest_2.13</artifactId>
+            <version>3.2.0-M2</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
-            <version>2.10.0-M1-virtualized.rdev-4217-2012-01-24-g9118644</version>
+            <version>2.13.1</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.3.1</version>
+            <version>7.1.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-test-framework</artifactId>
-            <version>4.10.1</version>
+            <version>8.4.1</version>
             <type>jar</type>
             <scope>test</scope>
         </dependency>
@@ -305,26 +305,26 @@
         <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-core</artifactId>
-            <version>4.10.1</version>
+            <version>8.4.1</version>
             <type>jar</type>
         </dependency>
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-core</artifactId>
-            <version>4.10.1</version>
+            <version>8.4.1</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-solrj</artifactId>
-            <version>4.10.1</version>
+            <version>8.4.1</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-highlighter</artifactId>
-            <version>4.10.1</version>
+            <version>8.4.1</version>
             <type>jar</type>
         </dependency>
         <dependency>
@@ -342,18 +342,20 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.1-b02</version>
+            <version>4.0.1</version>
         </dependency>
     </dependencies>
+    <!--
     <reporting>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.16</version>
+                <version>3.0.0</version>
             </plugin>
         </plugins>
     </reporting>
+    -->
     <profiles>
         <profile>
             <id>version</id>
