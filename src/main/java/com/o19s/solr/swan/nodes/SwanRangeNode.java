@@ -16,10 +16,11 @@ package com.o19s.solr.swan.nodes;
  * limitations under the License.
  */
 
-import org.apache.lucene.document.DateTools;
+import org.apache.lucene.document.*;
 import org.apache.lucene.search.*;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.util.BytesRef;
+import org.apache.solr.schema.DatePointField;
 import org.apache.solr.schema.TrieDateField;
 
 import java.util.Calendar;
@@ -84,11 +85,11 @@ public class SwanRangeNode extends SwanNode {
 
   // this is a copy constructor
   public SwanRangeNode(SwanRangeNode originalNode){
-	  this._field = originalNode.getField();
-	  this.operation1 = originalNode.operation1;
-	  this.value1 = originalNode.value1;
-	  this.operation2 = originalNode.operation2;
-	  this.value2 = originalNode.value2;
+    this._field = originalNode.getField();
+    this.operation1 = originalNode.operation1;
+    this.value1 = originalNode.value1;
+    this.operation2 = originalNode.operation2;
+    this.value2 = originalNode.value2;
   }
 
   @Override
@@ -105,16 +106,21 @@ public class SwanRangeNode extends SwanNode {
 
     String type = getType(field);
     if (type.equals("TrieIntField"))
-      return NumericRangeQuery.newIntRange(_field, bounds.getIntLower(), bounds.getIntUpper(), bounds.inc_lower, bounds.inc_upper);
+      //return NumericRangeQuery.newIntRange(_field, bounds.getIntLower(), bounds.getIntUpper(), bounds.inc_lower, bounds.inc_upper);
+      return IntPoint.newRangeQuery(_field, bounds.getIntLower(), bounds.getIntUpper());
     else if (type.equals("TrieLongField"))
-      return NumericRangeQuery.newLongRange(_field, bounds.getLongLower(), bounds.getLongUpper(), bounds.inc_lower, bounds.inc_upper);
+      //return NumericRangeQuery.newLongRange(_field, bounds.getLongLower(), bounds.getLongUpper(), bounds.inc_lower, bounds.inc_upper);
+      return LongPoint.newRangeQuery(_field, bounds.getLongLower(), bounds.getLongUpper());
     else if (type.equals("TrieDoubleField"))
-      return NumericRangeQuery.newDoubleRange(_field, bounds.getDoubleLower(), bounds.getDoubleUpper(), bounds.inc_lower, bounds.inc_upper);
+      //return NumericRangeQuery.newDoubleRange(_field, bounds.getDoubleLower(), bounds.getDoubleUpper(), bounds.inc_lower, bounds.inc_upper);
+      return DoublePoint.newRangeQuery(_field, bounds.getDoubleLower(), bounds.getDoubleUpper());
     else if (type.equals("TrieFloatField"))
-      return NumericRangeQuery.newFloatRange(_field, bounds.getFloatLower(), bounds.getFloatUpper(), bounds.inc_lower, bounds.inc_upper);
+      //return NumericRangeQuery.newFloatRange(_field, bounds.getFloatLower(), bounds.getFloatUpper(), bounds.inc_lower, bounds.inc_upper);
+      return FloatPoint.newRangeQuery(_field, bounds.getFloatLower(), bounds.getFloatUpper());
     else if (type.equals("TrieDateField")) {
-      TrieDateField dateField = (TrieDateField) schema.getField(field).getType();
-      return dateField.getRangeQuery(_parser, schema.getField(field), bounds.getDateLower(), bounds.getDateUpper(), bounds.inc_lower, bounds.inc_upper);
+      DatePointField dateField = (DatePointField) schema.getField(field).getType();
+      //TrieDateField dateField = (TrieDateField) schema.getField(field).getType();
+      return dateField.getRangeQuery(_parser, schema.getField(field), bounds.getDateLower().toString(), bounds.getDateUpper().toString(), bounds.inc_lower, bounds.inc_upper);
     }
     else
       return new TermRangeQuery(_field, bounds.ref_lower, bounds.ref_upper, bounds.inc_lower, bounds.inc_upper);
@@ -144,13 +150,13 @@ public class SwanRangeNode extends SwanNode {
         break;
       case EQUAL:
         SwanTermNode termNode = new SwanTermNode(value);
-          termNode.setField(_field);
-          termNode.setSchema(schema);
+        termNode.setField(_field);
+        termNode.setSchema(schema);
         return termNode.getQuery();
       case NOT_EQUAL:
-          SwanOrOperationNode node = new SwanOrOperationNode(new SwanRangeNode(_field, "<", value), new SwanRangeNode(_field, ">", value));
-          node.setSchema(schema);
-          return node.getQuery();
+        SwanOrOperationNode node = new SwanOrOperationNode(new SwanRangeNode(_field, "<", value), new SwanRangeNode(_field, ">", value));
+        node.setSchema(schema);
+        return node.getQuery();
 
       default:
         break;
