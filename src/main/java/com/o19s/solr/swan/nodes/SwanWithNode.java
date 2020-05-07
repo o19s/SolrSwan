@@ -16,13 +16,14 @@ package com.o19s.solr.swan.nodes;
  * limitations under the License.
  */
 
-import com.o19s.solr.swan.query.SpanWithinQuery;
+//import com.o19s.solr.swan.query.SpanWithinQuery;
 import org.apache.lucene.index.Term;
-import org.apache.lucene.search.BooleanClause;
-import org.apache.lucene.search.BooleanQuery;
-import org.apache.lucene.search.Query;
+//import org.apache.lucene.search.BooleanClause;
+//import org.apache.lucene.search.BooleanQuery;
+//import org.apache.lucene.search.Query;
 import org.apache.lucene.search.spans.SpanNearQuery;
 import org.apache.lucene.search.spans.SpanNotQuery;
+//import org.apache.lucene.search.spans.SpanWithinQuery;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.SpanTermQuery;
 
@@ -45,8 +46,8 @@ public class SwanWithNode extends SwanProxNode {
         false
     );
     SpanQuery sentence_boundary = new SpanTermQuery(new Term(field, getSentenceMarker()));
-//    return new SpanNotQuery(terms,sentence_boundary);
-    return new SpanWithinQuery(terms, sentence_boundary, _proximity);
+    return new SpanNotQuery(terms,sentence_boundary);
+//    return new SpanWithinQuery(terms, sentence_boundary, _proximity);
   }
 
   @Override
