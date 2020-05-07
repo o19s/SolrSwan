@@ -19,7 +19,7 @@ package com.o19s.solr.swan;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.solr.common.params.SolrParams;
 
 import com.google.common.collect.ListMultimap;
