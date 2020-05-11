@@ -18,11 +18,11 @@ package com.o19s.solr.swan.nodes;
 
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.spans.SpanNearQuery;
-import org.apache.lucene.search.spans.SpanNotQuery;
 import org.apache.lucene.search.spans.SpanQuery;
 import org.apache.lucene.search.spans.SpanTermQuery;
+//import org.apache.lucene.search.spans.SpanNotQuery;
+import com.o19s.solr.swan.query.SwanSpanNotQuery;
 
-//import com.o19s.solr.swan.query.SpanWithinQuery;
 
 public class SwanSameNode extends SwanProxNode {
 
@@ -42,8 +42,7 @@ public class SwanSameNode extends SwanProxNode {
         false
     );
     SpanQuery paragraph_boundary = new SpanTermQuery(new Term(field, getParagraphMarker()));
-    return new SpanNotQuery(terms,paragraph_boundary);
-//    return new SpanWithinQuery(terms, paragraph_boundary, _proximity);
+    return new SwanSpanNotQuery(terms, paragraph_boundary, _proximity);
   }
 
   @Override
