@@ -38,7 +38,7 @@ import org.apache.lucene.search.spans.*;
 /** Removes matches which overlap with another SpanQuery or which are
  * within x tokens before or y tokens after another SpanQuery.
  */
-public final class SwanSpanNotQuery extends SpanQuery {
+public final class SpanWithinQuery extends SpanQuery {
   private SpanQuery include;
   private SpanQuery exclude;
   private final int proximity;
@@ -47,7 +47,7 @@ public final class SwanSpanNotQuery extends SpanQuery {
 
   /** Construct a SwanSpanNotQuery matching spans from <code>include</code> which
    * have no overlap with spans from <code>exclude</code>.*/
-  public SwanSpanNotQuery(SpanQuery include, SpanQuery exclude) {
+  public SpanWithinQuery(SpanQuery include, SpanQuery exclude) {
      this(include, exclude, 1);
   }
 
@@ -56,7 +56,7 @@ public final class SwanSpanNotQuery extends SpanQuery {
    * <code>pre</code> tokens before or <code>post</code> tokens of
    * <code>include</code>. Inversely, negative values for <code>pre</code> and/or
    * <code>post</code> allow a certain amount of overlap to occur. */
-  public SwanSpanNotQuery(SpanQuery include, SpanQuery exclude, int proximity) {
+  public SpanWithinQuery(SpanQuery include, SpanQuery exclude, int proximity) {
     this.include = Objects.requireNonNull(include);
     this.exclude = Objects.requireNonNull(exclude);
     this.proximity = proximity;
@@ -79,12 +79,12 @@ public final class SwanSpanNotQuery extends SpanQuery {
   @Override
   public String toString(String field) {
     StringBuilder buffer = new StringBuilder();
-    buffer.append("swanSpanNot(");
+    buffer.append("spanWithin(");
     buffer.append(include.toString(field));
     buffer.append(", ");
+    buffer.append(proximity);
+    buffer.append(" ,");
     buffer.append(exclude.toString(field));
-    buffer.append(", ");
-    buffer.append(Integer.toString(proximity));
     buffer.append(")");
     return buffer.toString();
   }
@@ -106,7 +106,7 @@ public final class SwanSpanNotQuery extends SpanQuery {
 
     public SpanNotWeight(IndexSearcher searcher, Map<Term, TermStates> terms,
                          SpanWeight includeWeight, SpanWeight excludeWeight, int proximity, float boost) throws IOException {
-      super(SwanSpanNotQuery.this, searcher, terms, boost);
+      super(SpanWithinQuery.this, searcher, terms, boost);
       this.includeWeight = includeWeight;
       this.excludeWeight = excludeWeight;
       this.proximity = proximity;
@@ -213,7 +213,7 @@ public final class SwanSpanNotQuery extends SpanQuery {
     SpanQuery rewrittenInclude = (SpanQuery) include.rewrite(reader);
     SpanQuery rewrittenExclude = (SpanQuery) exclude.rewrite(reader);
     if (rewrittenInclude != include || rewrittenExclude != exclude) {
-      return new SwanSpanNotQuery(rewrittenInclude, rewrittenExclude, proximity);
+      return new SpanWithinQuery(rewrittenInclude, rewrittenExclude, proximity);
     }
     return super.rewrite(reader);
   }
@@ -233,7 +233,7 @@ public final class SwanSpanNotQuery extends SpanQuery {
            equalsTo(getClass().cast(other));
   } 
 
-  private boolean equalsTo(SwanSpanNotQuery other) {
+  private boolean equalsTo(SpanWithinQuery other) {
     return include.equals(other.include) && 
            exclude.equals(other.exclude) && 
            proximity == other.proximity;

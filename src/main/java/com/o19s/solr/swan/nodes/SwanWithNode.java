@@ -17,7 +17,7 @@ package com.o19s.solr.swan.nodes;
  */
 
 //import com.o19s.solr.swan.query.SpanWithinQuery;
-import com.o19s.solr.swan.query.SwanSpanNotQuery;
+import com.o19s.solr.swan.query.SpanWithinQuery;
 import org.apache.lucene.index.Term;
 //import org.apache.lucene.search.BooleanClause;
 //import org.apache.lucene.search.BooleanQuery;
@@ -43,12 +43,12 @@ public class SwanWithNode extends SwanProxNode {
         false
     );
     SpanQuery sentence_boundary = new SpanTermQuery(new Term(field, getSentenceMarker()));
-    return new SwanSpanNotQuery(terms,sentence_boundary, _proximity);
+    return new SpanWithinQuery(terms,sentence_boundary, _proximity);
   }
 
   @Override
   public String toString() {
-    return "WITH("+ _left +","+ _right + "," + _proximity + ")";
+    return "WITH("+ _left +","+ _right + /*"," + _proximity +*/ ")";
   }
 
 }
