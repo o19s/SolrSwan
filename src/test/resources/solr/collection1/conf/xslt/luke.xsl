@@ -39,17 +39,17 @@
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
                 <link rel="stylesheet" type="text/css" href="solr-admin.css"/>
-                <link rel="icon" href="favicon.ico" type="image/ico"/>
-                <link rel="shortcut icon" href="favicon.ico" type="image/ico"/>
+                <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+                <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
                 <title>
-                    <xsl:value1-of select="$title"/>
+                    <xsl:value-of select="$title"/>
                 </title>
                 <xsl:call-template name="css"/>
 
             </head>
             <body>
                 <h1>
-                    <xsl:value1-of select="$title"/>
+                    <xsl:value-of select="$title"/>
                 </h1>
                 <div class="doc">
                     <ul>
@@ -65,7 +65,7 @@
                                     <xsl:for-each select="response/lst[@name='fields']/lst">
                                         <li>
                                             <a href="#{@name}">
-                                                <xsl:value1-of select="@name"/>
+                                                <xsl:value-of select="@name"/>
                                             </a>
                                         </li>
                                     </xsl:for-each>
@@ -121,7 +121,7 @@
                             <p>
                                 <a name="{@name}"/>
                             </p>
-                            <xsl:value1-of select="@name"/>
+                            <xsl:value-of select="@name"/>
                         </th>
                     </tr>
                 </thead>
@@ -164,20 +164,20 @@
             <xsl:for-each select="int">
                 <xsl:sort data-type="number" order="descending"/>
                 <xsl:if test="position()=1">
-                    <xsl:value1-of select="."/>
+                    <xsl:value-of select="."/>
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>
         <xsl:variable name="bars">
-           <xsl:value1-of select="count(int)"/>
+           <xsl:value-of select="count(int)"/>
         </xsl:variable>
         <xsl:variable name="bar_width">
            <xsl:choose>
              <xsl:when test="$max_bar_width &lt; ($iwidth div $bars)">
-               <xsl:value1-of select="$max_bar_width"/>
+               <xsl:value-of select="$max_bar_width"/>
              </xsl:when>
              <xsl:otherwise>
-               <xsl:value1-of select="$iwidth div $bars"/>
+               <xsl:value-of select="$iwidth div $bars"/>
              </xsl:otherwise>
            </xsl:choose>
         </xsl:variable>
@@ -186,9 +186,9 @@
               <tr>
                 <xsl:for-each select="int">
                    <td>
-                 <xsl:value1-of select="."/>
+                 <xsl:value-of select="."/>
                  <div class="histogram">
-                  <xsl:attribute name="style">background-color: <xsl:value1-of select="$fill"/>; width: <xsl:value1-of select="$bar_width"/>px; height: <xsl:value1-of select="($iheight*number(.)) div $max"/>px;</xsl:attribute>
+                  <xsl:attribute name="style">background-color: <xsl:value-of select="$fill"/>; width: <xsl:value-of select="$bar_width"/>px; height: <xsl:value-of select="($iheight*number(.)) div $max"/>px;</xsl:attribute>
                  </div>
                    </td> 
                 </xsl:for-each>
@@ -196,7 +196,7 @@
               <tr>
                 <xsl:for-each select="int">
                    <td>
-                       <xsl:value1-of select="@name"/>
+                       <xsl:value-of select="@name"/>
                    </td>
                 </xsl:for-each>
               </tr>
@@ -209,15 +209,15 @@
             <xsl:when test="@name">
                 <tr>
                     <td class="name">
-                        <xsl:value1-of select="@name"/>
+                        <xsl:value-of select="@name"/>
                     </td>
-                    <td class="value1">
-                        <xsl:value1-of select="."/>
+                    <td class="value">
+                        <xsl:value-of select="."/>
                     </td>
                 </tr>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:value1-of select="."/>
+                <xsl:value-of select="."/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -229,9 +229,9 @@
     <xsl:template match="arr">
         <tr>
             <td class="name">
-                <xsl:value1-of select="@name"/>
+                <xsl:value-of select="@name"/>
             </td>
-            <td class="value1">
+            <td class="value">
                 <ul>
                     <xsl:for-each select="child::*">
                         <li>
@@ -257,16 +257,16 @@
     <xsl:template name="schema">
         <tr>
             <td class="name">
-                <xsl:value1-of select="@name"/>
+                <xsl:value-of select="@name"/>
             </td>
-            <td class="value1">
+            <td class="value">
                 <xsl:if test="contains(.,'unstored')">
-                    <xsl:value1-of select="."/>
+                    <xsl:value-of select="."/>
                 </xsl:if>
                 <xsl:if test="not(contains(.,'unstored'))">
                     <xsl:call-template name="infochar2string">
                         <xsl:with-param name="charList">
-                            <xsl:value1-of select="."/>
+                            <xsl:value-of select="."/>
                         </xsl:with-param>
                     </xsl:call-template>
                 </xsl:if>
@@ -279,45 +279,45 @@
         <xsl:param name="charList"/>
 
         <xsl:variable name="char">
-            <xsl:value1-of select="substring($charList,$i,1)"/>
+            <xsl:value-of select="substring($charList,$i,1)"/>
         </xsl:variable>
         <xsl:choose>
             <xsl:when test="$char='I'">
-                <xsl:value1-of select="/response/lst[@name='info']/lst/str[@name='I']"/> - </xsl:when>
+                <xsl:value-of select="/response/lst[@name='info']/lst/str[@name='I']"/> - </xsl:when>
             <xsl:when test="$char='T'">
-                <xsl:value1-of select="/response/lst[@name='info']/lst/str[@name='T']"/> - </xsl:when>
+                <xsl:value-of select="/response/lst[@name='info']/lst/str[@name='T']"/> - </xsl:when>
             <xsl:when test="$char='S'">
-                <xsl:value1-of select="/response/lst[@name='info']/lst/str[@name='S']"/> - </xsl:when>
+                <xsl:value-of select="/response/lst[@name='info']/lst/str[@name='S']"/> - </xsl:when>
             <xsl:when test="$char='M'">
-                <xsl:value1-of select="/response/lst[@name='info']/lst/str[@name='M']"/> - </xsl:when>
+                <xsl:value-of select="/response/lst[@name='info']/lst/str[@name='M']"/> - </xsl:when>
             <xsl:when test="$char='V'">
-                <xsl:value1-of select="/response/lst[@name='info']/lst/str[@name='V']"/> - </xsl:when>
+                <xsl:value-of select="/response/lst[@name='info']/lst/str[@name='V']"/> - </xsl:when>
             <xsl:when test="$char='o'">
-                <xsl:value1-of select="/response/lst[@name='info']/lst/str[@name='o']"/> - </xsl:when>
+                <xsl:value-of select="/response/lst[@name='info']/lst/str[@name='o']"/> - </xsl:when>
             <xsl:when test="$char='p'">
-                <xsl:value1-of select="/response/lst[@name='info']/lst/str[@name='p']"/> - </xsl:when>
+                <xsl:value-of select="/response/lst[@name='info']/lst/str[@name='p']"/> - </xsl:when>
             <xsl:when test="$char='O'">
-                <xsl:value1-of select="/response/lst[@name='info']/lst/str[@name='O']"/> - </xsl:when>
+                <xsl:value-of select="/response/lst[@name='info']/lst/str[@name='O']"/> - </xsl:when>
             <xsl:when test="$char='L'">
-                <xsl:value1-of select="/response/lst[@name='info']/lst/str[@name='L']"/> - </xsl:when>
+                <xsl:value-of select="/response/lst[@name='info']/lst/str[@name='L']"/> - </xsl:when>
             <xsl:when test="$char='B'">
-                <xsl:value1-of select="/response/lst[@name='info']/lst/str[@name='B']"/> - </xsl:when>
+                <xsl:value-of select="/response/lst[@name='info']/lst/str[@name='B']"/> - </xsl:when>
             <xsl:when test="$char='C'">
-                <xsl:value1-of select="/response/lst[@name='info']/lst/str[@name='C']"/> - </xsl:when>
+                <xsl:value-of select="/response/lst[@name='info']/lst/str[@name='C']"/> - </xsl:when>
             <xsl:when test="$char='f'">
-                <xsl:value1-of select="/response/lst[@name='info']/lst/str[@name='f']"/> - </xsl:when>
+                <xsl:value-of select="/response/lst[@name='info']/lst/str[@name='f']"/> - </xsl:when>
             <xsl:when test="$char='l'">
-                <xsl:value1-of select="/response/lst[@name='info']/lst/str[@name='l']"/> -
+                <xsl:value-of select="/response/lst[@name='info']/lst/str[@name='l']"/> -
             </xsl:when>
         </xsl:choose>
 
         <xsl:if test="not($i>=string-length($charList))">
             <xsl:call-template name="infochar2string">
                 <xsl:with-param name="i">
-                    <xsl:value1-of select="$i+1"/>
+                    <xsl:value-of select="$i+1"/>
                 </xsl:with-param>
                 <xsl:with-param name="charList">
-                    <xsl:value1-of select="$charList"/>
+                    <xsl:value-of select="$charList"/>
                 </xsl:with-param>
             </xsl:call-template>
         </xsl:if>

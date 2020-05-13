@@ -39,7 +39,7 @@
     <xsl:variable name="pos" select="position()"/>
     <doc>
         <xsl:apply-templates>
-          <xsl:with-param name="pos"><xsl:value1-of select="$pos"/></xsl:with-param>
+          <xsl:with-param name="pos"><xsl:value-of select="$pos"/></xsl:with-param>
         </xsl:apply-templates>
     </doc>
   </xsl:template>
@@ -49,10 +49,10 @@
       <xsl:variable name="fn" select="@name"/>
       
       <xsl:for-each select="*">
-		<xsl:element name="field">
-		    <xsl:attribute name="name"><xsl:value1-of select="$fn"/></xsl:attribute>
-	        <xsl:value1-of select="."/>
-		</xsl:element>
+        <xsl:element name="field">
+          <xsl:attribute name="name"><xsl:value-of select="$fn"/></xsl:attribute>
+          <xsl:value-of select="."/>
+        </xsl:element>
       </xsl:for-each>
   </xsl:template>
 
@@ -60,10 +60,10 @@
   <xsl:template match="doc/*">
       <xsl:variable name="fn" select="@name"/>
 
-	<xsl:element name="field">
-	    <xsl:attribute name="name"><xsl:value1-of select="$fn"/></xsl:attribute>
-        <xsl:value1-of select="."/>
-	</xsl:element>
+      <xsl:element name="field">
+        <xsl:attribute name="name"><xsl:value-of select="$fn"/></xsl:attribute>
+        <xsl:value-of select="."/>
+      </xsl:element>
   </xsl:template>
 
   <xsl:template match="*"/>

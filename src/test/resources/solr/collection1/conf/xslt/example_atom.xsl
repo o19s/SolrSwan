@@ -45,7 +45,7 @@
       <link rel="self" type="application/atom+xml" 
             href="http://localhost:8983/solr/q={$query}&amp;wt=xslt&amp;tr=atom.xsl"/>
       <updated>
-        <xsl:value1-of select="response/result/doc[position()=1]/date[@name='timestamp']"/>
+        <xsl:value-of select="response/result/doc[position()=1]/date[@name='timestamp']"/>
       </updated>
       <id>tag:localhost,2007:example</id>
       <xsl:apply-templates select="response/result/doc"/>
@@ -56,11 +56,11 @@
   <xsl:template match="doc">
     <xsl:variable name="id" select="str[@name='id']"/>
     <entry>
-      <title><xsl:value1-of select="str[@name='name']"/></title>
+      <title><xsl:value-of select="str[@name='name']"/></title>
       <link href="http://localhost:8983/solr/select?q={$id}"/>
-      <id>tag:localhost,2007:<xsl:value1-of select="$id"/></id>
-      <summary><xsl:value1-of select="arr[@name='features']"/></summary>
-      <updated><xsl:value1-of select="date[@name='timestamp']"/></updated>
+      <id>tag:localhost,2007:<xsl:value-of select="$id"/></id>
+      <summary><xsl:value-of select="arr[@name='features']"/></summary>
+      <updated><xsl:value-of select="date[@name='timestamp']"/></updated>
     </entry>
   </xsl:template>
 

@@ -31,11 +31,11 @@
   <xsl:template match='/'>
     <html>
       <head>
-        <title><xsl:value1-of select="$title"/></title>
+        <title><xsl:value-of select="$title"/></title>
         <xsl:call-template name="css"/>
       </head>
       <body>
-        <h1><xsl:value1-of select="$title"/></h1>
+        <h1><xsl:value-of select="$title"/></h1>
         <div class="note">
           This has been formatted by the sample "example.xsl" transform -
           use your own XSLT to get a nicer page
@@ -50,7 +50,7 @@
     <div class="doc">
       <table width="100%">
         <xsl:apply-templates>
-          <xsl:with-param name="pos"><xsl:value1-of select="$pos"/></xsl:with-param>
+          <xsl:with-param name="pos"><xsl:value-of select="$pos"/></xsl:with-param>
         </xsl:apply-templates>
       </table>
     </div>
@@ -60,22 +60,22 @@
     <xsl:param name="pos"></xsl:param>
     <tr>
       <td class="name">
-        <xsl:value1-of select="@name"/>
+        <xsl:value-of select="@name"/>
       </td>
-      <td class="value1">
-        <xsl:value1-of select="."/>
+      <td class="value">
+        <xsl:value-of select="."/>
 
         <xsl:if test="boolean(//lst[@name='explain'])">
           <xsl:element name="a">
             <!-- can't allow whitespace here -->
-            <xsl:attribute name="href">javascript:toggle("<xsl:value1-of select="concat('exp-',$pos)" />");</xsl:attribute>?</xsl:element>
+            <xsl:attribute name="href">javascript:toggle("<xsl:value-of select="concat('exp-',$pos)" />");</xsl:attribute>?</xsl:element>
           <br/>
           <xsl:element name="div">
             <xsl:attribute name="class">exp</xsl:attribute>
             <xsl:attribute name="id">
-              <xsl:value1-of select="concat('exp-',$pos)" />
+              <xsl:value-of select="concat('exp-',$pos)" />
             </xsl:attribute>
-            <xsl:value1-of select="//lst[@name='explain']/str[position()=$pos]"/>
+            <xsl:value-of select="//lst[@name='explain']/str[position()=$pos]"/>
           </xsl:element>
         </xsl:if>
       </td>
@@ -85,12 +85,12 @@
   <xsl:template match="doc/arr" priority="100">
     <tr>
       <td class="name">
-        <xsl:value1-of select="@name"/>
+        <xsl:value-of select="@name"/>
       </td>
-      <td class="value1">
+      <td class="value">
         <ul>
         <xsl:for-each select="*">
-          <li><xsl:value1-of select="."/></li>
+          <li><xsl:value-of select="."/></li>
         </xsl:for-each>
         </ul>
       </td>
@@ -101,10 +101,10 @@
   <xsl:template match="doc/*">
     <tr>
       <td class="name">
-        <xsl:value1-of select="@name"/>
+        <xsl:value-of select="@name"/>
       </td>
-      <td class="value1">
-        <xsl:value1-of select="."/>
+      <td class="value">
+        <xsl:value-of select="."/>
       </td>
     </tr>
   </xsl:template>

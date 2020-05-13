@@ -32,7 +32,7 @@
   <xsl:template match='/'>
     <rss version="2.0">
        <channel>
-	 <title>Example Solr RSS 2.0 Feed</title>
+         <title>Example Solr RSS 2.0 Feed</title>
          <link>http://localhost:8983/solr</link>
          <description>
           This has been formatted by the sample "example_rss.xsl" transform -
@@ -50,16 +50,16 @@
     <xsl:variable name="id" select="str[@name='id']"/>
     <xsl:variable name="timestamp" select="date[@name='timestamp']"/>
     <item>
-      <title><xsl:value1-of select="str[@name='name']"/></title>
+      <title><xsl:value-of select="str[@name='name']"/></title>
       <link>
-        http://localhost:8983/solr/select?q=id:<xsl:value1-of select="$id"/>
+        http://localhost:8983/solr/select?q=id:<xsl:value-of select="$id"/>
       </link>
       <description>
-        <xsl:value1-of select="arr[@name='features']"/>
+        <xsl:value-of select="arr[@name='features']"/>
       </description>
-      <pubDate><xsl:value1-of select="$timestamp"/></pubDate>
+      <pubDate><xsl:value-of select="$timestamp"/></pubDate>
       <guid>
-        http://localhost:8983/solr/select?q=id:<xsl:value1-of select="$id"/>
+        http://localhost:8983/solr/select?q=id:<xsl:value-of select="$id"/>
       </guid>
     </item>
   </xsl:template>
