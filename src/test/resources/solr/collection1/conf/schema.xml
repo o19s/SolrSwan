@@ -82,27 +82,29 @@
                 <filter class="solr.LowerCaseFilterFactory" />
 			</analyzer>
 		</fieldType>
-        <fieldType name="int" class="solr.TrieIntField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
-        <fieldType name="long" class="solr.TrieLongField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
-        <fieldType name="float" class="solr.TrieFloatField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
-        <fieldType name="double" class="solr.TrieDoubleField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
-        <fieldType name="date" class="solr.TrieDateField" omitNorms="true" precisionStep="1" positionIncrementGap="0"/>
-
-
+        <fieldType name="int" class="solr.IntPointField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
+        <fieldType name="long" class="solr.LongPointField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
+        <fieldType name="float" class="solr.FloatPointField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
+        <fieldType name="double" class="solr.DoublePointField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
+        <fieldType name="date" class="solr.DatePointField" omitNorms="true" precisionStep="1" positionIncrementGap="0"/>
+<!--
+		<fieldType name="double" class="solr.TrieDoubleField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
+		<fieldType name="date" class="solr.TrieDateField" omitNorms="true" precisionStep="1" positionIncrementGap="0"/>
+-->
 	</types>
 
 	<fields>
 		<field name="_version_" type="long" indexed="true" stored="true"/>
 		<field name="id" type="string" indexed="true" stored="true"
 			required="true" />
-    <field name="fruit" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-    <field name="animal" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-    <field name="x" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
+    	<field name="fruit" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
+    	<field name="animal" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
+    	<field name="x" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
 		<field name="y" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-    <field name="z" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-    <field name="z1" type="textNoStem" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-    <field name="z2" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-    <field name="z3" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
+    	<field name="z" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
+    	<field name="z1" type="textNoStem" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
+    	<field name="z2" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
+    	<field name="z3" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
 
         <!--Stemming-->
         <field name="fruit_stem" type="text_general_stem" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>

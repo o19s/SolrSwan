@@ -1308,6 +1308,7 @@
        In reality you will likely want to add the component to your
        already specified request handlers.
     -->
+  <!--
   <requestHandler name="/tvrh" class="solr.SearchHandler" startup="lazy">
     <lst name="defaults">
       <bool name="tv">true</bool>
@@ -1316,6 +1317,7 @@
       <str>tvComponent</str>
     </arr>
   </requestHandler>
+  -->
 
   <!-- Term Vector Component http://wiki.apache.org/solr/TermVectorComponent -->
   <!-- <searchComponent name="thComponent" class="com.o19s.solr.swan.TermHighlightComponent"/> -->
@@ -1325,7 +1327,7 @@
   <!-- A request handler for demonstrating the _term vector component This
       is purely as an example. In reality you will likely want to add the component
       to your already specified request handlers. -->
-  <requestHandler name="/tvrhs" class="solr.SearchHandler"
+  <requestHandler name="/tvrh" class="solr.SearchHandler"
                   startup="lazy">
     <lst name="defaults">
       <str name="defType">swan</str>
