@@ -105,19 +105,27 @@ public class SwanRangeNode extends SwanNode {
       return query;
 
     String type = getType(field);
-    if (type.equals("TrieIntField"))
+    if (type.equals("TrieIntField")) {
       //return NumericRangeQuery.newIntRange(_field, bounds.getIntLower(), bounds.getIntUpper(), bounds.inc_lower, bounds.inc_upper);
-      return IntPoint.newRangeQuery(_field, bounds.getIntLower(), bounds.getIntUpper());
-    else if (type.equals("TrieLongField"))
+      int lbincr = (bounds.inc_lower) ? 0 : 1;
+      int ubdecr = (bounds.inc_upper) ? 0 : 1;
+      return IntPoint.newRangeQuery(_field, bounds.getIntLower() + lbincr, bounds.getIntUpper() - ubdecr);
+    } else if (type.equals("TrieLongField")) {
       //return NumericRangeQuery.newLongRange(_field, bounds.getLongLower(), bounds.getLongUpper(), bounds.inc_lower, bounds.inc_upper);
-      return LongPoint.newRangeQuery(_field, bounds.getLongLower(), bounds.getLongUpper());
-    else if (type.equals("TrieDoubleField"))
+      long lbincr = (bounds.inc_lower) ? 0 : 1;
+      long ubdecr = (bounds.inc_upper) ? 0 : 1;
+      return LongPoint.newRangeQuery(_field, bounds.getLongLower() + lbincr, bounds.getLongUpper() - ubdecr);
+    } else if (type.equals("TrieDoubleField")) {
       //return NumericRangeQuery.newDoubleRange(_field, bounds.getDoubleLower(), bounds.getDoubleUpper(), bounds.inc_lower, bounds.inc_upper);
-      return DoublePoint.newRangeQuery(_field, bounds.getDoubleLower(), bounds.getDoubleUpper());
-    else if (type.equals("TrieFloatField"))
+      double lower = (bounds.inc_lower) ? bounds.getDoubleLower() : Math.nextAfter(bounds.getDoubleLower(), Double.POSITIVE_INFINITY);
+      double upper = (bounds.inc_upper) ? bounds.getDoubleUpper() : Math.nextAfter(bounds.getDoubleUpper(), Double.NEGATIVE_INFINITY);
+      return DoublePoint.newRangeQuery(_field, lower, upper);
+    } else if (type.equals("TrieFloatField")) {
       //return NumericRangeQuery.newFloatRange(_field, bounds.getFloatLower(), bounds.getFloatUpper(), bounds.inc_lower, bounds.inc_upper);
-      return FloatPoint.newRangeQuery(_field, bounds.getFloatLower(), bounds.getFloatUpper());
-    else if (type.equals("TrieDateField")) {
+      float lower = (bounds.inc_lower) ? bounds.getFloatLower() : Math.nextAfter(bounds.getFloatLower(), Double.POSITIVE_INFINITY);
+      float upper = (bounds.inc_upper) ? bounds.getFloatUpper() : Math.nextAfter(bounds.getFloatUpper(), Double.NEGATIVE_INFINITY);
+      return FloatPoint.newRangeQuery(_field, lower, upper);
+    } else if (type.equals("TrieDateField")) {
       DatePointField dateField = (DatePointField) schema.getField(field).getType();
       //TrieDateField dateField = (TrieDateField) schema.getField(field).getType();
       return dateField.getRangeQuery(_parser, schema.getField(field), bounds.getDateLower().toString(), bounds.getDateUpper().toString(), bounds.inc_lower, bounds.inc_upper);
