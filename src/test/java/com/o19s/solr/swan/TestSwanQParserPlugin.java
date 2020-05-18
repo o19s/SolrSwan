@@ -145,7 +145,7 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
 
   @Test
   public void testRangeQuery() {
-    test("@range<12346",1);
+    test("@range < 12346",1);
     test("@range > 12346",5);
     test("@range <= 12346",2);
     test("@range >= 12346",6);
@@ -154,7 +154,7 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
 
   @Test
   public void testRangeIntQuery() {
-    test("@rangeInt<12346",1);
+    test("@rangeInt < 12346",1);
     test("@rangeInt > 12346",5);
     test("@rangeInt <= 12346",2);
     test("@rangeInt >= 12346",6);
@@ -163,7 +163,7 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
 
   @Test
   public void testRangeLongQuery() {
-    test("@rangeLong<12346",1);
+    test("@rangeLong < 12346",1);
     test("@rangeLong > 12346",5);
     test("@rangeLong <= 12346",2);
     test("@rangeLong >= 12346",6);
@@ -172,7 +172,7 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
 
   @Test
   public void testRangeFloatQuery() {
-    test("@rangeFloat<12346",1);
+    test("@rangeFloat < 12346",1);
     test("@rangeFloat > 12346",5);
     test("@rangeFloat <= 12346",2);
     test("@rangeFloat >= 12346",6);
@@ -181,7 +181,7 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
 
   @Test
   public void testRangeDoubleQuery() {
-    test("@rangeDouble<12346",1);
+    test("@rangeDouble < 12346",1);
     test("@rangeDouble > 12346",5);
     test("@rangeDouble <= 12346",2);
     test("@rangeDouble >= 12346",6);
@@ -214,12 +214,12 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
     test("@range<>12346",6);
   }
 
-    @Test
-    public void testFailingExclusionQuery() {
+  @Test
+  public void testFailingExclusionQuery() {
         test("@rangeInt<>12346",6);
     }
 
-    @Test
+  @Test
   public void testRangeEqualQuery() {
     test("@range=12345",1);
   }
