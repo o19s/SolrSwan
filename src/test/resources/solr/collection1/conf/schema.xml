@@ -82,11 +82,12 @@
                 <filter class="solr.LowerCaseFilterFactory" />
 			</analyzer>
 		</fieldType>
-        <fieldType name="int" class="solr.IntPointField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
-        <fieldType name="long" class="solr.LongPointField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
-        <fieldType name="float" class="solr.FloatPointField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
-        <fieldType name="double" class="solr.DoublePointField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
-        <fieldType name="date" class="solr.DatePointField" omitNorms="true" precisionStep="1" positionIncrementGap="0"/>
+		<fieldType name="long" class="solr.LongPointField" docValues="true" />
+        <fieldType name="pint" class="solr.IntPointField" docValues="true" />
+        <fieldType name="plong" class="solr.LongPointField" docValues="true" />
+        <fieldType name="pfloat" class="solr.FloatPointField" docValues="true" />
+        <fieldType name="pdouble" class="solr.DoublePointField" docValues="true" />
+        <fieldType name="pdate" class="solr.DatePointField" docValues="true" />
 <!--
 		<fieldType name="double" class="solr.TrieDoubleField" precisionStep="1" omitNorms="true" positionIncrementGap="0"/>
 		<fieldType name="date" class="solr.TrieDateField" omitNorms="true" precisionStep="1" positionIncrementGap="0"/>
@@ -97,24 +98,24 @@
 		<field name="_version_" type="long" indexed="true" stored="true"/>
 		<field name="id" type="string" indexed="true" stored="true"
 			required="true" />
-    	<field name="fruit" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-    	<field name="animal" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-    	<field name="x" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-		<field name="y" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-    	<field name="z" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-    	<field name="z1" type="textNoStem" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-    	<field name="z2" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-    	<field name="z3" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
+    	<field name="fruit" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false"/>
+    	<field name="animal" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false" />
+    	<field name="x" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false" />
+		<field name="y" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false" />
+    	<field name="z" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false" />
+    	<field name="z1" type="textNoStem" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false" />
+    	<field name="z2" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false" />
+    	<field name="z3" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false" />
 
         <!--Stemming-->
         <field name="fruit_stem" type="text_general_stem" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
 
         <field name="range" type="string" indexed="true" stored="true" />
-        <field name="rangeInt" type="int" indexed="true" stored="true" />
-        <field name="rangeLong" type="long" indexed="true" stored="true" />
-        <field name="rangeFloat" type="float" indexed="true" stored="true" />
-        <field name="rangeDouble" type="double" indexed="true" stored="true" />
-        <field name="rangeDate" type="date" indexed="true" stored="true" />
+        <field name="rangeInt" type="pint" indexed="true" stored="true" />
+        <field name="rangeLong" type="plong" indexed="true" stored="true" />
+        <field name="rangeFloat" type="pfloat" indexed="true" stored="true" />
+        <field name="rangeDouble" type="pdouble" indexed="true" stored="true" />
+        <field name="rangeDate" type="pdate" indexed="true" stored="true" />
 
 	</fields>
 
