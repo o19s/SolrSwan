@@ -105,27 +105,34 @@ public class SwanRangeNode extends SwanNode {
       return query;
 
     String type = getType(field);
-    if (type.equals("TrieIntField")) {
+//    System.out.println("Type: " + type);
+    if (type.equals("IntPointField") || type.equals("TrieIntField")) {
       //return NumericRangeQuery.newIntRange(_field, bounds.getIntLower(), bounds.getIntUpper(), bounds.inc_lower, bounds.inc_upper);
-      int lbincr = (bounds.inc_lower) ? 0 : 1;
-      int ubdecr = (bounds.inc_upper) ? 0 : 1;
-      return IntPoint.newRangeQuery(_field, bounds.getIntLower() + lbincr, bounds.getIntUpper() - ubdecr);
-    } else if (type.equals("TrieLongField")) {
+      int lower = (bounds.inc_lower) ? bounds.getIntLower() : Math.addExact(bounds.getIntLower(), 1);
+      int upper = (bounds.inc_upper) ? bounds.getIntUpper() : Math.addExact(bounds.getIntUpper(), -1);
+      return IntPoint.newRangeQuery(_field, lower, upper);
+    } else if (type.equals("LongPointField") || type.equals("TrieLongField")) {
       //return NumericRangeQuery.newLongRange(_field, bounds.getLongLower(), bounds.getLongUpper(), bounds.inc_lower, bounds.inc_upper);
-      long lbincr = (bounds.inc_lower) ? 0 : 1;
-      long ubdecr = (bounds.inc_upper) ? 0 : 1;
-      return LongPoint.newRangeQuery(_field, bounds.getLongLower() + lbincr, bounds.getLongUpper() - ubdecr);
-    } else if (type.equals("TrieDoubleField")) {
+      long lower = (bounds.inc_lower) ? bounds.getLongLower() : Math.addExact(bounds.getLongLower(), 1);
+      long upper = (bounds.inc_upper) ? bounds.getLongUpper() : Math.addExact(bounds.getLongUpper(), -1);
+      return LongPoint.newRangeQuery(_field, lower, upper);
+    } else if (type.equals("DoublePointField") || type.equals("TrieDoubleField")) {
       //return NumericRangeQuery.newDoubleRange(_field, bounds.getDoubleLower(), bounds.getDoubleUpper(), bounds.inc_lower, bounds.inc_upper);
-      double lower = (bounds.inc_lower) ? bounds.getDoubleLower() : Math.nextAfter(bounds.getDoubleLower(), Double.POSITIVE_INFINITY);
-      double upper = (bounds.inc_upper) ? bounds.getDoubleUpper() : Math.nextAfter(bounds.getDoubleUpper(), Double.NEGATIVE_INFINITY);
+      double lower = (bounds.inc_lower) ? bounds.getDoubleLower() : Math.nextUp(bounds.getDoubleLower());
+      double upper = (bounds.inc_upper) ? bounds.getDoubleUpper() : Math.nextDown(bounds.getDoubleUpper());
       return DoublePoint.newRangeQuery(_field, lower, upper);
-    } else if (type.equals("TrieFloatField")) {
+    } else if (type.equals("FloatPointField") || type.equals("TrieFloatField")) {
       //return NumericRangeQuery.newFloatRange(_field, bounds.getFloatLower(), bounds.getFloatUpper(), bounds.inc_lower, bounds.inc_upper);
-      float lower = (bounds.inc_lower) ? bounds.getFloatLower() : Math.nextAfter(bounds.getFloatLower(), Double.POSITIVE_INFINITY);
-      float upper = (bounds.inc_upper) ? bounds.getFloatUpper() : Math.nextAfter(bounds.getFloatUpper(), Double.NEGATIVE_INFINITY);
+      float lower = (bounds.inc_lower) ? bounds.getFloatLower() : Math.nextUp(bounds.getFloatLower());
+      float upper = (bounds.inc_upper) ? bounds.getFloatUpper() : Math.nextDown(bounds.getFloatUpper());
       return FloatPoint.newRangeQuery(_field, lower, upper);
-    } else if (type.equals("TrieDateField")) {
+    } else if (type.equals("DatePointField")) {
+//      System.out.println("field: " + schema.getField(field).getType());
+      DatePointField dateField = (DatePointField) schema.getField(field).getType();
+      //TrieDateField dateField = (TrieDateField) schema.getField(field).getType();
+      return dateField.getRangeQuery(_parser, schema.getField(field), bounds.getDateLower().toString(), bounds.getDateUpper().toString(), bounds.inc_lower, bounds.inc_upper);
+    } else if(type.equals("TrieDateField")) {
+//      System.out.println("field: " + schema.getField(field).getType());
       DatePointField dateField = (DatePointField) schema.getField(field).getType();
       //TrieDateField dateField = (TrieDateField) schema.getField(field).getType();
       return dateField.getRangeQuery(_parser, schema.getField(field), bounds.getDateLower().toString(), bounds.getDateUpper().toString(), bounds.inc_lower, bounds.inc_upper);
