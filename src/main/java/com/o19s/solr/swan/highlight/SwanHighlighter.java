@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.util.*;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.CachingTokenFilter;
 import org.apache.lucene.analysis.TokenFilter;
@@ -71,8 +72,8 @@ public class SwanHighlighter extends DefaultSolrHighlighter {
   @Override
   public void init(PluginInfo info) {
     super.init(info);
-    SolrFormatter fmt = new HtmlFormatter();
-    formatters.put("html", fmt);
+    //SolrFormatter fmt = new HtmlFormatter();
+    //formatters.put("html", fmt);
   }
 
   /**
@@ -126,7 +127,9 @@ public class SwanHighlighter extends DefaultSolrHighlighter {
       Fields tvFields = searcher.getIndexReader().getTermVectors(docId);
 
       for (String fieldName : fieldNames) {
-        fieldName = fieldName.trim();
+//        fieldName = fieldName.trim();
+        if(StringUtils.isBlank(fieldName))
+          continue;
 
         IndexableField[] docFields = doc.getFields(fieldName);
         List<String> listFields = new ArrayList<>();
