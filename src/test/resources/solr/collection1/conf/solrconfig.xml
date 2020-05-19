@@ -382,11 +382,11 @@
   <query>
 
     <!-- Maximum number of clauses allowed when parsing a boolean query string.
-         
+
          This limit only impacts boolean queries specified by a user as part of a query string,
          and provides per-collection controls on how complex user specified boolean queries can
          be.  Query strings that specify more clauses then this will result in an error.
-         
+
          If this per-collection limit is greater then the global `maxBooleanClauses` limit
          specified in `solr.xml`, it will have no effect, as that setting also limits the size
          of user specified boolean queries.
@@ -735,7 +735,7 @@
   <!-- SolrSwan Work --><!-- SolrSwan Work --><!-- SolrSwan Work --><!-- SolrSwan Work --><!-- SolrSwan Work -->
   <!-- SolrSwan Work --><!-- SolrSwan Work --><!-- SolrSwan Work --><!-- SolrSwan Work --><!-- SolrSwan Work -->
   <queryParser name="swan" class="com.o19s.solr.swan.SwanQParserPlugin">
-    <str name="fieldAliases">solr/collection1/conf/fieldAliases.txt</str>
+    <str name="fieldAliases">fieldAliases.txt</str>
   </queryParser>
 
   <requestHandler name="swan" class="solr.SearchHandler">
@@ -746,16 +746,20 @@
       <str name="hl.useFastVectorHighlighter">true</str>
       <str name="hl.snippets">10</str>
       <str name="hl.mergeContiguous">true</str>
-      <str name="hl.fragmentsBuilder">colored</str>
+      <str name="hl.fragmentsBuilder">default</str>
+      <!--<str name="hl.fragmentsBuilder">colored</str> -->
       <str name="hl.fragListBuilder">simple</str>
       <str name="hl.fl">x</str>
       <str name="hl.usePhraseHighlighter">true</str>
       <str name="hl">true</str>
     </lst>
   </requestHandler>
-
+<!--
   <searchComponent class="solr.HighlightComponent" name="highlight">
     <highlighting class="com.o19s.solr.swan.highlight.SwanHighlighter">
+-->
+  <searchComponent class="com.o19s.solr.swan.highlight.SwanHighlightComponent" name="highlight">
+    <highlighting>
       <!--<highlighting class="org.apache.solr.highlight.DefaultSolrHighlighter">-->
       <!--<highlighting class="org.apache.solr.highlight.PostingsSolrHighlighter">-->
       <!-- Configure the standard fragmenter -->
@@ -790,7 +794,7 @@
 
       <!-- Configure the standard encoder -->
       <encoder name="html" class="solr.highlight.HtmlEncoder" default="true"/>
-      <!--<encoder name="html_striper" class="com.o19s.solr.swan.highlight.HtmlStriperEncoder" default="true"/>-->
+      <encoder name="html_striper" class="com.o19s.solr.swan.highlight.HtmlStriperEncoder" default="true"/>
       <encoder name="default" class="solr.highlight.DefaultEncoder" />
 
       <!-- Configure the standard fragListBuilder -->
@@ -939,12 +943,11 @@
          list can either be overridden completely, or components can be
          prepended or appended to the default list.  (see below)
       -->
-    <!--
-       <arr name="components">
-         <str>nameOfCustomComponent1</str>
-         <str>nameOfCustomComponent2</str>
-       </arr>
-      -->
+      <arr name="components">
+         <str>query</str>
+         <str>highlight</str>
+      </arr>
+
   </requestHandler>
 
   <!-- A request handler that returns indented JSON by default -->
@@ -1480,10 +1483,13 @@
 
        http://wiki.apache.org/solr/HighlightingParameters
     -->
-  <searchComponent class="solr.HighlightComponent" name="highlight">
+<!--
+  <searchComponent class="solr.HighlightComponent" name="defhighlight">
     <highlighting>
+-->
       <!-- Configure the standard fragmenter -->
       <!-- This could most likely be commented out in the "default" case -->
+<!--
       <fragmenter name="gap"
                   default="true"
                   class="solr.highlight.GapFragmenter">
@@ -1491,24 +1497,28 @@
           <int name="hl.fragsize">100</int>
         </lst>
       </fragmenter>
-
+-->
       <!-- A regular-expression-based fragmenter
            (for sentence extraction)
         -->
+<!--
       <fragmenter name="regex"
                   class="solr.highlight.RegexFragmenter">
         <lst name="defaults">
+-->
           <!-- slightly smaller fragsizes work better because of slop -->
-          <int name="hl.fragsize">70</int>
+<!--          <int name="hl.fragsize">70</int>
+-->
           <!-- allow 50% slop on fragment sizes -->
-          <float name="hl.regex.slop">0.5</float>
+<!--          <float name="hl.regex.slop">0.5</float>
+-->
           <!-- a basic sentence pattern -->
-          <str name="hl.regex.pattern">[-\w ,/\n\&quot;&apos;]{20,200}</str>
+<!--          <str name="hl.regex.pattern">[-\w ,/\n\&quot;&apos;]{20,200}</str>
         </lst>
       </fragmenter>
-
+-->
       <!-- Configure the standard formatter -->
-      <formatter name="html"
+<!--      <formatter name="html"
                  default="true"
                  class="solr.highlight.HtmlFormatter">
         <lst name="defaults">
@@ -1516,37 +1526,38 @@
           <str name="hl.simple.post"><![CDATA[</em>]]></str>
         </lst>
       </formatter>
-
+-->
       <!-- Configure the standard encoder -->
-      <encoder name="html"
+<!--      <encoder name="html"
                class="solr.highlight.HtmlEncoder" />
-
+-->
       <!-- Configure the standard fragListBuilder -->
-      <fragListBuilder name="simple"
+<!--      <fragListBuilder name="simple"
                        class="solr.highlight.SimpleFragListBuilder"/>
-
+-->
       <!-- Configure the single fragListBuilder -->
-      <fragListBuilder name="single"
+<!--      <fragListBuilder name="single"
                        class="solr.highlight.SingleFragListBuilder"/>
-
+-->
       <!-- Configure the weighted fragListBuilder -->
-      <fragListBuilder name="weighted"
+<!--      <fragListBuilder name="weighted"
                        default="true"
                        class="solr.highlight.WeightedFragListBuilder"/>
-
+-->
       <!-- default tag FragmentsBuilder -->
-      <fragmentsBuilder name="default"
+<!--      <fragmentsBuilder name="default"
                         default="true"
                         class="solr.highlight.ScoreOrderFragmentsBuilder">
+-->
         <!--
         <lst name="defaults">
           <str name="hl.multiValuedSeparatorChar">/</str>
         </lst>
         -->
-      </fragmentsBuilder>
-
+<!--      </fragmentsBuilder>
+-->
       <!-- multi-colored tag FragmentsBuilder -->
-      <fragmentsBuilder name="colored"
+<!--      <fragmentsBuilder name="colored"
                         class="solr.highlight.ScoreOrderFragmentsBuilder">
         <lst name="defaults">
           <str name="hl.tag.pre"><![CDATA[
@@ -1571,16 +1582,18 @@
       <boundaryScanner name="breakIterator"
                        class="solr.highlight.BreakIteratorBoundaryScanner">
         <lst name="defaults">
+-->
           <!-- type should be one of CHARACTER, WORD(default), LINE and SENTENCE -->
-          <str name="hl.bs.type">WORD</str>
+<!--          <str name="hl.bs.type">WORD</str> -->
           <!-- language and country are used when constructing Locale object.  -->
           <!-- And the Locale object will be used when getting instance of BreakIterator -->
-          <str name="hl.bs.language">en</str>
+<!--          <str name="hl.bs.language">en</str>
           <str name="hl.bs.country">US</str>
         </lst>
       </boundaryScanner>
     </highlighting>
   </searchComponent>
+-->
 
   <!-- Update Processors
 
