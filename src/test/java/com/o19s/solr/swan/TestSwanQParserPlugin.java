@@ -192,6 +192,7 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
   public void testRangeDateQuery() {
     test("@rangeDate<20121015",7);
     test("@rangeDate<201204",2);
+    test("@rangeDate<201602", 7);
     test("@rangeDate<201205",3);
     test("@rangeDate>201205<201206",2);
     test("@rangeDate>201205<20120601",1);
