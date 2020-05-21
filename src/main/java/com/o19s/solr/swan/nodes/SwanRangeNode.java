@@ -105,39 +105,26 @@ public class SwanRangeNode extends SwanNode {
       return query;
 
     String type = getType(field);
-//    System.out.println("Type: " + type);
     if (type.equals("IntPointField") || type.equals("TrieIntField")) {
-      //return NumericRangeQuery.newIntRange(_field, bounds.getIntLower(), bounds.getIntUpper(), bounds.inc_lower, bounds.inc_upper);
       int lower = (bounds.inc_lower) ? bounds.getIntLower() : Math.addExact(bounds.getIntLower(), 1);
       int upper = (bounds.inc_upper) ? bounds.getIntUpper() : Math.addExact(bounds.getIntUpper(), -1);
       return IntPoint.newRangeQuery(_field, lower, upper);
     } else if (type.equals("LongPointField") || type.equals("TrieLongField")) {
-      //return NumericRangeQuery.newLongRange(_field, bounds.getLongLower(), bounds.getLongUpper(), bounds.inc_lower, bounds.inc_upper);
       long lower = (bounds.inc_lower) ? bounds.getLongLower() : Math.addExact(bounds.getLongLower(), 1);
       long upper = (bounds.inc_upper) ? bounds.getLongUpper() : Math.addExact(bounds.getLongUpper(), -1);
       return LongPoint.newRangeQuery(_field, lower, upper);
     } else if (type.equals("DoublePointField") || type.equals("TrieDoubleField")) {
-      //return NumericRangeQuery.newDoubleRange(_field, bounds.getDoubleLower(), bounds.getDoubleUpper(), bounds.inc_lower, bounds.inc_upper);
       double lower = (bounds.inc_lower) ? bounds.getDoubleLower() : Math.nextUp(bounds.getDoubleLower());
       double upper = (bounds.inc_upper) ? bounds.getDoubleUpper() : Math.nextDown(bounds.getDoubleUpper());
       return DoublePoint.newRangeQuery(_field, lower, upper);
     } else if (type.equals("FloatPointField") || type.equals("TrieFloatField")) {
-      //return NumericRangeQuery.newFloatRange(_field, bounds.getFloatLower(), bounds.getFloatUpper(), bounds.inc_lower, bounds.inc_upper);
       float lower = (bounds.inc_lower) ? bounds.getFloatLower() : Math.nextUp(bounds.getFloatLower());
       float upper = (bounds.inc_upper) ? bounds.getFloatUpper() : Math.nextDown(bounds.getFloatUpper());
       return FloatPoint.newRangeQuery(_field, lower, upper);
-    } else if (type.equals("DatePointField")) {
-//      System.out.println("field: " + schema.getField(field).getType());
+    } else if (type.equals("DatePointField") || type.equals("TrieDateField")) {
       DatePointField dateField = (DatePointField) schema.getField(field).getType();
-      //TrieDateField dateField = (TrieDateField) schema.getField(field).getType();
-      return dateField.getRangeQuery(_parser, schema.getField(field), bounds.getDateLower().toString(), bounds.getDateUpper().toString(), bounds.inc_lower, bounds.inc_upper);
-    } else if(type.equals("TrieDateField")) {
-//      System.out.println("field: " + schema.getField(field).getType());
-      DatePointField dateField = (DatePointField) schema.getField(field).getType();
-      //TrieDateField dateField = (TrieDateField) schema.getField(field).getType();
-      return dateField.getRangeQuery(_parser, schema.getField(field), bounds.getDateLower().toString(), bounds.getDateUpper().toString(), bounds.inc_lower, bounds.inc_upper);
-    }
-    else
+      return dateField.getRangeQuery(_parser, schema.getField(field), bounds.getDateStrLower(), bounds.getDateStrUpper(), bounds.inc_lower, bounds.inc_upper);
+    } else
       return new TermRangeQuery(_field, bounds.ref_lower, bounds.ref_upper, bounds.inc_lower, bounds.inc_upper);
 
   }
@@ -238,6 +225,7 @@ public class SwanRangeNode extends SwanNode {
       return Float.parseFloat(ref_upper.utf8ToString());
     }
 
+    /*
     public Date getDateLower() {
       Calendar cal = Calendar.getInstance();
       cal.set(1800, 1, 1, 0, 0, 0);
@@ -260,6 +248,43 @@ public class SwanRangeNode extends SwanNode {
       int day = ref.length() < 8 ? 31 : Integer.parseInt(ref.substring(6,8));
       cal.set(year, month - 1, day);
       return cal.getTime();
+    }
+     */
+
+    public String getDateStrLower() {
+      //Calendar cal = Calendar.getInstance();
+      //cal.set(1800, 1, 1, 0, 0, 0);
+      if (ref_lower == null || ref_lower.length < 4)
+        return null;
+      String ref = ref_lower.utf8ToString();
+      int year = ref.length() == 4 ? Integer.parseInt(ref) : Integer.parseInt(ref.substring(0, 4));
+      int month = ref.length() < 6 ? 01 : Integer.parseInt(ref.substring(4,6));
+      int day = ref.length() < 8 ? 01 : Integer.parseInt(ref.substring(6,8));
+      return String.format("%04d-%02d-%02dT00:00:00Z", year, month, day);
+      //cal.set(year, month - 1, day);
+      //return cal.getTime();
+    }
+
+    public String getDateStrUpper() {
+      //Calendar cal = Calendar.getInstance();
+      //cal.set(2100, 1, 1, 23, 59, 59);
+      if (ref_upper == null || ref_upper.length < 4)
+        return null;
+      String ref = ref_upper.utf8ToString();
+      int year = ref.length() == 4 ? Integer.parseInt(ref) : Integer.parseInt(ref.substring(0, 4));
+      int month = ref.length() < 6 ? 12 : Integer.parseInt(ref.substring(4,6));
+      int day = 31;
+      if(ref.length() < 8) {
+        switch(month) {
+          case 1: case 3: case 5: case 7: case 8: case 10: case 12: day = 31; break;
+          case 4: case 6: case 9: case 11: day = 30; break;
+          case 2: day = ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) ? 29 : 28; break;
+        }
+      } else
+        day = Integer.parseInt(ref.substring(6,8));
+      return String.format("%04d-%02d-%02dT23:59:59.999Z", year, month, day);
+      //cal.set(year, month - 1, day);
+      //return cal.getTime();
     }
   }
 
