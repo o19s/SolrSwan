@@ -68,9 +68,7 @@ public class SwanHighlightComponent extends HighlightComponent implements Plugin
     } else {
       swanHighlighter = core.createInitInstance(children.get(0),SwanHighlighter.class,null, SwanHighlighter.class.getName());
     }
-
   }
-
 
   @Override
   public void process(ResponseBuilder rb) throws IOException {
