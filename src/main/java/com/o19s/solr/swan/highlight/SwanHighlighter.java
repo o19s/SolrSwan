@@ -91,7 +91,7 @@ public class SwanHighlighter extends DefaultSolrHighlighter {
    * @return NamedList containing a NamedList for each document, which in
    * turns contains sets (field, summary) pairs.
    */
-  /*
+
   @Override
   @SuppressWarnings("unchecked")
   public NamedList<Object> doHighlighting(DocList docs, Query query, SolrQueryRequest req, String[] defaultFields)
@@ -241,8 +241,8 @@ public class SwanHighlighter extends DefaultSolrHighlighter {
 
     return fragments;
   }
-  */
 
+/*
   @Override
   @SuppressWarnings("unchecked")
   public NamedList<Object> doHighlighting(DocList docs, Query query, SolrQueryRequest req, String[] defaultFields)
@@ -286,7 +286,7 @@ public class SwanHighlighter extends DefaultSolrHighlighter {
             new WordHashFragmentsBuilder());
 
     safvh.setPhraseLimit(params.getInt(HighlightParams.PHRASE_LIMIT, Integer.MAX_VALUE));
-    SAFieldQuery spanAwareFieldQuery = new SAFieldQuery(query, searcher.getIndexReader(),
+    SAFieldQuery fieldQuery = new SAFieldQuery(query, searcher, searcher.getIndexReader(),
             params.getBool( HighlightParams.USE_PHRASE_HIGHLIGHTER, true ),
             params.getBool( HighlightParams.FIELD_MATCH, false ));
     //FieldQuery fieldQuery = safvh.getFieldQuery(query, searcher.getIndexReader());
@@ -298,7 +298,7 @@ public class SwanHighlighter extends DefaultSolrHighlighter {
         if(StringUtils.isBlank(fieldName))
           continue;
         if( useFastVectorHighlighter( params, schema, fieldName ) )
-          doHighlightingByFastVectorHighlighter( safvh, spanAwareFieldQuery, req, docSummaries, docId, doc, fieldName );
+          doHighlightingByFastVectorHighlighter( safvh, fieldQuery, req, docSummaries, docId, doc, fieldName );
         else
           doHighlightingByHighlighter( query, req, docSummaries, docId, doc, fieldName, smMarker, pmMarker );
       }
@@ -308,7 +308,7 @@ public class SwanHighlighter extends DefaultSolrHighlighter {
     //CHANGE end
     return fragments;
   }
-
+*/
   /*
    * If fieldName is undefined, this method returns false, then
    * doHighlightingByHighlighter() will do nothing for the field.
