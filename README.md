@@ -3,6 +3,9 @@
 SolrSwan
 ========
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![CircleCI](https://circleci.com/gh/o19s/SolrSwan.svg?style=svg)](https://circleci.com/gh/o19s/SolrSwan)
+
 SolrSwan is a query parser and highlighter for Solr that accepts proximity and Boolean queries. The syntax is designed to be compatible with the search syntax in use at the U.S. Patent and Trademark Office. In addition to a changed fielded query syntax, the additional operators are:
 
 * Same
