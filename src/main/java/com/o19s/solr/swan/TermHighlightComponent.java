@@ -1,14 +1,11 @@
 package com.o19s.solr.swan;
 
 import java.io.IOException;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-import org.apache.lucene.index.AtomicReaderContext;
+//import org.apache.lucene.index.AtomicReaderContext;
 import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.index.LeafReaderContext;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
@@ -18,7 +15,6 @@ import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.spans.SpanQuery;
-import org.apache.lucene.search.spans.SpanTermQuery;
 import org.apache.solr.common.util.NamedList;
 import org.apache.solr.common.util.SimpleOrderedMap;
 import org.apache.solr.core.SolrCore;
@@ -32,14 +28,17 @@ import org.apache.solr.util.plugin.SolrCoreAware;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.o19s.solr.swan.highlight.WordHashFragmentsBuilder;
+//import com.o19s.solr.swan.highlight.WordHashFragmentsBuilder;
 
 /**
  * Provides an end point for listing all the terms related to a search.
  *
  */
 public class TermHighlightComponent extends SearchComponent implements SolrCoreAware {
-
+    private static final int    MAX_HIGHLIGHT = 360;
+    private static int toHash(String key) {
+        return Math.abs(key.toLowerCase().hashCode() % MAX_HIGHLIGHT);
+    }
 
     public static final Logger LOG = LoggerFactory.getLogger(TermHighlightComponent.class);
 
@@ -71,7 +70,7 @@ public class TermHighlightComponent extends SearchComponent implements SolrCoreA
     private void flatten( Query sourceQuery, IndexReader reader, Collection<Query> flatQueries ) throws IOException {
         if( sourceQuery instanceof BooleanQuery){
             BooleanQuery bq = (BooleanQuery)sourceQuery;
-            for( BooleanClause clause : bq.getClauses() ){
+            for( BooleanClause clause : bq.clauses() ){
                 if( !clause.isProhibited() )
                     flatten( clause.getQuery(), reader, flatQueries );
             }
@@ -87,7 +86,8 @@ public class TermHighlightComponent extends SearchComponent implements SolrCoreA
                 flatQueries.add( sourceQuery );
         }
         else if (sourceQuery instanceof MultiTermQuery && reader != null) {
-            MultiTermQuery copy = (MultiTermQuery) sourceQuery.clone();
+            //MultiTermQuery copy = ((MultiTermQuery) sourceQuery).clone(); //Original
+            MultiTermQuery copy = (MultiTermQuery) sourceQuery;
             copy.setRewriteMethod(new MultiTermQuery.TopTermsScoringBooleanQueryRewrite(MAX_MTQ_TERMS));
             BooleanQuery mtqTerms = (BooleanQuery) copy.rewrite(reader);
             flatten(mtqTerms, reader, flatQueries);
@@ -107,7 +107,7 @@ public class TermHighlightComponent extends SearchComponent implements SolrCoreA
             //all of the corner case fixes for the phrases already in highlighing - the result will be
             //phrases that have different color highlights for each term
             Set<Term> terms = new LinkedHashSet<Term>();
-            List<AtomicReaderContext> readerContexts = reader.getContext().leaves();
+            List<LeafReaderContext> readerContexts = reader.getContext().leaves();
 
             if(readerContexts.size() < 1) {
                 return;
@@ -115,11 +115,15 @@ public class TermHighlightComponent extends SearchComponent implements SolrCoreA
 
             //TODO it is necessary to call getSpans first so that if there is a MultiTerm query it get's rewritten by com.o19s.solr.swan.nodes.SwanTermNode.SwanSpanMultiTermQueryWrapper
             //no easy way around this
-            sourceQuery.extractTerms(terms);
+            /*
+            SpanQuery sq = (SpanQuery)sourceQuery;
+            Map<Term, TermStates> maps = SpanQuery.getTermStates(sq);
+            //sourceQuery.extractTerms(terms);
+            sq.extractTerms(terms);
             for(Term t : terms ) {
                 flatQueries.add(new SpanTermQuery(t));//TODO need to check that this isn't already in the flatQueries (see example above)
             }
-
+            */
         }
     }
 
@@ -133,9 +137,11 @@ public class TermHighlightComponent extends SearchComponent implements SolrCoreA
 
         flatten(rb.getQuery(), rb.req.getSearcher().getIndexReader(), flatQueries);
 
+        /*
         for(Query q: flatQueries) {
             q.extractTerms(terms);
         }
+         */
         return terms;
     }
 
@@ -158,10 +164,11 @@ public class TermHighlightComponent extends SearchComponent implements SolrCoreA
             termData = new NamedList<Object>();
             count = Integer.valueOf(searcher.numDocs(tq, docs)).longValue();
             if (count == 0l) {
-              continue;
+                continue;
             }
             termData.add(TERM_FREQUENCY, count);
-            termData.add(TERM_ID, WordHashFragmentsBuilder.toHash(t.text()));
+            //termData.add(TERM_ID, WordHashFragmentsBuilder.toHash(t.text()));
+            termData.add(TERM_ID, toHash(t.text()));
             termHighlights.add(t.text(), termData);
         };
 
@@ -182,7 +189,7 @@ public class TermHighlightComponent extends SearchComponent implements SolrCoreA
 
             for (ShardRequest sreq : rb.finished) {
                 if ((sreq.purpose & ShardRequest.PURPOSE_GET_FIELDS) == 0 || !sreq.params.getBool(COMPONENT_NAME,
-                false)) {
+                        false)) {
                     continue;
                 }
                 for (ShardResponse srsp : sreq.responses) {
@@ -212,7 +219,7 @@ public class TermHighlightComponent extends SearchComponent implements SolrCoreA
             termDataNl = (NamedList)nl.getVal(i);
             total = (Long)termDataNl.get(TERM_FREQUENCY);
             if (total == 0l) {
-              continue;
+                continue;
             }
             if(all.get(key) == null) {
                 all.add(key, termDataNl);
@@ -248,7 +255,7 @@ public class TermHighlightComponent extends SearchComponent implements SolrCoreA
 
     @Override
     public Category getCategory() {
-        return Category.HIGHLIGHTING;
+        return Category.HIGHLIGHTER;
     }
 
     @Override
@@ -256,12 +263,12 @@ public class TermHighlightComponent extends SearchComponent implements SolrCoreA
         return "Term Highlight Component (SWAN)";
     }
 
-    @Override
+    //@Override
     public String getSource() {
         return "https://github.com/o19s/SolrSwan";
     }
 
-    @Override
+    //@Override
     public NamedList getStatistics() {
         NamedList all = new SimpleOrderedMap<Object>();
 
@@ -274,8 +281,5 @@ public class TermHighlightComponent extends SearchComponent implements SolrCoreA
     public String getDescription() {
         return "A Component for returning the total number of times a highlighted term occurs in the index.";
     }
-
-
-
 }
 

@@ -158,11 +158,11 @@ public abstract class SwanProxNode extends SwanNode {
   }
 
   private Query nestedConditionalQuery(BooleanClause.Occur innerOccur, BooleanClause.Occur outerOccur, List<SwanNode> left, List<SwanNode> right, String lfDef, String rfDef, boolean reverse) {
-    BooleanQuery query = new BooleanQuery();
-    BooleanQuery innerQuery;
+    BooleanQuery.Builder queryBuilder = new BooleanQuery.Builder();
+    BooleanQuery.Builder innerQueryBuilder;
     for (SwanNode l : left) {
       String lf = l.getField() != null ? l.getField() : lfDef;
-      innerQuery = new BooleanQuery();
+      innerQueryBuilder = new BooleanQuery.Builder();
       for (SwanNode r : right) {
         String f = r.getField() != null ? r.getField() : rfDef;
         if (f == null)
@@ -171,20 +171,21 @@ public abstract class SwanProxNode extends SwanNode {
           continue;
 
         if (reverse)
-          addSpanQuery(innerQuery, innerOccur, r, l, f);
+          addSpanQuery(innerQueryBuilder, innerOccur, r, l, f);
         else
-          addSpanQuery(innerQuery, innerOccur, l, r, f);
+          addSpanQuery(innerQueryBuilder, innerOccur, l, r, f);
       }
-      if (innerQuery.getClauses().length == 0)
+      BooleanQuery inner = innerQueryBuilder.build();
+      if (inner.clauses().size() == 0)
         throw new IllegalArgumentException("Clauses must have same field.");
-      query.add(innerQuery, outerOccur);
+      queryBuilder.add(inner, outerOccur);
     }
 
-    return query;
+    return queryBuilder.build();
   }
 
   private Query conditionalQuery(BooleanClause.Occur occur, List<SwanNode> left, List<SwanNode> right, String lfDef, String rfDef) {
-    BooleanQuery query = new BooleanQuery();
+    BooleanQuery.Builder queryBuilder = new BooleanQuery.Builder();
     for (SwanNode l : left) {
       String lf = l.getField() != null ? l.getField() : lfDef;
       for (SwanNode r : right) {
@@ -194,11 +195,11 @@ public abstract class SwanProxNode extends SwanNode {
         else if (lf != null && !lf.equals(f))
           continue;
 
-        addSpanQuery(query, occur, l, r, f);
+        addSpanQuery(queryBuilder, occur, l, r, f);
       }
     }
 
-    return query;
+    return queryBuilder.build();
   }
 
   private Query singleXOrConditionalQuery(SwanNode left, SwanNode right, boolean reverse) {
@@ -219,7 +220,7 @@ public abstract class SwanProxNode extends SwanNode {
     List<Query> nodes = new ArrayList<Query>();
 
     for (SwanNode left_node : left_nodes) {
-      BooleanQuery outer = new BooleanQuery();
+      BooleanQuery.Builder outerBuilder = new BooleanQuery.Builder();
       String lf = checkSet(left_node.getField(), lf_def);
 
       for (SwanNode right_node : right_nodes) {
@@ -227,11 +228,11 @@ public abstract class SwanProxNode extends SwanNode {
         String f = checkSet(lf, rf);
 
         if (reverse)
-          addSpanQuery(outer, occur, right_node, left_node, f);
+          addSpanQuery(outerBuilder, occur, right_node, left_node, f);
         else
-          addSpanQuery(outer, occur, left_node, right_node, f);
+          addSpanQuery(outerBuilder, occur, left_node, right_node, f);
       }
-      nodes.add(outer);
+      nodes.add(outerBuilder.build());
     }
 
     return xOrNodes(nodes);
@@ -251,10 +252,10 @@ public abstract class SwanProxNode extends SwanNode {
 
         // TODO: This I believe can be refactored to something cleaner.
         if (f == null) {
-          BooleanQuery inner = new BooleanQuery();
+          BooleanQuery.Builder innerBuilder = new BooleanQuery.Builder();
           for (String _f : defaultFields)
-            inner.add(getSpanQuery(left, right, _f), BooleanClause.Occur.SHOULD);
-          nodes.add(inner);
+            innerBuilder.add(getSpanQuery(left, right, _f), BooleanClause.Occur.SHOULD);
+          nodes.add(innerBuilder.build());
         } else {
           nodes.add(getSpanQuery(left, right, f));
         }
@@ -265,14 +266,14 @@ public abstract class SwanProxNode extends SwanNode {
   }
 
   private Query xOrNodes(BooleanQuery query) {
-    List<Query> queries = new ArrayList<Query>(query.getClauses().length);
-    for (BooleanClause clause : query.getClauses())
+    List<Query> queries = new ArrayList<Query>(query.clauses().size());
+    for (BooleanClause clause : query.clauses())
       queries.add(clause.getQuery());
     return xOrNodes(queries);
   }
 
   private Query xOrNodes(List<Query> queries) {
-    BooleanQuery query = new BooleanQuery();
+    BooleanQuery.Builder queryBuilder = new BooleanQuery.Builder();
     ArrayList<Query> sub_nodes = new ArrayList<Query>(queries.size());
 
     for (int x = 0; x < queries.size(); x++) {
@@ -280,18 +281,18 @@ public abstract class SwanProxNode extends SwanNode {
       sub_nodes.addAll(queries);
       sub_nodes.remove(x);
 
-      BooleanQuery inner = new BooleanQuery();
+      BooleanQuery.Builder innerBuilder = new BooleanQuery.Builder();
       for (Query q : sub_nodes)
-        inner.add(q, BooleanClause.Occur.MUST_NOT);
-      inner.add(queries.get(x), BooleanClause.Occur.MUST);
-      query.add(inner, BooleanClause.Occur.SHOULD);
+        innerBuilder.add(q, BooleanClause.Occur.MUST_NOT);
+      innerBuilder.add(queries.get(x), BooleanClause.Occur.MUST);
+      queryBuilder.add(innerBuilder.build(), BooleanClause.Occur.SHOULD);
     }
 
-    return query;
+    return queryBuilder.build();
   }
 
   private Query singleConditionalQuery(SwanNode left, SwanNode right, boolean reverse) {
-    BooleanQuery query = new BooleanQuery();
+    BooleanQuery.Builder queryBuilder = new BooleanQuery.Builder();
     String lf_def = left.getField();
     String rf_def = right.getField();
 
@@ -308,29 +309,29 @@ public abstract class SwanProxNode extends SwanNode {
         lf = rf_def;
 
       if (reverse)
-        addSpanQuery(query, outerOccur, right, l, lf);
+        addSpanQuery(queryBuilder, outerOccur, right, l, lf);
       else
-        addSpanQuery(query, outerOccur, l, right, lf);
+        addSpanQuery(queryBuilder, outerOccur, l, right, lf);
     }
 
-    return query;
+    return queryBuilder.build();
   }
 
-  private void addSpanQuery(BooleanQuery query, BooleanClause.Occur occur, SwanNode left, SwanNode right, String field) {
+  private void addSpanQuery(BooleanQuery.Builder queryBuilder, BooleanClause.Occur occur, SwanNode left, SwanNode right, String field) {
     if (field == null) {
       if (occur.equals(BooleanClause.Occur.SHOULD))
         // Optimize OR queries, don't require nesting
         for (String _f : defaultFields)
-          query.add(getSpanQuery(left, right, _f), BooleanClause.Occur.SHOULD);
+          queryBuilder.add(getSpanQuery(left, right, _f), BooleanClause.Occur.SHOULD);
       else {
-        BooleanQuery q = new BooleanQuery();
+        BooleanQuery.Builder qb = new BooleanQuery.Builder();
         for (String _f : defaultFields)
-          q.add(getSpanQuery(left, right, _f), BooleanClause.Occur.SHOULD);
-        query.add(q, occur);
+          qb.add(getSpanQuery(left, right, _f), BooleanClause.Occur.SHOULD);
+        queryBuilder.add(qb.build(), occur);
       }
     }
     else
-      query.add(getSpanQuery(left, right, field), occur);
+      queryBuilder.add(getSpanQuery(left, right, field), occur);
   }
 
   @Override

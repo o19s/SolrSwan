@@ -16,7 +16,7 @@ package com.o19s.solr.swan.nodes;
  * limitations under the License.
  */
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
@@ -64,21 +64,21 @@ public abstract class SwanOperatorNode extends SwanNode {
 
   @Override
   public Query getQuery(String field) {
-    BooleanQuery query = new BooleanQuery();
+    BooleanQuery.Builder queryBuilder = new BooleanQuery.Builder();
     for(SwanNode n : _nodes){
       Query q = n.getQuery(field);
-      query.add(q,getClause());
+      queryBuilder.add(q,getClause());
     }
-    return query;
+    return queryBuilder.build();
   }
 
   @Override
   public Query getQuery(String[] fields) {
-    BooleanQuery query = new BooleanQuery();
+    BooleanQuery.Builder queryBuilder = new BooleanQuery.Builder();
     for(SwanNode n : _nodes){
-      query.add(n.getQuery(), getClause());
+      queryBuilder.add(n.getQuery(), getClause());
     }
-    return query;
+    return queryBuilder.build();
   }
 
   public List<SwanNode> getNodes() {

@@ -1,11 +1,10 @@
-package com.o19s.solr.swan.query;
-
-/**
- * Copyright 2012 OpenSource Connections, LLC.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
  *
  *     http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -15,259 +14,240 @@ package com.o19s.solr.swan.query;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.o19s.solr.swan.query;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
-import org.apache.lucene.index.AtomicReaderContext;
 import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.index.LeafReaderContext;
 import org.apache.lucene.index.Term;
-import org.apache.lucene.index.TermContext;
+import org.apache.lucene.index.TermStates;
+import org.apache.lucene.search.BooleanClause;
+import org.apache.lucene.search.DocIdSetIterator;
+import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.spans.SpanQuery;
-import org.apache.lucene.search.spans.Spans;
-import org.apache.lucene.util.Bits;
-import org.apache.lucene.util.ToStringUtils;
+import org.apache.lucene.search.QueryVisitor;
+import org.apache.lucene.search.ScoreMode;
+import org.apache.lucene.search.TwoPhaseIterator;
 
-/**
- * Allows a given number of intersections between spans.
+import org.apache.lucene.search.spans.*;
+
+/** Removes matches which overlap with another SpanQuery or which are
+ * within x tokens before or y tokens after another SpanQuery.
  */
-public class SpanWithinQuery extends SpanQuery {
-
+public final class SpanWithinQuery extends SpanQuery {
   private SpanQuery include;
   private SpanQuery exclude;
-  private int proximity;
+  private final int proximity;
 
-  /**
-   * Construct a SpanWithinQuery matching spans from <code>include</code> which
-   * overlap with spans from <code>exclude</code> up to <code>proximity</code>
-   * times.
-   */
+  //private Logger log = Logger.getLogger(getClass().getCanonicalName());
+
+  /** Construct a SwanSpanNotQuery matching spans from <code>include</code> which
+   * have no overlap with spans from <code>exclude</code>.*/
+  public SpanWithinQuery(SpanQuery include, SpanQuery exclude) {
+     this(include, exclude, 1);
+  }
+
+  /** Construct a SwanSpanNotQuery matching spans from <code>include</code> which
+   * have no overlap with spans from <code>exclude</code> within
+   * <code>pre</code> tokens before or <code>post</code> tokens of
+   * <code>include</code>. Inversely, negative values for <code>pre</code> and/or
+   * <code>post</code> allow a certain amount of overlap to occur. */
   public SpanWithinQuery(SpanQuery include, SpanQuery exclude, int proximity) {
-    this.include = include;
-    this.exclude = exclude;
+    this.include = Objects.requireNonNull(include);
+    this.exclude = Objects.requireNonNull(exclude);
     this.proximity = proximity;
 
-    if (!include.getField().equals(exclude.getField())) {
+    if (include.getField() != null && exclude.getField() != null && !include.getField().equals(exclude.getField()))
       throw new IllegalArgumentException("Clauses must have same field.");
-    }
   }
 
   /** Return the SpanQuery whose matches are filtered. */
-  public SpanQuery getInclude() {
-    return include;
-  }
+  public SpanQuery getInclude() { return include; }
 
   /** Return the SpanQuery whose matches must not overlap those returned. */
-  public SpanQuery getExclude() {
-    return exclude;
-  }
+  public SpanQuery getExclude() { return exclude; }
+
+  public int getProximity() { return proximity; }
 
   @Override
-  public Spans getSpans(final AtomicReaderContext context, final Bits acceptDocs, final Map<Term, TermContext> termContexts) throws IOException {
-    return new Spans() {
-      private Spans includeSpans = include.getSpans(context,  acceptDocs,  termContexts);
-      private boolean moreInclude = true;
-      private Spans excludeSpans = exclude.getSpans(context,  acceptDocs,  termContexts);
-      private boolean moreExclude = true;
+  public String getField() { return include.getField(); }
 
-      public boolean next() throws IOException {
-        if (moreInclude) { // move to next include
-          moreInclude = includeSpans.next();
-        }
-
-        while (moreInclude && moreExclude) {
-          if (includeSpans.doc() > excludeSpans.doc()) { // skip exclude
-            moreExclude = excludeSpans.skipTo(includeSpans.doc());
-          }
-
-          int count = 0;
-
-          while (moreExclude // while exclude is before
-            && (includeSpans.doc() == excludeSpans.doc())) {
-            if ((excludeSpans.end() - 1) > includeSpans.start() && excludeSpans.start() < (includeSpans.end() - 1)) {
-              count += 1;
-
-              if (count >= proximity) {
-                break;
-              }
-            }
-
-            moreExclude = excludeSpans.next(); // increment exclude
-          }
-
-          if (!moreExclude // if no intersection
-            || (includeSpans.doc() != excludeSpans.doc())
-            || (includeSpans.end() <= excludeSpans.start())) {
-            break; // we found a match
-          }
-
-          moreInclude = includeSpans.next(); // intersected: keep scanning
-        }
-
-        return moreInclude;
-      }
-
-      public boolean skipTo(int target) throws IOException {
-        if (moreInclude) { // skip include
-          moreInclude = includeSpans.skipTo(target);
-        }
-
-        if (!moreInclude) {
-          return false;
-        }
-
-        if (moreExclude // skip exclude
-          && (includeSpans.doc() > excludeSpans.doc())) {
-          moreExclude = excludeSpans.skipTo(includeSpans.doc());
-        }
-
-        int count = 0;
-
-        while (moreExclude // while exclude is before
-          && (includeSpans.doc() == excludeSpans.doc())) {
-          if ((excludeSpans.end() - 1) > includeSpans.start() && excludeSpans.start() < (includeSpans.end() - 1)) {
-            count += 1;
-
-            if (count >= proximity) {
-              break;
-            }
-          }
-
-          moreExclude = excludeSpans.next(); // increment exclude
-        }
-
-        if (!moreExclude // if no intersection
-          || (includeSpans.doc() != excludeSpans.doc())
-          || (includeSpans.end() <= excludeSpans.start())) {
-          return true; // we found a match
-        }
-
-        boolean returnboolean = next();
-
-        return returnboolean; // scan to next match
-      }
-
-      public int doc() {
-        return includeSpans.doc();
-      }
-
-      public int start() {
-        return includeSpans.start();
-      }
-
-      public int end() {
-        return includeSpans.end();
-      }
-
-      @Override
-      public Collection<byte[]> getPayload() throws IOException {
-        ArrayList<byte[]> result = null;
-        if (includeSpans.isPayloadAvailable()) {
-          result = new ArrayList<byte[]>(includeSpans.getPayload());
-        }
-        return result;
-      }
-
-      @Override
-      public boolean isPayloadAvailable() {
-        try {
-          return includeSpans.isPayloadAvailable();
-        } catch (IOException e) {
-          e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-          return false;
-        }
-      }
-
-      public String toString() {
-        return "spans(" + SpanWithinQuery.this.toString() + ")";
-      }
-
-      @Override
-      public long cost() {
-          // TODO Auto-generated method stub
-          return 0;
-      }
-    };
-  }
-
-  public String getField() {
-    return include.getField();
-  }
-
-  public void extractTerms(Set terms) {
-    include.extractTerms(terms);
-  }
-
+  @Override
   public String toString(String field) {
-    StringBuffer buffer = new StringBuffer();
+    StringBuilder buffer = new StringBuilder();
     buffer.append("spanWithin(");
     buffer.append(include.toString(field));
     buffer.append(", ");
-    buffer.append(proximity + " ,");
+    buffer.append(proximity);
+    buffer.append(" ,");
     buffer.append(exclude.toString(field));
     buffer.append(")");
-    buffer.append(ToStringUtils.boost(getBoost()));
-
     return buffer.toString();
   }
 
-  public Query rewrite(IndexReader reader) throws IOException {
-    SpanWithinQuery clone = null;
 
-    SpanQuery rewrittenInclude = (SpanQuery) include.rewrite(reader);
+  @Override
+  public SpanWeight createWeight(IndexSearcher searcher, ScoreMode scoreMode, float boost) throws IOException {
+    SpanWeight includeWeight = include.createWeight(searcher, scoreMode, boost);
+    SpanWeight excludeWeight = exclude.createWeight(searcher, ScoreMode.COMPLETE_NO_SCORES, boost);
+    return new SpanNotWeight(searcher, scoreMode.needsScores() ? getTermStates(includeWeight) : null,
+                                  includeWeight, excludeWeight, proximity, boost);
+  }
 
-    if (rewrittenInclude != include) {
-      clone = (SpanWithinQuery) this.clone();
-      clone.include = rewrittenInclude;
+  public class SpanNotWeight extends SpanWeight {
+
+    final SpanWeight includeWeight;
+    final SpanWeight excludeWeight;
+    final int proximity;
+
+    public SpanNotWeight(IndexSearcher searcher, Map<Term, TermStates> terms,
+                         SpanWeight includeWeight, SpanWeight excludeWeight, int proximity, float boost) throws IOException {
+      super(SpanWithinQuery.this, searcher, terms, boost);
+      this.includeWeight = includeWeight;
+      this.excludeWeight = excludeWeight;
+      this.proximity = proximity;
     }
 
-    SpanQuery rewrittenExclude = (SpanQuery) exclude.rewrite(reader);
+    @Override
+    public void extractTermStates(Map<Term, TermStates> contexts) {
+      includeWeight.extractTermStates(contexts);
+    }
 
-    if (rewrittenExclude != exclude) {
-      if (clone == null) {
-        clone = (SpanWithinQuery) this.clone();
+    @Override
+    public Spans getSpans(final LeafReaderContext context, Postings requiredPostings) throws IOException {
+      Spans includeSpans = includeWeight.getSpans(context, requiredPostings);
+      if (includeSpans == null) {
+        return null;
       }
 
-      clone.exclude = rewrittenExclude;
+      Spans excludeSpans = excludeWeight.getSpans(context, requiredPostings);
+      if (excludeSpans == null) {
+        return includeSpans;
+      }
+
+      TwoPhaseIterator excludeTwoPhase = excludeSpans.asTwoPhaseIterator();
+      DocIdSetIterator excludeApproximation = excludeTwoPhase == null ? null : excludeTwoPhase.approximation();
+
+      return new FilterSpans(includeSpans) {
+        // last document we have checked matches() against for the exclusion, and failed
+        // when using approximations, so we don't call it again, and pass thru all inclusions.
+        int lastApproxDoc = -1;
+        boolean lastApproxResult = false;
+
+        @Override
+        protected AcceptStatus accept(Spans candidate) throws IOException {
+          // TODO: this logic is ugly and sneaky, can we clean it up?
+          int doc = candidate.docID();
+          if (doc > excludeSpans.docID()) {
+            // catch up 'exclude' to the current doc
+            if (excludeTwoPhase != null) {
+              if (excludeApproximation.advance(doc) == doc) {
+                lastApproxDoc = doc;
+                lastApproxResult = excludeTwoPhase.matches();
+              }
+            } else {
+              excludeSpans.advance(doc);
+            }
+          } else if (excludeTwoPhase != null && doc == excludeSpans.docID() && doc != lastApproxDoc) {
+            // excludeSpans already sitting on our candidate doc, but matches not called yet.
+            lastApproxDoc = doc;
+            lastApproxResult = excludeTwoPhase.matches();
+          }
+
+          if (doc != excludeSpans.docID() || (doc == lastApproxDoc && lastApproxResult == false)) {
+            return AcceptStatus.YES;
+          }
+
+          if (excludeSpans.startPosition() == -1) { // init exclude start position if needed
+            excludeSpans.nextStartPosition();
+          }
+
+          while (excludeSpans.endPosition() <= candidate.startPosition() - 0) {
+            // exclude end position is before a possible exclusion
+            if (excludeSpans.nextStartPosition() == NO_MORE_POSITIONS) {
+              return AcceptStatus.YES; // no more exclude at current doc.
+            }
+          }
+
+          for(int i = 0; i < proximity; i++) {
+            if(excludeSpans.startPosition() >= candidate.endPosition())
+              return AcceptStatus.YES;
+            else {
+              if (excludeSpans.nextStartPosition() == NO_MORE_POSITIONS && (i+1) < proximity)
+                return AcceptStatus.YES;
+            }
+          }
+          return AcceptStatus.NO;
+
+            /* // Original code
+          // exclude end position far enough in current doc, check start position:
+          if (excludeSpans.startPosition() - 0 >= candidate.endPosition()) {
+            return AcceptStatus.YES;
+          } else {
+            return AcceptStatus.NO;
+          }
+
+             */
+        }
+      };
     }
 
-    if (clone != null) {
-      return clone; // some clauses rewrote
-    } else {
-      return this; // no clauses rewrote
+    @Override
+    public void extractTerms(Set<Term> terms) {
+      includeWeight.extractTerms(terms);
+    }
+
+    @Override
+    public boolean isCacheable(LeafReaderContext ctx) {
+      return includeWeight.isCacheable(ctx) && excludeWeight.isCacheable(ctx);
+    }
+
+  }
+
+  @Override
+  public Query rewrite(IndexReader reader) throws IOException {
+    SpanQuery rewrittenInclude = (SpanQuery) include.rewrite(reader);
+    SpanQuery rewrittenExclude = (SpanQuery) exclude.rewrite(reader);
+    if (rewrittenInclude != include || rewrittenExclude != exclude) {
+      return new SpanWithinQuery(rewrittenInclude, rewrittenExclude, proximity);
+    }
+    return super.rewrite(reader);
+  }
+
+  @Override
+  public void visit(QueryVisitor visitor) {
+    if (visitor.acceptField(getField())) {
+      include.visit(visitor.getSubVisitor(BooleanClause.Occur.MUST, this));
+      exclude.visit(visitor.getSubVisitor(BooleanClause.Occur.MUST_NOT, this));
     }
   }
 
   /** Returns true iff <code>o</code> is equal to this. */
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
+  @Override
+  public boolean equals(Object other) {
+    return sameClassAs(other) &&
+           equalsTo(getClass().cast(other));
+  } 
 
-    if (!(o instanceof SpanWithinQuery)) {
-      return false;
-    }
-
-    SpanWithinQuery other = (SpanWithinQuery) o;
-
-    return this.include.equals(other.include)
-      && this.exclude.equals(other.exclude)
-      && (this.getBoost() == other.getBoost())
-      && (proximity == other.proximity);
+  private boolean equalsTo(SpanWithinQuery other) {
+    return include.equals(other.include) && 
+           exclude.equals(other.exclude) && 
+           proximity == other.proximity;
   }
 
+  @Override
   public int hashCode() {
-    int h = include.hashCode();
-    h = (h << 1) | (h >>> 31); // rotate left
+    int h = classHash();
+    h = Integer.rotateLeft(h, 1);
+    h ^= include.hashCode();
+    h = Integer.rotateLeft(h, 1);
     h ^= exclude.hashCode();
-    h = (h << 1) | (h >>> 31); // rotate left
-    h ^= Float.floatToRawIntBits(getBoost());
+    h = Integer.rotateLeft(h, 1);
     h ^= proximity;
-
     return h;
   }
 

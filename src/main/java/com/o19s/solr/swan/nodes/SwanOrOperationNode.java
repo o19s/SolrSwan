@@ -28,16 +28,16 @@ public class SwanOrOperationNode extends SwanOperatorNode {
 
   //this is a copy constructor
   public SwanOrOperationNode(SwanOrOperationNode originalNode) {
-	  super(originalNode.getNodes().toArray(new SwanNode[originalNode.getNodes().size()]));
+    super(originalNode.getNodes().toArray(new SwanNode[originalNode.getNodes().size()]));
   }
-  
+
   @Override
   public SpanQuery getSpanQuery(String field) {
-    SpanOrQuery query = new SpanOrQuery();
-    for(SwanNode n : _nodes){
-      query.addClause(n.getSpanQuery(field));
+    SpanQuery [] nodes = new SpanQuery[_nodes.size()];
+    for(int i = 0; i < _nodes.size(); i++) {
+      nodes[i] = _nodes.get(i).getSpanQuery(field);
     }
-    return query;
+    return new SpanOrQuery(nodes);
   }
 
   @Override

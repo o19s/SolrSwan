@@ -45,10 +45,10 @@ public class SwanNotNode extends SwanNode {
 
   @Override
   public Query getQuery(String field) {
-    BooleanQuery query = new BooleanQuery();
-    query.add(_left.getQuery(field),BooleanClause.Occur.MUST);
-    query.add(_right.getQuery(field),BooleanClause.Occur.MUST_NOT);
-    return query;
+    BooleanQuery.Builder queryBuilder = new BooleanQuery.Builder();
+    queryBuilder.add(_left.getQuery(field),BooleanClause.Occur.MUST);
+    queryBuilder.add(_right.getQuery(field),BooleanClause.Occur.MUST_NOT);
+    return queryBuilder.build();
   }
 
   @Override
@@ -58,12 +58,12 @@ public class SwanNotNode extends SwanNode {
 
   @Override
   public Query getQuery(String[] fields) {
-    BooleanQuery query = new BooleanQuery();
+    BooleanQuery.Builder queryBuilder = new BooleanQuery.Builder();
 
-    query.add(_left.getQuery(),BooleanClause.Occur.MUST);
-    query.add(_right.getQuery(),BooleanClause.Occur.MUST_NOT);
+    queryBuilder.add(_left.getQuery(),BooleanClause.Occur.MUST);
+    queryBuilder.add(_right.getQuery(),BooleanClause.Occur.MUST_NOT);
 
-    return query;
+    return queryBuilder.build();
   }
 
   @Override

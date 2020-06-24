@@ -44,6 +44,7 @@ public class SwanQParserPlugin extends QParserPlugin implements ResourceLoaderAw
 	@SuppressWarnings("rawtypes")
 	@Override
 	public void init(NamedList args) {
+		super.init(args);
 		fieldAliasesFileName = (String) args.get("fieldAliases");
 	}
 
@@ -74,7 +75,7 @@ public class SwanQParserPlugin extends QParserPlugin implements ResourceLoaderAw
 					if(!k.matches("[a-zA-Z0-9_-]+")) {
 						throw new IOException("key doesn't match regex [a-zA-Z0-9_]+");
 					}
-					fieldAliases.put(k.toLowerCase(), val);
+					fieldAliases.put(k.trim().toLowerCase(), val);
 				}
 			}
 			in.close();

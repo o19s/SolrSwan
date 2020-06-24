@@ -31,7 +31,6 @@ public class HtmlStriperEncoder extends HighlightingPluginBase implements SolrEn
         return "Html Striper";
     }
 
-    @Override
     public String getSource() {
         return "";
     }

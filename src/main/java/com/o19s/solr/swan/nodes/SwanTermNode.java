@@ -37,7 +37,7 @@ import org.apache.solr.schema.SchemaField;
 import org.apache.solr.schema.TextField;
 
 import com.o19s.solr.swan.query.SpanRegexpQuery;
-import org.apache.commons.lang.StringUtils;
+//import org.apache.commons.lang3.StringUtils;
 
 public class SwanTermNode extends SwanNode {
 

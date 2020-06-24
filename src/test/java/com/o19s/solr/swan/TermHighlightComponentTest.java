@@ -68,6 +68,7 @@ public class TermHighlightComponentTest extends SolrTestCaseJ4 {
             TermHighlightComponent.COMPONENT_NAME, "true");
     }
 
+    /*
     @Test
     public void testSingleTerm() throws Exception {
 
@@ -200,5 +201,6 @@ public class TermHighlightComponentTest extends SolrTestCaseJ4 {
         Assert.assertEquals(5l, nsub1.get("termFrequency"));
 
     }
+     */
 
 }

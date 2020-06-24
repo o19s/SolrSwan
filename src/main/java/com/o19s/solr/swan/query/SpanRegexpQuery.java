@@ -16,17 +16,9 @@ package com.o19s.solr.swan.query;
  * limitations under the License.
  */
 
-import org.apache.lucene.index.AtomicReaderContext;
-import org.apache.lucene.index.Term;
-import org.apache.lucene.index.TermContext;
 import org.apache.lucene.search.RegexpQuery;
 import org.apache.lucene.search.spans.SpanMultiTermQueryWrapper;
 import org.apache.lucene.search.spans.SpanQuery;
-import org.apache.lucene.search.spans.Spans;
-import org.apache.lucene.util.Bits;
-
-import java.io.IOException;
-import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -36,31 +28,7 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class SpanRegexpQuery extends SpanMultiTermQueryWrapper<RegexpQuery> {
-  private static final int MAX_MTQ_TERMS = 1024;
-  private SpanQuery rewrittenQuery = null;
-
   public SpanRegexpQuery(RegexpQuery query) {
     super(query);
-  }
-
-
-  @Override
-  public Spans getSpans(AtomicReaderContext context, Bits acceptDocs,
-                        Map<Term, TermContext> termContexts) throws IOException {
-    if (rewrittenQuery == null) {
-      //TODO this approach is to avoid disassembling, rewriting, and then reassembling query at time of highlighting just to get spans and terms.
-      //I think this approach is not ideal. A better approach is due once the SpanQueries and Queries have been merged.
-      this.setRewriteMethod(new SpanMultiTermQueryWrapper.TopTermsSpanBooleanQueryRewrite(MAX_MTQ_TERMS));
-      rewrittenQuery = (SpanQuery) this.rewrite(context.reader());
-    }
-    return rewrittenQuery.getSpans(context, acceptDocs, termContexts);
-  }
-
-  @Override
-  public void extractTerms(java.util.Set<Term> terms) {
-    if (rewrittenQuery != null)
-      rewrittenQuery.extractTerms(terms);
-//    else
-//      System.out.println("getSpans was not called before extractTerms.");
   }
 }

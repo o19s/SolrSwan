@@ -23,8 +23,21 @@ import org.apache.lucene.search.highlight.Encoder;
  * Removes html from the highlighted text
  */
 public class SimpleHtmlStriperEncoder implements Encoder {
+    private boolean in_tag;
+
+    public SimpleHtmlStriperEncoder() { in_tag = false; }
+
     @Override
     public String encodeText(String originalText) {
-        return originalText.replaceAll("<[^>]*>|^[^<>]+>|<[^<>]+$", " ").replaceAll("\\s+", " ");
+        StringBuilder sb = new StringBuilder();
+        for(char c : originalText.toCharArray()) {
+            if(!in_tag) {
+                if(c == '<') in_tag ^= true; else sb.append(c);
+            } else {
+                if(c == '>') { in_tag ^= true; sb.append(" "); }
+            }
+        }
+        return sb.toString().replaceAll("\\s+", " ");
+//        return originalText.replaceAll("<[^>]*>|^[^<>]+>|<[^<>]+$", " ").replaceAll("\\s+", " ");
     }
 }
