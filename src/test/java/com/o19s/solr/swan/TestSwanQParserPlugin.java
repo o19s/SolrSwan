@@ -66,7 +66,7 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
       "rangeLong", Integer.toString(12342 + i),
       "rangeFloat", Integer.toString(12342 + i),
       "rangeDouble", Integer.toString(12342 + i),
-      "rangeDate", String.format("2012-0%d-15T12:30:30Z", i),
+      "rangeDate", String.format("2012-0%s-15T12:30:30Z", i),
       "x", "apple"
     ));
     i++;
@@ -77,7 +77,7 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
       "rangeLong", Integer.toString(12342 + i),
       "rangeFloat", Integer.toString(12342 + i),
       "rangeDouble", Integer.toString(12342 + i),
-      "rangeDate", String.format("2012-0%d-15T12:30:30Z", i),
+      "rangeDate", String.format("2012-0%s-15T12:30:30Z", i),
       "x", "banana"
     ));
     i++;
@@ -88,7 +88,7 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
       "rangeLong", Integer.toString(12342 + i),
       "rangeFloat", Integer.toString(12342 + i),
       "rangeDouble", Integer.toString(12342 + i),
-      "rangeDate", String.format("2012-0%d-15T12:30:30Z", i),
+      "rangeDate", String.format("2012-0%s-15T12:30:30Z", i),
       "x", "coconut"
     ));
     i++;
@@ -99,7 +99,7 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
       "rangeLong", Integer.toString(12342 + i),
       "rangeFloat", Integer.toString(12342 + i),
       "rangeDouble", Integer.toString(12342 + i),
-      "rangeDate", String.format("2012-0%d-15T12:30:30Z", i),
+      "rangeDate", String.format("2012-0%s-15T12:30:30Z", i),
       "x", "dorian"
     ));
     i++;
@@ -110,7 +110,7 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
       "rangeLong", Integer.toString(12342 + i),
       "rangeFloat", Integer.toString(12342 + i),
       "rangeDouble", Integer.toString(12342 + i),
-      "rangeDate", String.format("2012-0%d-15T12:30:30Z", i),
+      "rangeDate", String.format("2012-0%s-15T12:30:30Z", i),
       "x", "epcot"
     ));
     i++;
@@ -121,7 +121,7 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
       "rangeLong", Integer.toString(12342 + i),
       "rangeFloat", Integer.toString(12342 + i),
       "rangeDouble", Integer.toString(12342 + i),
-      "rangeDate", String.format("2012-0%d-15T12:30:30Z", i),
+      "rangeDate", String.format("2012-0%s-15T12:30:30Z", i),
       "x", "pickle"
     ));
     i++;
@@ -132,7 +132,7 @@ public class TestSwanQParserPlugin extends SolrTestCaseJ4 {
       "rangeLong", Integer.toString(12342 + i),
       "rangeFloat", Integer.toString(12342 + i),
       "rangeDouble", Integer.toString(12342 + i),
-      "rangeDate", String.format("2012-0%d-15T12:30:30Z", i),
+      "rangeDate", String.format("2012-0%s-15T12:30:30Z", i),
       "x", "fridge"
     ));
 
