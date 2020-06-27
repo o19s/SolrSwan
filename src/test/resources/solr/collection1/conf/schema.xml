@@ -100,6 +100,7 @@
 			required="true" />
     	<field name="fruit" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false"/>
     	<field name="animal" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false" />
+    	<field name="text" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false" />
     	<field name="x" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false" />
 		<field name="y" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false" />
     	<field name="z" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" required="false" />

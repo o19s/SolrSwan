@@ -16,18 +16,15 @@ package com.o19s.solr.swan.highlight;
  * limitations under the License.
  */
 
-import java.util.HashMap;
-
 import org.apache.solr.SolrTestCaseJ4;
-import org.apache.solr.common.SolrException;
 import org.apache.solr.request.LocalSolrQueryRequest;
 import org.apache.solr.util.TestHarness;
 import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
+
+import java.util.HashMap;
 
 /**
  * Tests some basic functionality of Solr while demonstrating good Best
@@ -565,6 +562,7 @@ public class SwanHighlighterTest extends SolrTestCaseJ4 {
         "//lst[@name='1']/arr[@name='y']/str[contains(.,'>third</')]");
   }
 
+  @Ignore("Replace with Unified highlighter")
   @Test
   public void testNestedSpans() {
     assertU(adoc("id", "1",
@@ -832,6 +830,7 @@ public class SwanHighlighterTest extends SolrTestCaseJ4 {
   }
 
 
+  @Ignore("Replace with Unified highlighter")
   @Test
   /**
    * Term specific frag list builder parameters seem to be ignored.  Trying

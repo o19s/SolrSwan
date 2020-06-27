@@ -25,7 +25,7 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <surefireArgLine>-Dtest.solr.allowed.securerandom=NativePRNG</surefireArgLine>
+        <surefireArgLine>-Dtest.solr.allowed.securerandom=NativePRNGNonBlocking</surefireArgLine>
     </properties>
     <build>
         <finalName>SwanParser</finalName>
