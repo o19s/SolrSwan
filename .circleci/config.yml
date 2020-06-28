@@ -1,9 +1,10 @@
 version: 2.1
 
 orbs:
-  maven: circleci/maven@0.0.12
+  gradle: circleci/gradle@2.1.0
 
 workflows:
-  maven_test:
+  checkout-build-test:
     jobs:
-      - maven/test # checkout, build, test, and upload test results
+      - gradle/test
+

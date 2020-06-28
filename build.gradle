@@ -1,0 +1,47 @@
+apply plugin: 'java'
+
+group = 'com.o19s.solr.swan'
+version = '1.0-SNAPSHOT'
+
+description = """SwanParser"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+compileJava {
+    options.compilerArgs << '-proc:none'
+}
+
+ext {
+    solrVersion = '8.4.1'
+    springVersion = '2.0.8'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compileOnly group: 'org.slf4j', name: 'slf4j-api', version: '1.6.6'
+    compileOnly group: 'org.apache.lucene', name: 'lucene-core', version: solrVersion
+    compileOnly group: 'org.apache.solr', name: 'solr-core', version: solrVersion
+    compileOnly group: 'org.apache.solr', name: 'solr-solrj', version: solrVersion
+    compileOnly group: 'org.apache.lucene', name: 'lucene-highlighter', version: solrVersion
+
+    implementation group: 'org.parboiled', name: 'parboiled-java', version: '1.1.8'
+    implementation group: 'org.scala-lang', name: 'scala-library', version: '2.13.1'
+    implementation group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    implementation group: 'org.springframework', name: 'spring-core', version: springVersion
+
+    testImplementation group: 'org.scalatest', name: 'scalatest_2.13', version: '3.2.0-M2'
+    testImplementation('org.apache.solr:solr-test-framework:' + solrVersion) {
+        exclude group: 'org.apache.logging.log4j', module: 'log4j-core'
+    }
+    testImplementation group: 'org.springframework', name: 'spring-mock', version: springVersion
+}
+
+test {
+    useTestNG()
+    exclude 'com/o19s/solr/swan/TestBigSwan'
+}
